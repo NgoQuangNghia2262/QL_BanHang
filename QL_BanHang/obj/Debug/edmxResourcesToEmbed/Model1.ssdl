@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_BanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="tk" />
+    </Key>
+    <Property Name="tk" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="mk" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="cate" Type="char" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATEIN" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="NAME" />
+    </Key>
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PRICE" Type="float" />
+    <Property Name="CATEGORY" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProductInBill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDBILL" Type="int" />
+    <Property Name="NAMEPROD" Type="nvarchar" MaxLength="100" />
+    <Property Name="SL" Type="int" />
+  </EntityType>
+  <Association Name="FK__ProductIn__IDBIL__403A8C7D">
+    <End Role="BILL" Type="Self.BILL" Multiplicity="0..1" />
+    <End Role="ProductInBill" Type="Self.ProductInBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BILL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductInBill">
+        <PropertyRef Name="IDBILL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="USP_ADDBILLINFO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDBILL" Type="int" Mode="In" />
+    <Parameter Name="NAMEF" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="QL_BanHangModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductInBill" EntityType="Self.ProductInBill" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ProductIn__IDBIL__403A8C7D" Association="Self.FK__ProductIn__IDBIL__403A8C7D">
+      <End Role="BILL" EntitySet="BILL" />
+      <End Role="ProductInBill" EntitySet="ProductInBill" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

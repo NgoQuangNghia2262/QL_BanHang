@@ -1,0 +1,6 @@
+D:\Visual code\DNN\QL_BanHang\DAL\bin\Debug\DAL.dll
+D:\Visual code\DNN\QL_BanHang\DAL\bin\Debug\DAL.pdb
+D:\Visual code\DNN\QL_BanHang\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Visual code\DNN\QL_BanHang\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Visual code\DNN\QL_BanHang\DAL\obj\Debug\DAL.dll
+D:\Visual code\DNN\QL_BanHang\DAL\obj\Debug\DAL.pdb

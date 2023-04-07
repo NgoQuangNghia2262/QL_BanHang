@@ -1,0 +1,9 @@
+D:\Visual code\DNN\QL_BanHang\BUS\bin\Debug\BUS.dll
+D:\Visual code\DNN\QL_BanHang\BUS\bin\Debug\BUS.pdb
+D:\Visual code\DNN\QL_BanHang\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Visual code\DNN\QL_BanHang\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Visual code\DNN\QL_BanHang\BUS\obj\Debug\BUS.dll
+D:\Visual code\DNN\QL_BanHang\BUS\obj\Debug\BUS.pdb
+D:\Visual code\DNN\QL_BanHang\BUS\bin\Debug\DAL.dll
+D:\Visual code\DNN\QL_BanHang\BUS\bin\Debug\DAL.pdb
+D:\Visual code\DNN\QL_BanHang\BUS\obj\Debug\BUS.csproj.CopyComplete

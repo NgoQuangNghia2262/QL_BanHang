@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QL_BanHangModelStoreContainer" CdmEntityContainer="QL_BanHangEntities">
+    <EntitySetMapping Name="Account">
+      <EntityTypeMapping TypeName="QL_BanHangModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="tk" ColumnName="tk" />
+          <ScalarProperty Name="mk" ColumnName="mk" />
+          <ScalarProperty Name="cate" ColumnName="cate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILL">
+      <EntityTypeMapping TypeName="QL_BanHangModel.BILL">
+        <MappingFragment StoreEntitySet="BILL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DATEIN" ColumnName="DATEIN" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="QL_BanHangModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInBill">
+      <EntityTypeMapping TypeName="QL_BanHangModel.ProductInBill">
+        <MappingFragment StoreEntitySet="ProductInBill">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBILL" ColumnName="IDBILL" />
+          <ScalarProperty Name="NAMEPROD" ColumnName="NAMEPROD" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_ADDBILLINFO" FunctionName="QL_BanHangModel.Store.USP_ADDBILLINFO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QL_BanHangModel.USP_ADDBILLINFO_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Datein" ColumnName="Datein" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

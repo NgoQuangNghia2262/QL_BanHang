@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_BanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="tk" />
+    </Key>
+    <Property Name="tk" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="mk" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="cate" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DATEIN" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductInBill" Relationship="Self.FK__ProductIn__IDBIL__403A8C7D" FromRole="BILL" ToRole="ProductInBill" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="NAME" />
+    </Key>
+    <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PRICE" Type="Double" />
+    <Property Name="CATEGORY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductInBill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDBILL" Type="Int32" />
+    <Property Name="NAMEPROD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SL" Type="Int32" />
+    <NavigationProperty Name="BILL" Relationship="Self.FK__ProductIn__IDBIL__403A8C7D" FromRole="ProductInBill" ToRole="BILL" />
+  </EntityType>
+  <Association Name="FK__ProductIn__IDBIL__403A8C7D">
+    <End Role="BILL" Type="Self.BILL" Multiplicity="0..1" />
+    <End Role="ProductInBill" Type="Self.ProductInBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BILL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductInBill">
+        <PropertyRef Name="IDBILL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QL_BanHangEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Account" EntityType="Self.Account" />
+    <EntitySet Name="BILL" EntityType="Self.BILL" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="ProductInBill" EntityType="Self.ProductInBill" />
+    <AssociationSet Name="FK__ProductIn__IDBIL__403A8C7D" Association="Self.FK__ProductIn__IDBIL__403A8C7D">
+      <End Role="BILL" EntitySet="BILL" />
+      <End Role="ProductInBill" EntitySet="ProductInBill" />
+    </AssociationSet>
+    <FunctionImport Name="USP_ADDBILLINFO" ReturnType="Collection(QL_BanHangModel.USP_ADDBILLINFO_Result)">
+      <Parameter Name="IDBILL" Mode="In" Type="Int32" />
+      <Parameter Name="NAMEF" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="USP_ADDBILLINFO_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="DateTime" Name="Datein" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="1000" />
+    <Property Type="Double" Name="Column1" Nullable="true" />
+  </ComplexType>
+</Schema>
