@@ -88,6 +88,7 @@ namespace DTO
             DataTable dt = bus.FindBillDayBetweenDay(FirstDay , SecondDay);
             return ConvertDataTableToBill(dt);
         }
+       
 
         public Bill FindBillForTable(string idtb)
         {
@@ -103,5 +104,6 @@ namespace DTO
             DataTable dt = CRUD.Instance.Find(this);
             return new Bill(dt.Rows[0]);
         }
+        
     }
 }

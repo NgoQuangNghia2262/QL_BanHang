@@ -28,27 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.iconPictureBox14 = new FontAwesome.Sharp.IconPictureBox();
             this.label35 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tổngQuanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýHàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.iconPictureBox15 = new FontAwesome.Sharp.IconPictureBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.iconPictureBox16 = new FontAwesome.Sharp.IconPictureBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.iconPictureBox17 = new FontAwesome.Sharp.IconPictureBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.iconPictureBox18 = new FontAwesome.Sharp.IconPictureBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
@@ -107,58 +120,34 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.nplTopFood = new System.Windows.Forms.Panel();
+            this.flpTopFood = new System.Windows.Forms.FlowLayoutPanel();
             this.label29 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.iconPictureBox15 = new FontAwesome.Sharp.IconPictureBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label37 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.iconPictureBox16 = new FontAwesome.Sharp.IconPictureBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.iconPictureBox17 = new FontAwesome.Sharp.IconPictureBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label41 = new System.Windows.Forms.Label();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.iconPictureBox18 = new FontAwesome.Sharp.IconPictureBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.label43 = new System.Windows.Forms.Label();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.iconPictureBox19 = new FontAwesome.Sharp.IconPictureBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label52 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.iconPictureBox19 = new FontAwesome.Sharp.IconPictureBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.mtbDay = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox15)).BeginInit();
+            this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).BeginInit();
+            this.panel27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox17)).BeginInit();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -187,19 +176,7 @@
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox13)).BeginInit();
             this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox15)).BeginInit();
-            this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).BeginInit();
-            this.panel27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox17)).BeginInit();
-            this.panel29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox18)).BeginInit();
-            this.panel31.SuspendLayout();
+            this.nplTopFood.SuspendLayout();
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel33.SuspendLayout();
@@ -275,6 +252,15 @@
             this.label35.TabIndex = 1;
             this.label35.Text = "đã thanh toán đơn hàn TRX112";
             // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.LightGray;
+            this.panel22.Location = new System.Drawing.Point(12, 49);
+            this.panel22.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(442, 1);
+            this.panel22.TabIndex = 3;
+            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -285,78 +271,231 @@
             this.label34.TabIndex = 0;
             this.label34.Text = "Admin";
             // 
-            // menuStrip1
+            // panel23
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.tổngQuanToolStripMenuItem,
-            this.hàngHóaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1451, 31);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
+            this.panel23.Controls.Add(this.iconPictureBox15);
+            this.panel23.Controls.Add(this.label36);
+            this.panel23.Controls.Add(this.panel24);
+            this.panel23.Controls.Add(this.label37);
+            this.panel23.Location = new System.Drawing.Point(0, 96);
+            this.panel23.Margin = new System.Windows.Forms.Padding(0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(461, 54);
+            this.panel23.TabIndex = 1;
             // 
-            // toolStripMenuItem1
+            // iconPictureBox15
             // 
-            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(47, 27);
-            this.toolStripMenuItem1.Text = " ";
+            this.iconPictureBox15.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox15.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.iconPictureBox15.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox15.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox15.Location = new System.Drawing.Point(16, 11);
+            this.iconPictureBox15.Name = "iconPictureBox15";
+            this.iconPictureBox15.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox15.TabIndex = 2;
+            this.iconPictureBox15.TabStop = false;
             // 
-            // tổngQuanToolStripMenuItem
+            // label36
             // 
-            this.tổngQuanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tổngQuanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tổngQuanToolStripMenuItem.Name = "tổngQuanToolStripMenuItem";
-            this.tổngQuanToolStripMenuItem.Size = new System.Drawing.Size(110, 27);
-            this.tổngQuanToolStripMenuItem.Text = "Tổng Quan";
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(102, 17);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(189, 16);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "đã thanh toán đơn hàn TRX112";
             // 
-            // hàngHóaToolStripMenuItem
+            // panel24
             // 
-            this.hàngHóaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýHàngHóaToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
-            this.hàngHóaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.hàngHóaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.hàngHóaToolStripMenuItem.Name = "hàngHóaToolStripMenuItem";
-            this.hàngHóaToolStripMenuItem.Size = new System.Drawing.Size(101, 27);
-            this.hàngHóaToolStripMenuItem.Text = "Hàng Hóa";
+            this.panel24.BackColor = System.Drawing.Color.LightGray;
+            this.panel24.Location = new System.Drawing.Point(12, 49);
+            this.panel24.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(442, 1);
+            this.panel24.TabIndex = 3;
             // 
-            // quảnLýHàngHóaToolStripMenuItem
+            // label37
             // 
-            this.quảnLýHàngHóaToolStripMenuItem.Name = "quảnLýHàngHóaToolStripMenuItem";
-            this.quảnLýHàngHóaToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
-            this.quảnLýHàngHóaToolStripMenuItem.Text = "Quản lý hàng hóa";
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(56, 19);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(50, 16);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Admin";
             // 
-            // toolStripMenuItem2
+            // panel25
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(231, 28);
-            this.toolStripMenuItem2.Text = "...";
+            this.panel25.Controls.Add(this.iconPictureBox16);
+            this.panel25.Controls.Add(this.label38);
+            this.panel25.Controls.Add(this.panel26);
+            this.panel25.Controls.Add(this.label39);
+            this.panel25.Location = new System.Drawing.Point(0, 150);
+            this.panel25.Margin = new System.Windows.Forms.Padding(0);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(461, 54);
+            this.panel25.TabIndex = 1;
             // 
-            // toolStripMenuItem3
+            // iconPictureBox16
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(231, 28);
-            this.toolStripMenuItem3.Text = "...";
+            this.iconPictureBox16.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox16.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.iconPictureBox16.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox16.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox16.Location = new System.Drawing.Point(16, 11);
+            this.iconPictureBox16.Name = "iconPictureBox16";
+            this.iconPictureBox16.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox16.TabIndex = 2;
+            this.iconPictureBox16.TabStop = false;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(102, 17);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(189, 16);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.LightGray;
+            this.panel26.Location = new System.Drawing.Point(12, 49);
+            this.panel26.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(442, 1);
+            this.panel26.TabIndex = 3;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(56, 19);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(50, 16);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "Admin";
+            // 
+            // panel27
+            // 
+            this.panel27.Controls.Add(this.iconPictureBox17);
+            this.panel27.Controls.Add(this.label40);
+            this.panel27.Controls.Add(this.panel28);
+            this.panel27.Controls.Add(this.label41);
+            this.panel27.Location = new System.Drawing.Point(0, 204);
+            this.panel27.Margin = new System.Windows.Forms.Padding(0);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(461, 54);
+            this.panel27.TabIndex = 1;
+            // 
+            // iconPictureBox17
+            // 
+            this.iconPictureBox17.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox17.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.iconPictureBox17.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox17.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox17.Location = new System.Drawing.Point(16, 11);
+            this.iconPictureBox17.Name = "iconPictureBox17";
+            this.iconPictureBox17.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox17.TabIndex = 2;
+            this.iconPictureBox17.TabStop = false;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(102, 17);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(189, 16);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.LightGray;
+            this.panel28.Location = new System.Drawing.Point(12, 49);
+            this.panel28.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(442, 1);
+            this.panel28.TabIndex = 3;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(56, 19);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(50, 16);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Admin";
+            // 
+            // panel29
+            // 
+            this.panel29.Controls.Add(this.iconPictureBox18);
+            this.panel29.Controls.Add(this.label42);
+            this.panel29.Controls.Add(this.panel30);
+            this.panel29.Controls.Add(this.label43);
+            this.panel29.Location = new System.Drawing.Point(0, 258);
+            this.panel29.Margin = new System.Windows.Forms.Padding(0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(461, 54);
+            this.panel29.TabIndex = 1;
+            // 
+            // iconPictureBox18
+            // 
+            this.iconPictureBox18.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox18.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.iconPictureBox18.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconPictureBox18.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox18.Location = new System.Drawing.Point(16, 11);
+            this.iconPictureBox18.Name = "iconPictureBox18";
+            this.iconPictureBox18.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox18.TabIndex = 2;
+            this.iconPictureBox18.TabStop = false;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(102, 17);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(189, 16);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.LightGray;
+            this.panel30.Location = new System.Drawing.Point(12, 49);
+            this.panel30.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(442, 1);
+            this.panel30.TabIndex = 3;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(56, 19);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(50, 16);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "Admin";
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(0, 64);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh Thu";
-            this.chart1.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Doanh Thu";
+            this.chart1.Series.Add(series7);
             this.chart1.Size = new System.Drawing.Size(897, 249);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "Doanh Thu";
@@ -539,7 +678,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(220, 71);
             this.panel5.TabIndex = 9;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // iconPictureBox2
             // 
@@ -1026,105 +1164,24 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "Doanh Thu Trong Tháng Này";
             // 
-            // panel18
+            // nplTopFood
             // 
-            this.panel18.BackColor = System.Drawing.Color.White;
-            this.panel18.Controls.Add(this.comboBox2);
-            this.panel18.Controls.Add(this.flowLayoutPanel1);
-            this.panel18.Controls.Add(this.label29);
-            this.panel18.Location = new System.Drawing.Point(31, 537);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(339, 333);
-            this.panel18.TabIndex = 13;
+            this.nplTopFood.BackColor = System.Drawing.Color.White;
+            this.nplTopFood.Controls.Add(this.mtbDay);
+            this.nplTopFood.Controls.Add(this.flpTopFood);
+            this.nplTopFood.Controls.Add(this.label29);
+            this.nplTopFood.Location = new System.Drawing.Point(31, 537);
+            this.nplTopFood.Name = "nplTopFood";
+            this.nplTopFood.Size = new System.Drawing.Size(339, 333);
+            this.nplTopFood.TabIndex = 13;
             // 
-            // comboBox2
+            // flpTopFood
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(206, 23);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 26);
-            this.comboBox2.TabIndex = 9;
-            this.comboBox2.Text = "Tháng Này";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.panel19);
-            this.flowLayoutPanel1.Controls.Add(this.panel20);
-            this.flowLayoutPanel1.Controls.Add(this.panel31);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 55);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 275);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.SystemColors.Control;
-            this.panel19.Controls.Add(this.label31);
-            this.panel19.Controls.Add(this.label30);
-            this.panel19.Location = new System.Drawing.Point(3, 3);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(329, 43);
-            this.panel19.TabIndex = 0;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Red;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label31.Location = new System.Drawing.Point(280, 11);
-            this.label31.Name = "label31";
-            this.label31.Padding = new System.Windows.Forms.Padding(3);
-            this.label31.Size = new System.Drawing.Size(23, 24);
-            this.label31.TabIndex = 1;
-            this.label31.Text = "2";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(9, 15);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(141, 20);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Gà Sốt Tiêu Xanh";
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.label33);
-            this.panel20.Controls.Add(this.label32);
-            this.panel20.Location = new System.Drawing.Point(3, 52);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(329, 43);
-            this.panel20.TabIndex = 0;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Red;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label33.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label33.Location = new System.Drawing.Point(280, 7);
-            this.label33.Name = "label33";
-            this.label33.Padding = new System.Windows.Forms.Padding(3);
-            this.label33.Size = new System.Drawing.Size(23, 24);
-            this.label33.TabIndex = 1;
-            this.label33.Text = "1";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label32.Location = new System.Drawing.Point(9, 11);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(88, 20);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Cơm Rang";
+            this.flpTopFood.AutoScroll = true;
+            this.flpTopFood.Location = new System.Drawing.Point(4, 55);
+            this.flpTopFood.Name = "flpTopFood";
+            this.flpTopFood.Size = new System.Drawing.Size(332, 275);
+            this.flpTopFood.TabIndex = 0;
             // 
             // label29
             // 
@@ -1135,261 +1192,6 @@
             this.label29.Size = new System.Drawing.Size(149, 18);
             this.label29.TabIndex = 8;
             this.label29.Text = "Mặt hàng bán chạy";
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.LightGray;
-            this.panel22.Location = new System.Drawing.Point(12, 49);
-            this.panel22.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(442, 1);
-            this.panel22.TabIndex = 3;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.iconPictureBox15);
-            this.panel23.Controls.Add(this.label36);
-            this.panel23.Controls.Add(this.panel24);
-            this.panel23.Controls.Add(this.label37);
-            this.panel23.Location = new System.Drawing.Point(0, 96);
-            this.panel23.Margin = new System.Windows.Forms.Padding(0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(461, 54);
-            this.panel23.TabIndex = 1;
-            // 
-            // iconPictureBox15
-            // 
-            this.iconPictureBox15.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox15.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.iconPictureBox15.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox15.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox15.Location = new System.Drawing.Point(16, 11);
-            this.iconPictureBox15.Name = "iconPictureBox15";
-            this.iconPictureBox15.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox15.TabIndex = 2;
-            this.iconPictureBox15.TabStop = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(102, 17);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(189, 16);
-            this.label36.TabIndex = 1;
-            this.label36.Text = "đã thanh toán đơn hàn TRX112";
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.LightGray;
-            this.panel24.Location = new System.Drawing.Point(12, 49);
-            this.panel24.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(442, 1);
-            this.panel24.TabIndex = 3;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(56, 19);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(50, 16);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Admin";
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.iconPictureBox16);
-            this.panel25.Controls.Add(this.label38);
-            this.panel25.Controls.Add(this.panel26);
-            this.panel25.Controls.Add(this.label39);
-            this.panel25.Location = new System.Drawing.Point(0, 150);
-            this.panel25.Margin = new System.Windows.Forms.Padding(0);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(461, 54);
-            this.panel25.TabIndex = 1;
-            // 
-            // iconPictureBox16
-            // 
-            this.iconPictureBox16.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox16.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.iconPictureBox16.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox16.Location = new System.Drawing.Point(16, 11);
-            this.iconPictureBox16.Name = "iconPictureBox16";
-            this.iconPictureBox16.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox16.TabIndex = 2;
-            this.iconPictureBox16.TabStop = false;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(102, 17);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(189, 16);
-            this.label38.TabIndex = 1;
-            this.label38.Text = "đã thanh toán đơn hàn TRX112";
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.LightGray;
-            this.panel26.Location = new System.Drawing.Point(12, 49);
-            this.panel26.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(442, 1);
-            this.panel26.TabIndex = 3;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(56, 19);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(50, 16);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "Admin";
-            // 
-            // panel27
-            // 
-            this.panel27.Controls.Add(this.iconPictureBox17);
-            this.panel27.Controls.Add(this.label40);
-            this.panel27.Controls.Add(this.panel28);
-            this.panel27.Controls.Add(this.label41);
-            this.panel27.Location = new System.Drawing.Point(0, 204);
-            this.panel27.Margin = new System.Windows.Forms.Padding(0);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(461, 54);
-            this.panel27.TabIndex = 1;
-            // 
-            // iconPictureBox17
-            // 
-            this.iconPictureBox17.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox17.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.iconPictureBox17.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox17.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox17.Location = new System.Drawing.Point(16, 11);
-            this.iconPictureBox17.Name = "iconPictureBox17";
-            this.iconPictureBox17.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox17.TabIndex = 2;
-            this.iconPictureBox17.TabStop = false;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(102, 17);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(189, 16);
-            this.label40.TabIndex = 1;
-            this.label40.Text = "đã thanh toán đơn hàn TRX112";
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.LightGray;
-            this.panel28.Location = new System.Drawing.Point(12, 49);
-            this.panel28.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(442, 1);
-            this.panel28.TabIndex = 3;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(56, 19);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(50, 16);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "Admin";
-            // 
-            // panel29
-            // 
-            this.panel29.Controls.Add(this.iconPictureBox18);
-            this.panel29.Controls.Add(this.label42);
-            this.panel29.Controls.Add(this.panel30);
-            this.panel29.Controls.Add(this.label43);
-            this.panel29.Location = new System.Drawing.Point(0, 258);
-            this.panel29.Margin = new System.Windows.Forms.Padding(0);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(461, 54);
-            this.panel29.TabIndex = 1;
-            // 
-            // iconPictureBox18
-            // 
-            this.iconPictureBox18.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox18.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.iconPictureBox18.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.iconPictureBox18.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox18.Location = new System.Drawing.Point(16, 11);
-            this.iconPictureBox18.Name = "iconPictureBox18";
-            this.iconPictureBox18.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox18.TabIndex = 2;
-            this.iconPictureBox18.TabStop = false;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(102, 17);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(189, 16);
-            this.label42.TabIndex = 1;
-            this.label42.Text = "đã thanh toán đơn hàn TRX112";
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.LightGray;
-            this.panel30.Location = new System.Drawing.Point(12, 49);
-            this.panel30.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(442, 1);
-            this.panel30.TabIndex = 3;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(56, 19);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(50, 16);
-            this.label43.TabIndex = 0;
-            this.label43.Text = "Admin";
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.SystemColors.Control;
-            this.panel31.Controls.Add(this.label44);
-            this.panel31.Controls.Add(this.label45);
-            this.panel31.Location = new System.Drawing.Point(3, 101);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(329, 43);
-            this.panel31.TabIndex = 0;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Red;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label44.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label44.Location = new System.Drawing.Point(280, 7);
-            this.label44.Name = "label44";
-            this.label44.Padding = new System.Windows.Forms.Padding(3);
-            this.label44.Size = new System.Drawing.Size(23, 24);
-            this.label44.TabIndex = 1;
-            this.label44.Text = "1";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label45.Location = new System.Drawing.Point(9, 11);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(75, 20);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "Bánh Mỳ";
             // 
             // panel32
             // 
@@ -1402,22 +1204,44 @@
             this.panel32.Size = new System.Drawing.Size(580, 329);
             this.panel32.TabIndex = 14;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.LightGray;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(431, 19);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 26);
+            this.comboBox3.TabIndex = 9;
+            this.comboBox3.Text = "Tháng Này";
+            // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart2.Legends.Add(legend8);
             this.chart2.Location = new System.Drawing.Point(15, 57);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chart2.Series.Add(series8);
             this.chart2.Size = new System.Drawing.Size(562, 256);
             this.chart2.TabIndex = 0;
             this.chart2.Text = " ";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(29, 10);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(224, 18);
+            this.label52.TabIndex = 8;
+            this.label52.Text = "Doanh Thu Trong Tháng Này";
             // 
             // panel33
             // 
@@ -1434,57 +1258,6 @@
             this.panel33.Size = new System.Drawing.Size(1435, 44);
             this.panel33.TabIndex = 15;
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label46.Location = new System.Drawing.Point(473, 17);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(159, 16);
-            this.label46.TabIndex = 0;
-            this.label46.Text = "@ 2023 365 Software JSC";
-            this.label46.Click += new System.EventHandler(this.label46_Click);
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(692, 15);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(10, 16);
-            this.label47.TabIndex = 1;
-            this.label47.Text = "|";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label48.Location = new System.Drawing.Point(708, 17);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(100, 16);
-            this.label48.TabIndex = 0;
-            this.label48.Text = "Terms &  Privacy";
-            this.label48.Click += new System.EventHandler(this.label46_Click);
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(834, 15);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(10, 16);
-            this.label49.TabIndex = 1;
-            this.label49.Text = "|";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label50.Location = new System.Drawing.Point(876, 17);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(80, 16);
-            this.label50.TabIndex = 0;
-            this.label50.Text = "Hỗ trợ 24/7 : ";
-            this.label50.Click += new System.EventHandler(this.label46_Click);
-            // 
             // iconPictureBox19
             // 
             this.iconPictureBox19.BackColor = System.Drawing.Color.White;
@@ -1499,6 +1272,34 @@
             this.iconPictureBox19.TabIndex = 2;
             this.iconPictureBox19.TabStop = false;
             // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(834, 15);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(10, 16);
+            this.label49.TabIndex = 1;
+            this.label49.Text = "|";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(692, 15);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(10, 16);
+            this.label47.TabIndex = 1;
+            this.label47.Text = "|";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label50.Location = new System.Drawing.Point(876, 17);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(80, 16);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Hỗ trợ 24/7 : ";
+            // 
             // label51
             // 
             this.label51.AutoSize = true;
@@ -1508,29 +1309,37 @@
             this.label51.Size = new System.Drawing.Size(75, 16);
             this.label51.TabIndex = 0;
             this.label51.Text = "1900 4515";
-            this.label51.Click += new System.EventHandler(this.label46_Click);
             // 
-            // label52
+            // label48
             // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(29, 10);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(224, 18);
-            this.label52.TabIndex = 8;
-            this.label52.Text = "Doanh Thu Trong Tháng Này";
+            this.label48.AutoSize = true;
+            this.label48.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label48.Location = new System.Drawing.Point(708, 17);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(100, 16);
+            this.label48.TabIndex = 0;
+            this.label48.Text = "Terms &  Privacy";
             // 
-            // comboBox3
+            // label46
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(431, 19);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 26);
-            this.comboBox3.TabIndex = 9;
-            this.comboBox3.Text = "Tháng Này";
+            this.label46.AutoSize = true;
+            this.label46.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label46.Location = new System.Drawing.Point(473, 17);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(159, 16);
+            this.label46.TabIndex = 0;
+            this.label46.Text = "@ 2023 365 Software JSC";
+            // 
+            // mtbDay
+            // 
+            this.mtbDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtbDay.Location = new System.Drawing.Point(217, 24);
+            this.mtbDay.Mask = "00/00/0000";
+            this.mtbDay.Name = "mtbDay";
+            this.mtbDay.Size = new System.Drawing.Size(119, 22);
+            this.mtbDay.TabIndex = 9;
+            this.mtbDay.Text = "04012023";
+            this.mtbDay.ValidatingType = typeof(System.DateTime);
             // 
             // FormAdmin
             // 
@@ -1540,7 +1349,7 @@
             this.ClientSize = new System.Drawing.Size(1451, 932);
             this.Controls.Add(this.panel33);
             this.Controls.Add(this.panel32);
-            this.Controls.Add(this.panel18);
+            this.Controls.Add(this.nplTopFood);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel15);
@@ -1556,7 +1365,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -1566,8 +1374,18 @@
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox15)).EndInit();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).EndInit();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox17)).EndInit();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1610,27 +1428,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox13)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox15)).EndInit();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).EndInit();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox17)).EndInit();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox18)).EndInit();
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
+            this.nplTopFood.ResumeLayout(false);
+            this.nplTopFood.PerformLayout();
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -1638,19 +1437,11 @@
             this.panel33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox19)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tổngQuanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hàngHóaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýHàngHóaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -1711,16 +1502,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Panel nplTopFood;
+        private System.Windows.Forms.FlowLayoutPanel flpTopFood;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Label label35;
@@ -1747,9 +1530,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Panel panel33;
@@ -1762,5 +1542,6 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.MaskedTextBox mtbDay;
     }
 }

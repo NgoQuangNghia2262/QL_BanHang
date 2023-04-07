@@ -71,7 +71,7 @@ namespace DAL
         }
         public DataTable FindBillDayBetweenToday(DateTime FirstDay , DateTime SecondDay)
         {
-            return DataProvider.Instance.ExecuteQuery($"select * from Bill where DateIn between '{FirstDay.ToString("yyyy/MM/dd")}' and '{SecondDay.AddDays(1).ToString("yyyy/MM/dd")}'");
+            return DataProvider.Instance.ExecuteQuery($"select * from Bill where DateIn between '{FirstDay.ToString("dd/MM/yyyy")}' and '{SecondDay.AddDays(1).ToString("dd/MM/yyyy")}'");
         }
 
 

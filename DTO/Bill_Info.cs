@@ -58,6 +58,10 @@ namespace DTO
                 this.IdBill = int.Parse(idBill);
                 dt = CRUD.Instance.Find(this); 
             }
+            return ConvertDataTableToDTO(dt);
+        }
+        private Bill_Info[] ConvertDataTableToDTO(DataTable dt)
+        {
             Bill_Info[] BillInfos = new Bill_Info[dt.Rows.Count];
             for (int i = 0; i < BillInfos.Length; i++)
             {
@@ -65,12 +69,23 @@ namespace DTO
             }
             return BillInfos;
         }
-        
         public void Save()
         {
             CRUD.Instance.Save(this);
         }
-
+        public Bill_Info[] getTop5FoodDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
+        {
+            Bill_Info_BUS bus = new Bill_Info_BUS();
+            DataTable dt = bus.getTopFoodDayBetweenDay(FirstDay, SecondDay);
+            Bill_Info[] BillInfos = new Bill_Info[dt.Rows.Count];
+            for (int i = 0; i < BillInfos.Length; i++)
+            {
+                BillInfos[i] = new Bill_Info();
+                BillInfos[i].Amount = int.Parse(dt.Rows[i]["Amount"].ToString());
+                BillInfos[i].NameF = dt.Rows[i]["NameF"].ToString();
+            }
+            return BillInfos;
+        }
 
 
     }
