@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -85,23 +85,23 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbDonHang = new System.Windows.Forms.Label();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbTraDo = new System.Windows.Forms.Label();
             this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbDoanhThu = new System.Windows.Forms.Label();
             this.iconPictureBox8 = new FontAwesome.Sharp.IconPictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbGiaTriTraDo = new System.Windows.Forms.Label();
             this.iconPictureBox9 = new FontAwesome.Sharp.IconPictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbTienMat = new System.Windows.Forms.Label();
             this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
@@ -113,18 +113,17 @@
             this.iconPictureBox11 = new FontAwesome.Sharp.IconPictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lbSLBan = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lbBanSD = new System.Windows.Forms.Label();
             this.iconPictureBox13 = new FontAwesome.Sharp.IconPictureBox();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.nplTopFood = new System.Windows.Forms.Panel();
+            this.mtbDay = new System.Windows.Forms.MaskedTextBox();
             this.flpTopFood = new System.Windows.Forms.FlowLayoutPanel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label52 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
@@ -135,7 +134,7 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.mtbDay = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -485,17 +484,17 @@
             // 
             // chart1
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 64);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Doanh Thu";
-            this.chart1.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Doanh Thu";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(897, 249);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "Doanh Thu";
@@ -727,7 +726,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.label19);
-            this.panel9.Controls.Add(this.label11);
+            this.panel9.Controls.Add(this.lbDonHang);
             this.panel9.Controls.Add(this.iconPictureBox6);
             this.panel9.Location = new System.Drawing.Point(31, 50);
             this.panel9.Margin = new System.Windows.Forms.Padding(1);
@@ -746,16 +745,16 @@
             this.label19.TabIndex = 2;
             this.label19.Text = "ĐƠN HÀNG";
             // 
-            // label11
+            // lbDonHang
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label11.Location = new System.Drawing.Point(72, 7);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(19, 20);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "0";
+            this.lbDonHang.AutoSize = true;
+            this.lbDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDonHang.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbDonHang.Location = new System.Drawing.Point(72, 7);
+            this.lbDonHang.Name = "lbDonHang";
+            this.lbDonHang.Size = new System.Drawing.Size(19, 20);
+            this.lbDonHang.TabIndex = 1;
+            this.lbDonHang.Text = "0";
             // 
             // iconPictureBox6
             // 
@@ -775,7 +774,7 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.label20);
-            this.panel10.Controls.Add(this.label12);
+            this.panel10.Controls.Add(this.lbTraDo);
             this.panel10.Controls.Add(this.iconPictureBox7);
             this.panel10.Location = new System.Drawing.Point(31, 113);
             this.panel10.Margin = new System.Windows.Forms.Padding(1);
@@ -794,16 +793,16 @@
             this.label20.TabIndex = 2;
             this.label20.Text = "HỦY/TRẢ ĐỒ";
             // 
-            // label12
+            // lbTraDo
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label12.Location = new System.Drawing.Point(72, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(19, 20);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "0";
+            this.lbTraDo.AutoSize = true;
+            this.lbTraDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTraDo.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbTraDo.Location = new System.Drawing.Point(72, 6);
+            this.lbTraDo.Name = "lbTraDo";
+            this.lbTraDo.Size = new System.Drawing.Size(19, 20);
+            this.lbTraDo.TabIndex = 1;
+            this.lbTraDo.Text = "0";
             // 
             // iconPictureBox7
             // 
@@ -823,7 +822,7 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.label25);
-            this.panel11.Controls.Add(this.label13);
+            this.panel11.Controls.Add(this.lbDoanhThu);
             this.panel11.Controls.Add(this.iconPictureBox8);
             this.panel11.Location = new System.Drawing.Point(376, 50);
             this.panel11.Margin = new System.Windows.Forms.Padding(1);
@@ -842,16 +841,16 @@
             this.label25.TabIndex = 2;
             this.label25.Text = "DOANH THU";
             // 
-            // label13
+            // lbDoanhThu
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label13.Location = new System.Drawing.Point(69, 10);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 20);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "0";
+            this.lbDoanhThu.AutoSize = true;
+            this.lbDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDoanhThu.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbDoanhThu.Location = new System.Drawing.Point(69, 10);
+            this.lbDoanhThu.Name = "lbDoanhThu";
+            this.lbDoanhThu.Size = new System.Drawing.Size(19, 20);
+            this.lbDoanhThu.TabIndex = 1;
+            this.lbDoanhThu.Text = "0";
             // 
             // iconPictureBox8
             // 
@@ -871,7 +870,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.label22);
-            this.panel12.Controls.Add(this.label14);
+            this.panel12.Controls.Add(this.lbGiaTriTraDo);
             this.panel12.Controls.Add(this.iconPictureBox9);
             this.panel12.Location = new System.Drawing.Point(376, 113);
             this.panel12.Margin = new System.Windows.Forms.Padding(1);
@@ -890,16 +889,16 @@
             this.label22.TabIndex = 2;
             this.label22.Text = "GIÁ TRỊ TRẢ LẠI";
             // 
-            // label14
+            // lbGiaTriTraDo
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label14.Location = new System.Drawing.Point(69, 6);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(19, 20);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "0";
+            this.lbGiaTriTraDo.AutoSize = true;
+            this.lbGiaTriTraDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGiaTriTraDo.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbGiaTriTraDo.Location = new System.Drawing.Point(69, 6);
+            this.lbGiaTriTraDo.Name = "lbGiaTriTraDo";
+            this.lbGiaTriTraDo.Size = new System.Drawing.Size(19, 20);
+            this.lbGiaTriTraDo.TabIndex = 1;
+            this.lbGiaTriTraDo.Text = "0";
             // 
             // iconPictureBox9
             // 
@@ -919,7 +918,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Controls.Add(this.label26);
-            this.panel13.Controls.Add(this.label15);
+            this.panel13.Controls.Add(this.lbTienMat);
             this.panel13.Controls.Add(this.iconPictureBox10);
             this.panel13.Location = new System.Drawing.Point(739, 50);
             this.panel13.Margin = new System.Windows.Forms.Padding(1);
@@ -938,16 +937,16 @@
             this.label26.TabIndex = 2;
             this.label26.Text = "TIỀN MẶT";
             // 
-            // label15
+            // lbTienMat
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label15.Location = new System.Drawing.Point(79, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(19, 20);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "0";
+            this.lbTienMat.AutoSize = true;
+            this.lbTienMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienMat.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbTienMat.Location = new System.Drawing.Point(79, 10);
+            this.lbTienMat.Name = "lbTienMat";
+            this.lbTienMat.Size = new System.Drawing.Size(19, 20);
+            this.lbTienMat.TabIndex = 1;
+            this.lbTienMat.Text = "0";
             // 
             // iconPictureBox10
             // 
@@ -1063,9 +1062,9 @@
             // 
             this.panel16.BackColor = System.Drawing.Color.White;
             this.panel16.Controls.Add(this.label21);
-            this.panel16.Controls.Add(this.label28);
+            this.panel16.Controls.Add(this.lbSLBan);
             this.panel16.Controls.Add(this.label27);
-            this.panel16.Controls.Add(this.label18);
+            this.panel16.Controls.Add(this.lbBanSD);
             this.panel16.Controls.Add(this.iconPictureBox13);
             this.panel16.Location = new System.Drawing.Point(1084, 113);
             this.panel16.Margin = new System.Windows.Forms.Padding(1);
@@ -1084,16 +1083,16 @@
             this.label21.TabIndex = 2;
             this.label21.Text = "BÀN SỬ DỤNG";
             // 
-            // label28
+            // lbSLBan
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label28.Location = new System.Drawing.Point(108, 6);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(19, 20);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "0";
+            this.lbSLBan.AutoSize = true;
+            this.lbSLBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSLBan.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbSLBan.Location = new System.Drawing.Point(108, 6);
+            this.lbSLBan.Name = "lbSLBan";
+            this.lbSLBan.Size = new System.Drawing.Size(19, 20);
+            this.lbSLBan.TabIndex = 1;
+            this.lbSLBan.Text = "0";
             // 
             // label27
             // 
@@ -1106,16 +1105,16 @@
             this.label27.TabIndex = 1;
             this.label27.Text = "/";
             // 
-            // label18
+            // lbBanSD
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label18.Location = new System.Drawing.Point(76, 6);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(19, 20);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "0";
+            this.lbBanSD.AutoSize = true;
+            this.lbBanSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBanSD.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbBanSD.Location = new System.Drawing.Point(76, 6);
+            this.lbBanSD.Name = "lbBanSD";
+            this.lbBanSD.Size = new System.Drawing.Size(19, 20);
+            this.lbBanSD.TabIndex = 1;
+            this.lbBanSD.Text = "0";
             // 
             // iconPictureBox13
             // 
@@ -1134,25 +1133,12 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.White;
-            this.panel17.Controls.Add(this.comboBox1);
             this.panel17.Controls.Add(this.label10);
             this.panel17.Controls.Add(this.chart1);
             this.panel17.Location = new System.Drawing.Point(31, 215);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(925, 316);
             this.panel17.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(776, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Tháng Này";
             // 
             // label10
             // 
@@ -1167,13 +1153,25 @@
             // nplTopFood
             // 
             this.nplTopFood.BackColor = System.Drawing.Color.White;
-            this.nplTopFood.Controls.Add(this.mtbDay);
             this.nplTopFood.Controls.Add(this.flpTopFood);
             this.nplTopFood.Controls.Add(this.label29);
             this.nplTopFood.Location = new System.Drawing.Point(31, 537);
             this.nplTopFood.Name = "nplTopFood";
             this.nplTopFood.Size = new System.Drawing.Size(339, 333);
             this.nplTopFood.TabIndex = 13;
+            // 
+            // mtbDay
+            // 
+            this.mtbDay.BackColor = System.Drawing.Color.White;
+            this.mtbDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtbDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbDay.Location = new System.Drawing.Point(31, 12);
+            this.mtbDay.Mask = "00/00/0000";
+            this.mtbDay.Name = "mtbDay";
+            this.mtbDay.Size = new System.Drawing.Size(119, 27);
+            this.mtbDay.TabIndex = 9;
+            this.mtbDay.Text = "04012023";
+            this.mtbDay.ValidatingType = typeof(System.DateTime);
             // 
             // flpTopFood
             // 
@@ -1196,7 +1194,6 @@
             // panel32
             // 
             this.panel32.BackColor = System.Drawing.Color.White;
-            this.panel32.Controls.Add(this.comboBox3);
             this.panel32.Controls.Add(this.chart2);
             this.panel32.Controls.Add(this.label52);
             this.panel32.Location = new System.Drawing.Point(376, 538);
@@ -1204,31 +1201,19 @@
             this.panel32.Size = new System.Drawing.Size(580, 329);
             this.panel32.TabIndex = 14;
             // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(431, 19);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 26);
-            this.comboBox3.TabIndex = 9;
-            this.comboBox3.Text = "Tháng Này";
-            // 
             // chart2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(15, 57);
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart2.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(562, 256);
             this.chart2.TabIndex = 0;
             this.chart2.Text = " ";
@@ -1330,16 +1315,15 @@
             this.label46.TabIndex = 0;
             this.label46.Text = "@ 2023 365 Software JSC";
             // 
-            // mtbDay
+            // button1
             // 
-            this.mtbDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtbDay.Location = new System.Drawing.Point(217, 24);
-            this.mtbDay.Mask = "00/00/0000";
-            this.mtbDay.Name = "mtbDay";
-            this.mtbDay.Size = new System.Drawing.Size(119, 22);
-            this.mtbDay.TabIndex = 9;
-            this.mtbDay.Text = "04012023";
-            this.mtbDay.ValidatingType = typeof(System.DateTime);
+            this.button1.Location = new System.Drawing.Point(157, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 27);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Xem";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormAdmin
             // 
@@ -1347,6 +1331,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1451, 932);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.mtbDay);
             this.Controls.Add(this.panel33);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.nplTopFood);
@@ -1437,6 +1423,7 @@
             this.panel33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox19)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1474,24 +1461,23 @@
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbDonHang;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbTraDo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox7;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbDoanhThu;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox8;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbGiaTriTraDo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox9;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbTienMat;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox10;
         private System.Windows.Forms.Label label17;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox12;
         private System.Windows.Forms.Label label16;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox11;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbBanSD;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox13;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
@@ -1500,7 +1486,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lbSLBan;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel nplTopFood;
         private System.Windows.Forms.FlowLayoutPanel flpTopFood;
@@ -1540,8 +1526,8 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.MaskedTextBox mtbDay;
+        private System.Windows.Forms.Button button1;
     }
 }

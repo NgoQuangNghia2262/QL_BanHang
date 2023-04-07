@@ -11,17 +11,14 @@ namespace BUS
     public class Bill_BUS
     {
         private Bill_DAL DAL = new Bill_DAL();
-        public double getTotal(string idbill)
+        public double getTotal(int idbill)
         {
             try
             {
-                int i = 0;
-                if (int.TryParse(idbill, out i))
-                {
+                
                     double result = Convert.ToDouble(DAL.getTotal(idbill));
                     return result;
-                }
-                else { throw new Exception("Parameters phải là 1 id của Bill"); }
+               
             }
             catch (InvalidCastException) { return 0; }
         }
@@ -38,7 +35,7 @@ namespace BUS
         {
             if(FirstDay <= SecondDay)
             {
-                return DAL.FindBillDayBetweenToday(FirstDay,SecondDay);
+                return DAL.FindBillDayBetweenDay(FirstDay,SecondDay);
             }
             else { throw new Exception("Ngày truyền vào phải nhỏ hơn ngày hôm nay"); }
         }

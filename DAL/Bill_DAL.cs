@@ -60,7 +60,7 @@ namespace DAL
         }
 
         
-        public object getTotal(string idbill)
+        public object getTotal(int idbill)
         {
             string query = $"SELECT SUM(Food.Price*Bill_Info.Amount)FROM Bill,Bill_Info,Food where Bill.Id = Bill_Info.IdBill and bill.Id = {idbill} and Bill_Info.NameF = Food.NameF\r\n";
             return DataProvider.Instance.ExecutesScalar(query);
@@ -69,7 +69,7 @@ namespace DAL
         {
             return DataProvider.Instance.ExecuteQuery($"select * from Bill where idtb = {IdTb} and status = 0");
         }
-        public DataTable FindBillDayBetweenToday(DateTime FirstDay , DateTime SecondDay)
+        public DataTable FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
         {
             return DataProvider.Instance.ExecuteQuery($"select * from Bill where DateIn between '{FirstDay.ToString("dd/MM/yyyy")}' and '{SecondDay.AddDays(1).ToString("dd/MM/yyyy")}'");
         }

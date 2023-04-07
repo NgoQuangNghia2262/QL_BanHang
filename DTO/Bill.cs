@@ -59,7 +59,7 @@ namespace DTO
             get
             {
                 Bill_BUS bus = new Bill_BUS();
-                return bus.getTotal(Id.ToString());
+                return bus.getTotal(Id);
             }
         }
 

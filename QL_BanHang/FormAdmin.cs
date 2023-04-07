@@ -15,13 +15,40 @@ namespace QL_BanHang
     public partial class FormAdmin : Form
     {
         Bill_Info bif = new Bill_Info();
+        Bill bill = new Bill();
         public FormAdmin()
         {
             InitializeComponent();
+            string s = mtbDay.Text;
+            DateTime firstDay = DateTime.Parse(mtbDay.Text);
+            Bill[] bills = bill.FindBillDayBetweenDay(firstDay, DateTime.Now);
             LoadTopFood();
+            loadHeader(bills);
+        }
+        void loadHeader(Bill[] bills)
+        {
+            lbDonHang.Text = bills.Length.ToString();
+            lbSLBan.Text = Table.Count(0).ToString();
+            lbBanSD.Text = Table.Count(1).ToString();
+            int trado = 0;
+            double doanhthu = 0, giatritrado = 0;
+            foreach (Bill item in bills)
+            {
+                if(item.Status == 1) { doanhthu += (item.Total * (1 - item.Discount)); }
+                else if(item.Status == 2)
+                {
+                    trado += item.bill_Info.Length;
+                    giatritrado += item.Total;
+                }
+            }
+            lbTraDo.Text = trado.ToString();
+            lbDoanhThu.Text = doanhthu.ToString();
+            lbGiaTriTraDo.Text = giatritrado.ToString();
+
         }
         void LoadTopFood()
         {
+            flpTopFood.Controls.Clear();
             DateTime firstDay = DateTime.Parse(mtbDay.Text);
             Bill_Info[] billinfos = bif.getTop5FoodDayBetweenDay(firstDay, DateTime.Now);
             for (int i = 0; i < billinfos.Length; i++)
@@ -61,8 +88,7 @@ namespace QL_BanHang
             panel.Controls.Add(br);
             return panel;
         }
-
-        private void dtpTopFood_ValueChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             LoadTopFood();
         }

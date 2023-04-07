@@ -38,6 +38,11 @@ namespace DAL
                 throw ex;
             }
         }
-        
+        public object CountTable(int status)
+        {
+            return DataProvider.Instance.ExecutesScalar($"select Count(*) from TableFood where Status = {status}");
+        }
+
+
     }
 }

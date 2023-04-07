@@ -22,6 +22,11 @@ namespace DTO
         }
         public int Id { get => _id; }
         public int Status { get => _status; set => _status = value; }
+        public static int Count(int status)
+        {
+            Table_BUS bus = new Table_BUS();
+            return bus.CountTable(status);
+        }
         public Bill bill
         {
             get
