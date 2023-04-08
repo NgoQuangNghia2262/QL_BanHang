@@ -117,9 +117,9 @@ namespace QL_BanHang
 
         private void tbShare_TextChanged(object sender, EventArgs e)
         {
-             KetNoi ketnoi = new KetNoi();
-            DataTable dt = ketnoi.ExecuteQuery($"select * from Product where name like N'%{tbShare.Text}%'");
-            dgvProd.DataSource = dt;
+            // KetNoi ketnoi = new KetNoi();
+            //DataTable dt = ketnoi.ExecuteQuery($"select * from Product where name like N'%{tbShare.Text}%'");
+            //dgvProd.DataSource = dt;
         }
     }
 }

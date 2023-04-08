@@ -502,7 +502,7 @@
             this.mtbDay.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mtbDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbDay.Location = new System.Drawing.Point(31, 88);
-            this.mtbDay.Mask = "00/00/0000";
+            this.mtbDay.Mask = "0000/00/00";
             this.mtbDay.Name = "mtbDay";
             this.mtbDay.Size = new System.Drawing.Size(154, 28);
             this.mtbDay.TabIndex = 6;

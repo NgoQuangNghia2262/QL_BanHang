@@ -17,6 +17,7 @@ namespace DTO
         private DateTime _dateOut;
         private double _discount;
         private string _note;
+        private Bill_BUS bus = new Bill_BUS();
         public Bill() { _id = 0; }
         public Bill(int status, int idTb, DateTime dateIn, DateTime dateOut, double discount, string note)
         {
@@ -58,7 +59,6 @@ namespace DTO
         {
             get
             {
-                Bill_BUS bus = new Bill_BUS();
                 return bus.getTotal(Id);
             }
         }
@@ -84,7 +84,6 @@ namespace DTO
         }
         public Bill[] FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
         {
-            Bill_BUS bus = new Bill_BUS();
             DataTable dt = bus.FindBillDayBetweenDay(FirstDay , SecondDay);
             return ConvertDataTableToBill(dt);
         }
@@ -92,18 +91,22 @@ namespace DTO
 
         public Bill FindBillForTable(string idtb)
         {
-            Bill_BUS bus = new Bill_BUS();
             DataTable dt = bus.FindBillForTable(idtb);
             return new Bill(dt.Rows[0]);
         }
 
-        //Pra : id bàn(Chỉ lấy ra bill chưa tt của bàn)
+       
         public Bill Find(string idbill)
         {
             this._id = int.Parse(idbill);
             DataTable dt = CRUD.Instance.Find(this);
             return new Bill(dt.Rows[0]);
         }
-        
+        public double getTurnoverDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
+        {
+            return bus.getTurnoverDayBetweenDay(FirstDay ,SecondDay);
+        }
+
+
     }
 }

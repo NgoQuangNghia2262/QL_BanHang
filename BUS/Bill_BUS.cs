@@ -39,5 +39,13 @@ namespace BUS
             }
             else { throw new Exception("Ngày truyền vào phải nhỏ hơn ngày hôm nay"); }
         }
+        public double getTurnoverDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
+        {
+            try
+            {
+                return Convert.ToDouble(DAL.getTurnoverDayBetweenDay(FirstDay, SecondDay));
+            }
+            catch (Exception) { return 0; }
+        }
     }
 }

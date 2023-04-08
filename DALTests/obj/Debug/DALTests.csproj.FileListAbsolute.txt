@@ -1,0 +1,17 @@
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\DALTests.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\DALTests.pdb
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\DAL.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\DAL.pdb
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Visual code\DNN\QL_BanHang\DALTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Visual code\DNN\QL_BanHang\DALTests\obj\Debug\DALTests.csproj.AssemblyReference.cache
+D:\Visual code\DNN\QL_BanHang\DALTests\obj\Debug\DALTests.csproj.CoreCompileInputs.cache
+D:\Visual code\DNN\QL_BanHang\DALTests\obj\Debug\DALTests.csproj.CopyComplete
+D:\Visual code\DNN\QL_BanHang\DALTests\obj\Debug\DALTests.dll
+D:\Visual code\DNN\QL_BanHang\DALTests\obj\Debug\DALTests.pdb

@@ -56,7 +56,7 @@ namespace DAL
         public DataTable getTopFoodDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
         {
             string query1 = "select top(5) NameF ,SUM(amount) as Amount from Bill_Info , Bill where Bill.Id = IdBill ";
-            string query2 = $"and DateIn between '{FirstDay.ToString("dd/MM/yyyy")}' and '{SecondDay.AddDays(1).ToString("dd/MM/yyyy")}'";
+            string query2 = $"and DateIn between '{FirstDay.ToString("yyyy/MM/dd")}' and '{SecondDay.AddDays(1).ToString("yyyy/MM/dd")}'";
             string query = query1 + query2 + "group by NameF ORDER BY Sum(Amount) DESC";
             return DataProvider.Instance.ExecuteQuery(query);
         }

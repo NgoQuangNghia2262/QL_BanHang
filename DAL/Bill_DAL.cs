@@ -62,7 +62,7 @@ namespace DAL
         
         public object getTotal(int idbill)
         {
-            string query = $"SELECT SUM(Food.Price*Bill_Info.Amount)FROM Bill,Bill_Info,Food where Bill.Id = Bill_Info.IdBill and bill.Id = {idbill} and Bill_Info.NameF = Food.NameF\r\n";
+            string query = $"SELECT SUM(Food.Price*Bill_Info.Amount)FROM Bill,Bill_Info,Food where Bill.Id = Bill_Info.IdBill and bill.Id = {idbill} and Bill_Info.NameF = Food.NameF";
             return DataProvider.Instance.ExecutesScalar(query);
         }
         public DataTable FindBillForTable(string IdTb)
@@ -71,9 +71,16 @@ namespace DAL
         }
         public DataTable FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
         {
-            return DataProvider.Instance.ExecuteQuery($"select * from Bill where DateIn between '{FirstDay.ToString("dd/MM/yyyy")}' and '{SecondDay.AddDays(1).ToString("dd/MM/yyyy")}'");
+            return DataProvider.Instance.ExecuteQuery($"select * from Bill where DateIn between '{FirstDay.ToString("yyyy/MM/dd")}' and '{SecondDay.AddDays(1).ToString("yyyy/MM/dd")}'");
         }
+        public object getTurnoverDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
+        {
+            string query = $"SELECT SUM(Food.Price*Bill_Info.Amount)FROM Bill,Bill_Info,Food where Bill.Id = Bill_Info.IdBill and " +
+                $"DateIn between '{FirstDay.ToString("yyyy/MM/dd")}' and '{SecondDay.AddDays(1).ToString("yyyy/MM/dd")}'" +
+                $" and Bill_Info.NameF = Food.NameF";
+            return DataProvider.Instance.ExecutesScalar(query);
 
+        }
 
     }
 }

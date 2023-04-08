@@ -19,14 +19,14 @@ namespace QL_BanHang
         public FormAdmin()
         {
             InitializeComponent();
-            string s = mtbDay.Text;
             DateTime firstDay = DateTime.Parse(mtbDay.Text);
-            Bill[] bills = bill.FindBillDayBetweenDay(firstDay, DateTime.Now);
-            LoadTopFood();
-            loadHeader(bills);
+            LoadTopFood(firstDay, DateTime.Now);
+            loadHeader(firstDay, DateTime.Now);
+            LoadCharTable(firstDay , DateTime.Now);
         }
-        void loadHeader(Bill[] bills)
+        void loadHeader(DateTime firstDay , DateTime secondDay)
         {
+            Bill[] bills = bill.FindBillDayBetweenDay(firstDay, secondDay);
             lbDonHang.Text = bills.Length.ToString();
             lbSLBan.Text = Table.Count(0).ToString();
             lbBanSD.Text = Table.Count(1).ToString();
@@ -46,11 +46,23 @@ namespace QL_BanHang
             lbGiaTriTraDo.Text = giatritrado.ToString();
 
         }
-        void LoadTopFood()
+        void LoadCharTable(DateTime firstDay, DateTime secondDay)
+        {
+            chartTable.Series["Doanh Thu"].Points.Clear();
+            int between = 7;
+            TimeSpan fourTeenDay = new TimeSpan(14, 0, 0, 0);
+            if (secondDay - firstDay < fourTeenDay) { between = 1; }
+            while (firstDay < secondDay)
+            {
+                double turnover = bill.getTurnoverDayBetweenDay(firstDay, firstDay.AddDays(between));
+                chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover);
+                firstDay = firstDay.AddDays(between);
+            }
+        }
+        void LoadTopFood(DateTime firstDay , DateTime secondDay)
         {
             flpTopFood.Controls.Clear();
-            DateTime firstDay = DateTime.Parse(mtbDay.Text);
-            Bill_Info[] billinfos = bif.getTop5FoodDayBetweenDay(firstDay, DateTime.Now);
+            Bill_Info[] billinfos = bif.getTop5FoodDayBetweenDay(firstDay, secondDay);
             for (int i = 0; i < billinfos.Length; i++)
             {
                 flpTopFood.Controls.Add(createItemTopFood(billinfos[i]));
@@ -90,7 +102,10 @@ namespace QL_BanHang
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadTopFood();
+            DateTime firstDay = DateTime.Parse(mtbDay.Text.ToString());
+            loadHeader(firstDay , DateTime.Now);
+            LoadTopFood(firstDay , DateTime.Now);
+            LoadCharTable(firstDay , DateTime.Now);
         }
     }
 }
