@@ -20,9 +20,9 @@ namespace DTO
         }
         private Account(DataRow row)
         {
-            Username = row["username"].ToString();
-            Password = row["password"].ToString();
-            Category = row["category"].ToString();
+            Username = row["username"].ToString().Trim();
+            Password = row["password"].ToString().Trim();
+            Category = row["category"].ToString().Trim();
         }
         public Account(string username, string password, string category)
         {
@@ -49,10 +49,16 @@ namespace DTO
             }
             return accounts;
         }
-        public Account Find(string key)
+        public Account Find(string username)
         {
-            DataTable dt = CRUD.Instance.Find(this);
-            return new Account(dt.Rows[0]);
+            try
+            {
+                this.Username = username;
+                DataTable dt = CRUD.Instance.Find(this);
+                return new Account(dt.Rows[0]);
+            }
+            catch(IndexOutOfRangeException ) { return new Account(); }
+            
         }
     }
 }

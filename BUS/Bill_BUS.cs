@@ -15,21 +15,16 @@ namespace BUS
         {
             try
             {
-                
-                    double result = Convert.ToDouble(DAL.getTotal(idbill));
-                    return result;
-               
+                double result = Convert.ToDouble(DAL.getTotal(idbill));
+                return result;
             }
             catch (InvalidCastException) { return 0; }
         }
-        public DataTable FindBillForTable(string idtb)
+        public DataTable FindBillForTable(int idtb)
         {
-            int i = 0;
-            if(int.TryParse(idtb, out i))
-            {
+                if(idtb < 1) { throw new Exception("Id bàn không hợp lệ"); }
                 return DAL.FindBillForTable(idtb);
-            }
-            else { throw new Exception("Parameters phải là 1 id của table"); }
+          
         }
         public DataTable FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
         {
@@ -45,7 +40,7 @@ namespace BUS
             {
                 return Convert.ToDouble(DAL.getTurnoverDayBetweenDay(FirstDay, SecondDay));
             }
-            catch (Exception) { return 0; }
+            catch (InvalidCastException) { return 0; }
         }
     }
 }

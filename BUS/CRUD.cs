@@ -98,7 +98,7 @@ namespace BUS
                         break;
                     }
                 case "Account": {
-                        CRUDTable_BUS instance = new CRUDTable_BUS();
+                        CRUDAccount_BUS instance = new CRUDAccount_BUS();
                         dt = instance.Find();
                         break; 
                     }
@@ -136,7 +136,7 @@ namespace BUS
                         break; 
                     }
                 case "Account": {
-                        CRUDTable_BUS instance = new CRUDTable_BUS();
+                        CRUDAccount_BUS instance = new CRUDAccount_BUS();
                         dt = instance.Find(obj);
                         break; }
                 case "Food": {
@@ -171,7 +171,10 @@ namespace BUS
             string objType = obj.GetType().Name;
             switch (objType)
             {
-                case "Table": { break; }
+                case "Table": {
+                        Table_DAL instance = new Table_DAL();
+                        instance.Save(obj);
+                        break; }
                 case "Bill_Info": {
                         Bill_Info_DAL instance = new Bill_Info_DAL();
                         instance.Save(obj);
@@ -188,8 +191,14 @@ namespace BUS
                         instance.Save(obj);
                         break;
                     }
-                case "Account": { break; }
-                case "Food": { break; }
+                case "Account": {
+                        Account_DAL instance = new Account_DAL();
+                        instance.Save(obj);
+                        break; }
+                case "Food": {
+                        Food_DAL instance = new Food_DAL();
+                        instance.Save(obj);
+                        break; }
                 default: { throw new Exception($"Chưa thiết lập case {objType} tại lớp CRUD"); }
                     
             }

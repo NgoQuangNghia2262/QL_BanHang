@@ -17,13 +17,7 @@ namespace QL_BanHang
         public FormMain()
         {
             InitializeComponent();
-            LoadTable();
-            Test();
-        }
-        void Test()
-        {
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.BagShopping;
-            var a = btnCreateBill.IconChar;
+            LoadTable();  
         }
         void LoadTable()
         {
@@ -34,11 +28,11 @@ namespace QL_BanHang
                 btn.Text = item.Id.ToString();
                 btn.Width = flpTable.Width/4 - 12;
                 btn.Height = Convert.ToInt32(btn.Width * 0.625);
-                if(item.Status == 0) { btn.BackColor = Color.WhiteSmoke; }
+                if(item.Status == 1) { btn.BackColor = Color.Aqua; }
                 btn.Click += (object sender, EventArgs e) =>
                 {
                     this.Hide();
-                    FormBill form = new FormBill();
+                    FormBill form = new FormBill(item.bill);
                     form.ShowDialog();
                     this.Close();
 
@@ -46,11 +40,9 @@ namespace QL_BanHang
                 flpTable.Controls.Add(btn);
             }
         }
+     
 
-        private void Btn_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {

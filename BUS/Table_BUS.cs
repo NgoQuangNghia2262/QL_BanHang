@@ -14,5 +14,10 @@ namespace BUS
             Table_DAL DAL = new Table_DAL();
             return Convert.ToInt32(DAL.CountTable(status));
         }
+        public int CountTable()
+        {
+            Table_DAL DAL = new Table_DAL();
+            return Convert.ToInt32(DAL.CountTable());
+        }
     }
 }

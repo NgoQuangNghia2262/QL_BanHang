@@ -28,8 +28,8 @@ namespace QL_BanHang
         {
             Bill[] bills = bill.FindBillDayBetweenDay(firstDay, secondDay);
             lbDonHang.Text = bills.Length.ToString();
-            lbSLBan.Text = Table.Count(0).ToString();
-            lbBanSD.Text = Table.Count(1).ToString();
+            lbSLBan.Text = Table.Count.ToString();
+            lbBanSD.Text = Table.CountWithStatus(1).ToString();
             int trado = 0;
             double doanhthu = 0, giatritrado = 0;
             foreach (Bill item in bills)
@@ -58,6 +58,8 @@ namespace QL_BanHang
                 chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover);
                 firstDay = firstDay.AddDays(between);
             }
+            double turnover2 = bill.getTurnoverDayBetweenDay(firstDay, DateTime.Now);
+            chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover2);
         }
         void LoadTopFood(DateTime firstDay , DateTime secondDay)
         {

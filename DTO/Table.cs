@@ -22,17 +22,25 @@ namespace DTO
         }
         public int Id { get => _id; }
         public int Status { get => _status; set => _status = value; }
-        public static int Count(int status)
+        public static int CountWithStatus(int status)
         {
             Table_BUS bus = new Table_BUS();
             return bus.CountTable(status);
+        }
+        public static int Count
+        {
+            get
+            {
+                Table_BUS bus = new Table_BUS();
+                return bus.CountTable();
+            }
         }
         public Bill bill
         {
             get
             {
                 Bill bill = new Bill();
-                return bill.FindBillForTable(Id.ToString());
+                return bill.FindBillForTable(Id);
             }
         }
 
@@ -56,10 +64,6 @@ namespace DTO
             DataTable dt = CRUD.Instance.Find(this);
             return new Table(dt.Rows[0]);
         }
-        public Bill getBill()
-        {
-            throw new Exception();
-        }
-
+     
     }
 }

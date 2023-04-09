@@ -32,15 +32,20 @@ namespace DAL
         {
             try
             {
-                string query = $"insert";
+                string query = $"insert into TableFood(status) values ({obj.Status})";
+                DataProvider.Instance.ExecuteNonQuery(query);
             }catch(Exception ex)
             {
                 throw ex;
             }
         }
-        public object CountTable(int status)
+        public object CountTable(int status = -1)
         {
-            return DataProvider.Instance.ExecutesScalar($"select Count(*) from TableFood where Status = {status}");
+            if(status == -1) {
+                return DataProvider.Instance.ExecutesScalar($"select Count(*) from TableFood"); }
+            else {
+                return DataProvider.Instance.ExecutesScalar($"select Count(*) from TableFood where Status = {status}");
+            }
         }
 
 

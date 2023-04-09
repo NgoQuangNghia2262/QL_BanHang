@@ -18,7 +18,7 @@ namespace DAL.Tests
             try
             {
                 Bill_DAL dal = new Bill_DAL();
-                object dt = dal.getTurnoverDayBetweenDay(new DateTime(0,4,1) , DateTime.Now);
+                object dt = dal.getTurnoverDayBetweenDay(new DateTime(2023,4,1) , DateTime.Now);
                 int num = Convert.ToInt32(dt);
                 Console.WriteLine();
             }catch(Exception ex) { throw ex; }

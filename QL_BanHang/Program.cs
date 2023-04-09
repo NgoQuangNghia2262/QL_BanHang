@@ -19,7 +19,7 @@ namespace QL_BanHang
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Bill bill = new Bill();
-            Application.Run(new FormAdmin());
+            Application.Run(new FormLogIn());
         }
     }
 }

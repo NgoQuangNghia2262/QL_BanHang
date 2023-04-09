@@ -19,6 +19,7 @@ namespace DTO
         private string _note;
         private Bill_BUS bus = new Bill_BUS();
         public Bill() { _id = 0; }
+        public Bill(int idTb) { _id = 0; IdTb = idTb; }
         public Bill(int status, int idTb, DateTime dateIn, DateTime dateOut, double discount, string note)
         {
             _id = 0;
@@ -89,10 +90,14 @@ namespace DTO
         }
        
 
-        public Bill FindBillForTable(string idtb)
+        public Bill FindBillForTable(int idtb)
         {
-            DataTable dt = bus.FindBillForTable(idtb);
-            return new Bill(dt.Rows[0]);
+            try
+            {
+                DataTable dt = bus.FindBillForTable(idtb);
+                return new Bill(dt.Rows[0]);
+            }
+            catch (IndexOutOfRangeException) { return new Bill(idtb); }
         }
 
        
