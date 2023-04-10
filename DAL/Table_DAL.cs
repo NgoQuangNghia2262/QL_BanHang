@@ -23,20 +23,29 @@ namespace DAL
                 else { dt = DataProvider.Instance.ExecuteQuery($"select * from TableFood where id = {key.Id}"); }
                 return dt;
             }
-            catch(Exception err)
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
             {
-                throw err;
+                throw new Exception("Đối tượng truyền vào khổng phải là 1 Table");
             }
         }
         public void Save(dynamic obj)
         {
             try
             {
-                string query = $"insert into TableFood(status) values ({obj.Status})";
-                DataProvider.Instance.ExecuteNonQuery(query);
-            }catch(Exception ex)
+                DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from TableFood where Id = {obj.AHGFAJKSF}");
+                if(dt.Rows.Count > 0)
+                {
+                    string query = $"update TableFood set status = {obj.Status} where Id = {obj.Id}";
+                    DataProvider.Instance.ExecuteNonQuery(query);
+                }
+                else
+                {
+                    string query = $"insert into TableFood(status) values ({obj.Status})";
+                    DataProvider.Instance.ExecuteNonQuery(query);
+                }
+            }catch(Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
             {
-                throw ex;
+                throw new Exception("Đối tượng truyền vào khổng phải là 1 Table");
             }
         }
         public object CountTable(int status = -1)

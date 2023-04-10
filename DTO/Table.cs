@@ -58,9 +58,9 @@ namespace DTO
             }
             return tables;
         }
-        public Table Find(string key)
+        public Table Find(int key)
         {
-            this._id = int.Parse(key);
+            this._id = key;
             DataTable dt = CRUD.Instance.Find(this);
             return new Table(dt.Rows[0]);
         }

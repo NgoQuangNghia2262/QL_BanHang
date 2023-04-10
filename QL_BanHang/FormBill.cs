@@ -19,7 +19,7 @@ namespace QL_BanHang
     {
         private Food food = new Food();
         private Bill bill = new Bill();
-        private double sec = 0.5;
+        private double sec = 0.5;//Thời gian delay tìm kiếm food
         
        
         public FormBill()
@@ -286,6 +286,17 @@ namespace QL_BanHang
         private void food_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
+            if(bill.Id == 0) {
+                bill = new Bill(0 , bill.IdTb , DateTime.Now , DateTime.Now , 0 , "");
+                Table tb = new Table();
+                tb = tb.Find(bill.IdTb);
+                tb.Status = 1;
+                tb.Save();
+                bill.Save();
+                bill = tb.bill;
+                
+            }
+            
             Bill_Info billinfo = new Bill_Info(bill.Id, button.Text, 1);
             foreach (dynamic item in flpContainerRight_Bill.Controls)
             {
@@ -328,7 +339,7 @@ namespace QL_BanHang
             bill.Status = 1;
             bill.Save();
             Table tb = new Table();
-            tb = tb.Find(bill.IdTb.ToString());
+            tb = tb.Find(bill.IdTb);
             tb.Status = 1;
             tb.Save();
             FormMain form = new FormMain();

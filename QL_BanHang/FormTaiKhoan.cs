@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace QL_BanHang
 {
     public partial class FormTaiKhoan : Form
     {
+        private Account instance = new Account();
+        
         public FormTaiKhoan()
         {
             InitializeComponent();
@@ -20,8 +23,8 @@ namespace QL_BanHang
         }
         void LoadTaiKhoan()
         {
-            //var accounts = (from acc in db.Account select acc).ToList();
-            //dgvTaiKhoan.DataSource = accounts;
+            Account[] accounts = instance.Find();
+            dgvTaiKhoan.DataSource = accounts;
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -38,7 +41,8 @@ namespace QL_BanHang
             {
                 try
                 {
-                    
+                    Account account = new Account(tbTk.Text , tbMk.Text , tbCV.Text);
+                    account.Save();
                 }
                 catch (Exception)
                 {
@@ -84,8 +88,8 @@ namespace QL_BanHang
             {
                 try
                 {
-                    //Account acc = db.Account.Find(tbTk.Text);
-                    //db.Account.Remove(acc);
+                    Account acc = instance.Find(tbTk.Text);
+                    acc.Delete();
                     //db.SaveChanges();
                     //MessageBox.Show("Xóa Thành Công");
                     //LoadTaiKhoan();

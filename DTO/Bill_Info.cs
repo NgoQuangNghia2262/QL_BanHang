@@ -47,15 +47,15 @@ namespace DTO
         }
 
 
-        public Bill_Info[] Find(string idBill = null)
+        public Bill_Info[] Find(int idBill = -1)
         {
             DataTable dt = new DataTable();
-            if(idBill == null)
+            if(idBill == -1)
             {
                 dt = CRUD.Instance.FindALl(this);
             }
             else {
-                this.IdBill = int.Parse(idBill);
+                this.IdBill = idBill;
                 dt = CRUD.Instance.Find(this); 
             }
             return ConvertDataTableToDTO(dt);

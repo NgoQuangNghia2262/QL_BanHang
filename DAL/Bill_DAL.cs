@@ -51,7 +51,7 @@ namespace DAL
                 }
                 else
                 {
-                    string query = $"insert into Bill_Info(IdTb , DateIn , DateOut , Discount , note) values({obj.IdTb} ,getDate() , getDate(),{obj.Discount} , N'{obj.Note}')";
+                    string query = $"insert into Bill(IdTb , DateIn , DateOut , Discount , note) values({obj.IdTb} ,getDate() , getDate(),{obj.Discount} , N'{obj.Note}')";
                     DataProvider.Instance.ExecuteNonQuery(query);
                 }
             }
@@ -65,7 +65,7 @@ namespace DAL
             string query = $"SELECT SUM(Food.Price*Bill_Info.Amount)FROM Bill,Bill_Info,Food where Bill.Id = Bill_Info.IdBill and bill.Id = {idbill} and Bill_Info.NameF = Food.NameF";
             return DataProvider.Instance.ExecutesScalar(query);
         }
-        public DataTable FindBillForTable(string IdTb)
+        public DataTable FindBillForTable(int IdTb)
         {
             return DataProvider.Instance.ExecuteQuery($"select * from Bill where idtb = {IdTb} and status = 0");
         }

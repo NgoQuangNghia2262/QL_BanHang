@@ -53,7 +53,7 @@ namespace DTO
             get
             {
                 Bill_Info instance = new Bill_Info();
-                return instance.Find(Id.ToString());
+                return instance.Find(Id);
             }
         }
         public double Total
@@ -101,9 +101,9 @@ namespace DTO
         }
 
        
-        public Bill Find(string idbill)
+        public Bill Find(int idbill)
         {
-            this._id = int.Parse(idbill);
+            this._id = idbill;
             DataTable dt = CRUD.Instance.Find(this);
             return new Bill(dt.Rows[0]);
         }
