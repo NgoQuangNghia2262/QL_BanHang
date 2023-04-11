@@ -267,17 +267,19 @@ namespace QL_BanHang
 
             
             panel.Padding = new Padding(3);
-            //panel.MouseHover += (object sender, EventArgs e) => {
-            //   // panel.Height = panel.Height + 50;
-            //    panel.BorderStyle = BorderStyle.FixedSingle;
-            //    panel.BackColor = Color.Aqua;
-            //};
-            //panel.MouseLeave += (object sender, EventArgs e) => {
-            //    //panel.Height = panel.Height - 50;
-            //    panel.BorderStyle = BorderStyle.None;
-            //    panel.BackColor = Color.White;
+            panel.MouseEnter += (object sender, EventArgs e) =>
+            {
+                panel.Height = panel.Height + 50;
+                panel.BorderStyle = BorderStyle.FixedSingle;
+                panel.BackColor = Color.Aqua;
+            };
+            panel.MouseLeave += (object sender, EventArgs e) =>
+            {
+                 panel.Height = panel.Height - 50;
+                panel.BorderStyle = BorderStyle.None;
+                panel.BackColor = Color.White;
 
-            //};
+            };
 
             return panel;
         }

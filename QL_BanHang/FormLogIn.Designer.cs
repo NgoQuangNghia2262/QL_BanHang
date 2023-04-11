@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 482);
+            this.ClientSize = new System.Drawing.Size(452, 484);
             this.Controls.Add(this.checkmk);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbPass);

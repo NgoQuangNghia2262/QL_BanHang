@@ -18,8 +18,19 @@ namespace QL_BanHang
         public FormLogIn()
         {
             InitializeComponent();
+            test();
         }
-    
+        void test()
+        {
+            button1.MouseEnter += (object sender, EventArgs e) =>
+            {
+                button1.BackColor = Color.Aqua ;
+            };
+            button1.MouseLeave += (object sender, EventArgs e) =>
+            {
+                button1.BackColor = Color.White;
+            };
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Account result = account.Find(tbUser.Text);

@@ -1,13 +1,5 @@
 ﻿using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QL_BanHang
@@ -59,11 +51,6 @@ namespace QL_BanHang
             tbCV.Text = dgvTaiKhoan.Rows[index].Cells[2].Value.ToString();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void FormTaiKhoan_Load(object sender, EventArgs e)
         {
 
@@ -73,7 +60,8 @@ namespace QL_BanHang
         {
             try
             {
-                
+                Account account = new Account(tbTk.Text, tbMk.Text, tbCV.Text);
+                account.Save();
             }
             catch (Exception)
             {
@@ -90,9 +78,7 @@ namespace QL_BanHang
                 {
                     Account acc = instance.Find(tbTk.Text);
                     acc.Delete();
-                    //db.SaveChanges();
-                    //MessageBox.Show("Xóa Thành Công");
-                    //LoadTaiKhoan();
+                    LoadTaiKhoan();
                 }
                 catch (Exception)
                 {

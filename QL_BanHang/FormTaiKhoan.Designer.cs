@@ -108,7 +108,6 @@
             this.label4.Size = new System.Drawing.Size(63, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Quyền";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbCV
             // 
