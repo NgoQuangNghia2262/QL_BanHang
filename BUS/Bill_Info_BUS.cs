@@ -13,7 +13,12 @@ namespace BUS
         Bill_Info_DAL DAL = new Bill_Info_DAL();
         public DataTable getTopFoodDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
         {
-            return DAL.getTopFoodDayBetweenDay( FirstDay, SecondDay);
+            if (FirstDay <= SecondDay)
+            {
+                return DAL.getTopFoodDayBetweenDay(FirstDay, SecondDay);
+            }
+            else { throw new ArgumentOutOfRangeException(nameof(SecondDay), $"Para chuyền vào không hợp lệ SecondDay phải < FirstDay"); }
+           
         }
     }
 }

@@ -52,8 +52,7 @@ namespace BUS
                         BUS.Delete(obj);
                         break;
                     }
-                default: { throw new Exception($"Chưa thiết lập case {objType} tại lớp CRUD"); }
-                    
+                default: { throw new ArgumentOutOfRangeException(nameof(objType) , $"Chưa thiết lập case {objType} tại lớp CRUD"); }
             }
         }
 
@@ -107,8 +106,7 @@ namespace BUS
                         dt = instance.Find();
                         break; 
                     }
-                default: { throw new Exception($"Chưa thiết lập case {objType} tại lớp CRUD"); }
-
+                default: { throw new ArgumentOutOfRangeException(nameof(objType), $"Chưa thiết lập case {objType} tại lớp CRUD"); }
             }
             return dt;
         }
@@ -199,8 +197,8 @@ namespace BUS
                         Food_DAL instance = new Food_DAL();
                         instance.Save(obj);
                         break; }
-                default: { throw new Exception($"Chưa thiết lập case {objType} tại lớp CRUD"); }
-                    
+                default: { throw new ArgumentOutOfRangeException(nameof(objType), $"Chưa thiết lập case {objType} tại lớp CRUD"); }
+
             }
         }
         public DataTable Find()

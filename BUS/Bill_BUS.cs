@@ -15,6 +15,7 @@ namespace BUS
         {
             try
             {
+                if (idbill < 0) { throw new ArgumentOutOfRangeException(nameof(idbill), $"Para chuyền vào không hợp lệ (Phải >= 0)"); }
                 double result = Convert.ToDouble(DAL.getTotal(idbill));
                 return result;
             }
@@ -22,8 +23,8 @@ namespace BUS
         }
         public DataTable FindBillForTable(int idtb)
         {
-                if(idtb < 1) { throw new Exception("Id bàn không hợp lệ"); }
-                return DAL.FindBillForTable(idtb);
+            if (idtb < 0) { throw new ArgumentOutOfRangeException(nameof(idtb), $"Para chuyền vào không hợp lệ (Phải > 0)"); }
+            return DAL.FindBillForTable(idtb);
           
         }
         public DataTable FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
@@ -32,13 +33,17 @@ namespace BUS
             {
                 return DAL.FindBillDayBetweenDay(FirstDay,SecondDay);
             }
-            else { throw new Exception("Ngày truyền vào phải nhỏ hơn ngày hôm nay"); }
+            else { throw new ArgumentOutOfRangeException(nameof(SecondDay), $"Para chuyền vào không hợp lệ SecondDay phải < FirstDay"); }
         }
         public double getTurnoverDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
         {
             try
             {
-                return Convert.ToDouble(DAL.getTurnoverDayBetweenDay(FirstDay, SecondDay));
+                if (FirstDay <= SecondDay)
+                {
+                    return Convert.ToDouble(DAL.getTurnoverDayBetweenDay(FirstDay, SecondDay));
+                }
+                else { throw new ArgumentOutOfRangeException(nameof(SecondDay), $"Para chuyền vào không hợp lệ SecondDay phải < FirstDay"); }
             }
             catch (InvalidCastException) { return 0; }
         }
