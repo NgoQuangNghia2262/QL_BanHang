@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAL
 {
@@ -59,10 +60,11 @@ namespace DAL
             }
             catch (Exception err) { throw err; }
         }
-        public DataTable FindWithNameF(string NameF)
+        public DataTable FindApproximateNameF(string NameF)
         {
             return DataProvider.Instance.ExecuteQuery($"select * from food where NameF like N'%{NameF}%'");
 
         }
+        
     }
 }

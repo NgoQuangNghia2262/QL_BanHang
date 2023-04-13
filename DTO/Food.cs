@@ -10,7 +10,7 @@ namespace DTO
 {
     public class Food
     {
-        private Food_BUS BUS = new Food_BUS();
+        private readonly Food_BUS BUS = new Food_BUS();
         //Atri
         private string _nameF;
         private string _category;
@@ -56,13 +56,24 @@ namespace DTO
                 item.Save();
             }
         }
+        private Food[] ConvertDataTableToDTO(DataTable dt)
+        {
+            Food[] foods = new Food[dt.Rows.Count];
+            for (int i = 0; i < foods.Length; i++)
+            {
+                foods[i] = new Food(dt.Rows[i]);
+            }
+            return foods;
+        }
         public string[] getCategory()
         {
             return BUS.getCategory();
         }
         public Food[] Find()
         {
-            throw new Exception();
+            DataTable dt = CRUD.Instance.FindAll(this);
+            Food[] foods = ConvertDataTableToDTO(dt);
+            return foods;
         }
         public Food Find(string key)
         {
@@ -72,24 +83,14 @@ namespace DTO
         }
         public Food[] FindWithCategory(string category)
         {
-            Food_BUS BUS = new Food_BUS();
             DataTable dt = BUS.FindWithCategory(category);
-            Food[] foods = new Food[dt.Rows.Count];
-            for (int i = 0; i < foods.Length; i++)
-            {
-                foods[i] = new Food(dt.Rows[i]);
-            }
+            Food[] foods = ConvertDataTableToDTO(dt);
             return foods;
         }
-        public Food[] FindWithNameF(string nameF)
+        public Food[] FindApproximateNameF(string nameF)
         {
-            Food_BUS BUS = new Food_BUS();
-            DataTable dt = BUS.FindWithNameF(nameF);
-            Food[] foods = new Food[dt.Rows.Count];
-            for (int i = 0; i < foods.Length; i++)
-            {
-                foods[i] = new Food(dt.Rows[i]);
-            }
+            DataTable dt = BUS.FindApproximateNameF(nameF);
+            Food[] foods = ConvertDataTableToDTO(dt);
             return foods;
         }
         public void Save()

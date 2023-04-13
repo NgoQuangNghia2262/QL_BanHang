@@ -45,7 +45,7 @@ namespace DTO
         }
         public Account[] Find()
         {
-            DataTable dt = CRUD.Instance.FindALl(this);
+            DataTable dt = CRUD.Instance.FindAll(this);
             Account[] accounts = new Account[dt.Rows.Count];
             for (int i = 0; i < accounts.Length; i++)
             {

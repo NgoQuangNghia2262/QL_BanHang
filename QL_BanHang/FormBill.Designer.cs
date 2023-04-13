@@ -432,6 +432,7 @@
             this.lbSeach.Size = new System.Drawing.Size(147, 22);
             this.lbSeach.TabIndex = 14;
             this.lbSeach.Text = "Nhập tên món ăn";
+            this.lbSeach.Click += new System.EventHandler(this.lbSeach_Click);
             // 
             // panel3
             // 

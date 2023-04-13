@@ -26,7 +26,7 @@ namespace BUS
 
         public DataTable Find()
         {
-            throw new NotImplementedException();
+            return DAL.Find();
         }
 
         public DataTable Find(object key)

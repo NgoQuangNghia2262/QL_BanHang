@@ -45,7 +45,7 @@ namespace DTO
         public Ingredient[] Find(string nameF = null)
         {
             DataTable dt = new DataTable();
-            if (nameF == null) { dt = CRUD.Instance.FindALl(this); }
+            if (nameF == null) { dt = CRUD.Instance.FindAll(this); }
             else {
                 Ingredient_BUS BUS = new Ingredient_BUS();
                 dt = BUS.getIngredientsForFood(nameF);

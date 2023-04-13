@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DataProvider
+    internal class DataProvider
     {
         private string str = @"Data Source=.\SQLEXPRESS;Initial Catalog=QL_CuaHang;Integrated Security=True";
         private static DataProvider instance;

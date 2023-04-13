@@ -13,37 +13,51 @@ namespace QL_BanHang
 {
     public partial class FormFood : Form
     {
+        private Food food = new Food();
+        private double sec = 0.5;//Thời gian delay tìm kiếm food
         public FormFood()
         {
             InitializeComponent();
-            Food food = new Food();
-            flpFood.Controls.Add(createFoodPanel(food.Find("Gà Sốt Tiêu Xanh")));
+            LoadCBBcate();
+            LoadFood(food.FindApproximateNameF(""));
+        }
+        void LoadCBBcate()
+        {
+            string[] foodCategorys = food.getCategory();
+            foreach (string item in foodCategorys)
+            {
+                ccbLoaiMH.Items.Add(item);
+            }
         }
         void LoadFood(Food[] foods)
         {
-
+            flpFood.Controls.Clear();
+            foreach (Food item in foods)
+            {
+                flpFood.Controls.Add(createFoodPanel(item));
+            }
         }
         Panel createFoodPanel(Food food)
         {
             Panel createFoodPanel = new Panel();
+            createFoodPanel.Font = new Font("Sans Serif", 10, FontStyle.Regular);
             createFoodPanel.AutoSize = true;
 
             Label lbName = new Label();
+            lbName.AutoSize = true;
             lbName.Text = food.NameF;
+            lbName.MaximumSize = new Size(100,40);
             lbName.Location = lbTenMH.Location;
-            lbName.Font = new Font("Sans Serif", 10, FontStyle.Regular);
             lbName.ForeColor = Color.Blue;
 
             Label lbCate = new Label();
             lbCate.Text = food.Category;
             lbCate.Location = lbLoaiMH.Location;
-            lbCate.Font = new Font("Sans Serif", 10, FontStyle.Regular);
 
             Label lbPrice = new Label();
             lbPrice.Text = food.Price.ToString();
             lbPrice.Location = lbGia.Location;
             
-            lbPrice.Font = new Font("Sans Serif", 10, FontStyle.Regular);
 
 
             createFoodPanel.Controls.Add(lbName);
@@ -90,11 +104,13 @@ namespace QL_BanHang
 
             Label lbName = new Label();
             lbName.Text = ingredient.Name;
+            lbName.AutoSize = true;
+            lbName.MaximumSize = new Size(150, 50);
             lbName.Location = new Point(77, 0);
 
             Label lbAmount = new Label();
             lbAmount.Text = ingredient.Amount.ToString();
-            lbAmount.Location = new Point(140 , 0);
+            lbAmount.Location = new Point(280 , 0);
 
             
             panel.Controls.Add(lbAmount);
@@ -103,5 +119,58 @@ namespace QL_BanHang
             return panel;
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbSeach.Text = "";
+            if(ccbLoaiMH.Text.Trim() == "All") { LoadFood(food.FindApproximateNameF("")); }
+            else { LoadFood(food.FindWithCategory(ccbLoaiMH.Text)); }
+        }
+
+        private void tbSeach_TextChanged(object sender, EventArgs e)
+        {
+            
+            if (tbSeach.Text == "")
+            {
+                lbSeach.Visible = true;
+                iconClear.Visible = false;
+            }
+            else
+            {
+                lbSeach.Visible = false;
+                iconClear.Visible = true;
+            }
+            timer1.Stop();
+            sec = 0.5;
+            timer1.Start();
+        }
+
+        private void tbSeach_Click(object sender, EventArgs e)
+        {
+            lbSeach.Visible = false;
+        }
+
+       
+
+        private void iconClear_Click(object sender, EventArgs e)
+        {
+            tbSeach.Text = "";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            sec -= 0.5;
+            if (sec == 0)
+            {
+                LoadFood(food.FindApproximateNameF(tbSeach.Text));
+                timer1.Stop();
+                sec = 0.5;
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+        }
     }
 }

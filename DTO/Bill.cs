@@ -71,7 +71,7 @@ namespace DTO
         }
         public Bill[] Find()
         {
-            DataTable dt = CRUD.Instance.FindALl(this);
+            DataTable dt = CRUD.Instance.FindAll(this);
             return ConvertDataTableToBill(dt); 
         }
         private Bill[] ConvertDataTableToBill(DataTable dt)

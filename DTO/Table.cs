@@ -50,7 +50,7 @@ namespace DTO
         }
         public Table[] Find()
         {
-            DataTable dt = CRUD.Instance.FindALl(this);
+            DataTable dt = CRUD.Instance.FindAll(this);
             Table[] tables = new Table[dt.Rows.Count];
             for (int i = 0; i < tables.Length; i++)
             {

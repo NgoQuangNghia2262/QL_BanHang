@@ -389,7 +389,7 @@ namespace QL_BanHang
             sec-=0.5;
             if (sec == 0)
             { 
-                Food[] foods = food.FindWithNameF(tbSeach.Text);
+                Food[] foods = food.FindApproximateNameF(tbSeach.Text);
                 LoadProduct(foods);
                 timer1.Stop();
                 sec = 0.5;
@@ -418,6 +418,11 @@ namespace QL_BanHang
         private void tbSeach_Click(object sender, EventArgs e)
         {
             lbSeach.Visible = false;
+        }
+
+        private void lbSeach_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

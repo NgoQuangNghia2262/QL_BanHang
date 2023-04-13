@@ -52,7 +52,7 @@ namespace DTO
             DataTable dt = new DataTable();
             if(idBill == -1)
             {
-                dt = CRUD.Instance.FindALl(this);
+                dt = CRUD.Instance.FindAll(this);
             }
             else {
                 this.IdBill = idBill;

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
+ 
 
 namespace QL_BanHang
 {
@@ -57,6 +57,7 @@ namespace QL_BanHang
                 double turnover = bill.getTurnoverDayBetweenDay(firstDay, firstDay.AddDays(between));
                 chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover);
                 firstDay = firstDay.AddDays(between);
+                
             }
             double turnover2 = bill.getTurnoverDayBetweenDay(firstDay, DateTime.Now);
             chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover2);

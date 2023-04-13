@@ -10,9 +10,9 @@ namespace BUS
 {
     public class Food_BUS
     {
+        private readonly Food_DAL DAL = new Food_DAL();
         public string[] getCategory()
         {
-            Food_DAL DAL = new Food_DAL();
             DataTable dt = DAL.getCategory();
             string[] cates = new string[dt.Rows.Count];
             for (int i = 0; i < cates.Length; i++)
@@ -22,16 +22,14 @@ namespace BUS
             return cates;
         }
 
-        public DataTable FindWithNameF(string NameF)
+        public DataTable FindApproximateNameF(string NameF)
         {
-            Food_DAL DAL = new Food_DAL();
-            return DAL.FindWithNameF(NameF);
+            return DAL.FindApproximateNameF(NameF);
         }
         public DataTable FindWithCategory(string category)
         {
-            Food_DAL DAL = new Food_DAL();
             return DAL.FindWithCategory(category);
         }
-
+        
     }
 }

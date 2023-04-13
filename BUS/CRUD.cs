@@ -66,7 +66,7 @@ namespace BUS
         // Type parameters:
         //     Đối tượng trong lớp DTO
         //    
-        public DataTable FindALl(object obj)
+        public DataTable FindAll(object obj)
         {
             string objType = obj.GetType().Name;
             DataTable dt = new DataTable();
@@ -102,7 +102,7 @@ namespace BUS
                         break; 
                     }
                 case "Food": {
-                        CRUDTable_BUS instance = new CRUDTable_BUS();
+                        CRUDFood_BUS instance = new CRUDFood_BUS();
                         dt = instance.Find();
                         break; 
                     }
