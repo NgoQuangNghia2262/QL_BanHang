@@ -64,7 +64,10 @@ namespace DTO
             }
         }
 
-
+        public void Delete()
+        {
+            CRUD.Instance.Delete(this);
+        }
         public void Save()
         {
             CRUD.Instance.Save(this);

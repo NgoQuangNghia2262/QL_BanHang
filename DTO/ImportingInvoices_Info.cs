@@ -13,5 +13,9 @@ namespace DTO
         {
             CRUD.Instance.Save(this);
         }
+        public void Delete()
+        {
+            CRUD.Instance.Delete(this);
+        }
     }
 }

@@ -48,3 +48,5 @@ D:\Visual code\DNN\QL_BanHang\QL_BanHang\bin\Debug\xunit.abstractions.xml
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\bin\Debug\xunit.core.xml
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormBill_Info.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormFood.resources
+D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormIngredient.resources
+D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormUpdateFood.resources

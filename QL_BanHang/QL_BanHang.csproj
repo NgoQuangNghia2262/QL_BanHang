@@ -89,6 +89,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
@@ -99,6 +100,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddFood.Designer.cs">
+      <DependentUpon>FormAddFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +135,12 @@
     </Compile>
     <Compile Include="FormFood.Designer.cs">
       <DependentUpon>FormFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngredient.Designer.cs">
+      <DependentUpon>FormIngredient.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogIn.cs">
       <SubType>Form</SubType>
@@ -159,6 +172,12 @@
     <Compile Include="FormTaiKhoan.Designer.cs">
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateFood.Designer.cs">
+      <DependentUpon>FormUpdateFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
@@ -176,6 +195,9 @@
     <EmbeddedResource Include="FormFood.resx">
       <DependentUpon>FormFood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormIngredient.resx">
+      <DependentUpon>FormIngredient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaiKhoan.resx">
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateFood.resx">
+      <DependentUpon>FormUpdateFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

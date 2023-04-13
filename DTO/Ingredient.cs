@@ -25,7 +25,7 @@ namespace DTO
             Inventory = double.Parse(row["Inventory"].ToString());
         }
 
-        public Ingredient(string name, double amount, double inventory, string nameF)
+        public Ingredient(string name, string nameF , double amount, double inventory)
         {
             _name = name;
             _amount = amount;
@@ -64,6 +64,9 @@ namespace DTO
             DataTable dt = CRUD.Instance.Find(this);
             return new Ingredient(dt.Rows[0]);
         }
-        
+        public void Delete() { 
+            CRUD.Instance.Delete(this);
+        }
+
     }
 }

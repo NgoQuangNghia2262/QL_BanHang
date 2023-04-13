@@ -86,7 +86,10 @@ namespace DTO
             }
             return BillInfos;
         }
-
+        public void Delete()
+        {
+            CRUD.Instance.Delete(this);
+        }
 
     }
 }
