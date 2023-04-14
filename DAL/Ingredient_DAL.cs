@@ -80,5 +80,9 @@ namespace DAL
             }
             catch(Exception err) { throw err; }
         }
+        public object getInventory(string Name)
+        {
+            return DataProvider.Instance.ExecutesScalar($"select Inventory from Ingredient where  Name = N'{Name}'");
+        }
     }
 }

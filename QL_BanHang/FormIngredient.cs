@@ -21,6 +21,7 @@ namespace QL_BanHang
         {
             InitializeComponent();
             this.food = food;
+            
             LoadDgv(food.Ingredients);
         }
         void LoadDgv(Ingredient[] ingredients)
@@ -32,20 +33,14 @@ namespace QL_BanHang
 
             int index = e.RowIndex;
             ingredient.Amount = Convert.ToDouble(dataGridView1.Rows[index].Cells["Amount"].Value.ToString());
+            ingredient.Name = dataGridView1.Rows[index].Cells["Name"].Value.ToString();
+            ingredient.Inventory = ingredient.getInventory();
             ingredient.Save();
         }
 
         private void FormIngredient_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
-            {
-                DialogResult dia = MessageBox.Show("Còn sản phẩm chưa lưu . bạn có muốn lưu không ?", "Lưu ?", MessageBoxButtons.OKCancel);
-                if (dia == DialogResult.OK)
-                {
-                    ingredient.Save();
-                }
-            }
-            catch (System.Data.SqlClient.SqlException) { return; }
+           
             
         }
 
@@ -65,17 +60,26 @@ namespace QL_BanHang
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            string name = dataGridView1.Rows[index].Cells["Name"].Value.ToString();
-            string nameF = dataGridView1.Rows[index].Cells["NameF"].Value.ToString();
-            double amount = Convert.ToDouble(dataGridView1.Rows[index].Cells["Amount"].Value.ToString());
-            double inv = Convert.ToDouble(dataGridView1.Rows[index].Cells["Inventory"].Value.ToString());
-            ingredient = new Ingredient(name, nameF, amount, inv);
+           
+                int index = e.RowIndex;
+                string name = dataGridView1.Rows[index].Cells["Name"].Value.ToString();
+                string nameF = dataGridView1.Rows[index].Cells["NameF"].Value.ToString();
+                double amount = Convert.ToDouble(dataGridView1.Rows[index].Cells["Amount"].Value.ToString());
+                double inv = Convert.ToDouble(dataGridView1.Rows[index].Cells["Inventory"].Value.ToString());
+                ingredient = new Ingredient(name, nameF, amount, inv);
+            
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
+            int lenght = food.Ingredients.Length;
+            Ingredient[] ingredients = new Ingredient[lenght + 1];
+            for (int i = 0; i < lenght; i++)
+            {
+                ingredients[i] = food.Ingredients[i];
+            }
+            ingredients[lenght] = new Ingredient("" , ingredients[0].NameF , 0 , 0);
+            dataGridView1.DataSource = ingredients;
         }
     }
 }

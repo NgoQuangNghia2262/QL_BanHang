@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DTO
 {
@@ -16,7 +17,12 @@ namespace DTO
         private double _inventory;
         private string _nameF;
 
-        public Ingredient() { }
+        public Ingredient() {
+            _name = "";
+            _amount = 0;
+            _inventory = 0;
+            _nameF = "";
+        }
         private Ingredient(DataRow row)
         {
             _name = row["Name"].ToString();
@@ -33,8 +39,8 @@ namespace DTO
             _nameF = nameF;
         }
 
-        public string Name { get => _name; }
-        public string NameF { get => _nameF; }
+        public string Name { get => _name; set => _name = value; }
+        public string NameF { get => _nameF;  }
         public double Amount { get => _amount; set => _amount = value; }
         public double Inventory { get => _inventory; set => _inventory = value; }
 
@@ -67,6 +73,10 @@ namespace DTO
         public void Delete() { 
             CRUD.Instance.Delete(this);
         }
-
+        public double getInventory()
+        {
+            Ingredient_BUS bus = new Ingredient_BUS();
+            return bus.getInventory(Name);
+        }
     }
 }

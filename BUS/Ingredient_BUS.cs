@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BUS
 {
@@ -16,6 +17,9 @@ namespace BUS
             if (!string.IsNullOrEmpty(nameFood)) { return DAL.getIngredientsForFood(nameFood); }
             else { throw new Exception("Sai tên food"); }
         }
-       
+        public double getInventory(string Name)
+        {
+            return Convert.ToDouble(DAL.getInventory(Name));
+        }
     }
 }
