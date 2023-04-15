@@ -170,6 +170,8 @@ namespace QL_BanHang
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            FormAddFood form = new FormAddFood();
+            form.ShowDialog();
             this.Close();
         }
     }

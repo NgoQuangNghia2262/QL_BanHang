@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,18 @@ namespace QL_BanHang
             InitializeComponent();
             
         }
+        public FormUpdateFood(Food[] foods)
+        {
+            InitializeComponent();
+
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormFood form = new FormFood();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }
