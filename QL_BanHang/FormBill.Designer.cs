@@ -108,6 +108,7 @@
             this.flpContainerRight_Bill.Name = "flpContainerRight_Bill";
             this.flpContainerRight_Bill.Size = new System.Drawing.Size(529, 343);
             this.flpContainerRight_Bill.TabIndex = 6;
+            this.flpContainerRight_Bill.Paint += new System.Windows.Forms.PaintEventHandler(this.flpContainerRight_Bill_Paint);
             // 
             // flpContainerRight_Header
             // 

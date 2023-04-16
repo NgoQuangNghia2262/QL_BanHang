@@ -46,6 +46,7 @@
     <Compile Include="Bill_Info.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="ICollection.cs" />
+    <Compile Include="ImportingInvoices.cs" />
     <Compile Include="ImportingInvoices_Info.cs" />
     <Compile Include="Ingredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

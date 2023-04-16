@@ -50,3 +50,4 @@ D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormBill_Info.reso
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormFood.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormIngredient.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormUpdateFood.resources
+D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormAddFood.resources

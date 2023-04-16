@@ -424,5 +424,10 @@ namespace QL_BanHang
         {
 
         }
+
+        private void flpContainerRight_Bill_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
