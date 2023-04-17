@@ -109,7 +109,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Location = new System.Drawing.Point(0, 117);
+            this.panel3.Location = new System.Drawing.Point(9, 132);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(780, 4);
@@ -234,7 +234,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(781, 702);
+            this.ClientSize = new System.Drawing.Size(781, 762);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.label2);

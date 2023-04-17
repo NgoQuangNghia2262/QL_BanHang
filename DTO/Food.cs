@@ -16,8 +16,9 @@ namespace DTO
         private string _category;
         private double _price;
         public Food(){ }
-        public Food(string category, double price)
+        public Food(string name ,  double price , string category)
         {
+            _nameF = name;
             Category = category;
             Price = price;
         }
@@ -77,9 +78,13 @@ namespace DTO
         }
         public Food Find(string key)
         {
-            this._nameF = key;
-            DataTable dt = CRUD.Instance.Find(this);
-            return new Food(dt.Rows[0]);
+            try
+            {
+                this._nameF = key;
+                DataTable dt = CRUD.Instance.Find(this);
+                return new Food(dt.Rows[0]);
+            }
+            catch (IndexOutOfRangeException) { return null; }
         }
         public Food[] FindWithCategory(string category)
         {

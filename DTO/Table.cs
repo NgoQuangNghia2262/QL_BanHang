@@ -60,9 +60,13 @@ namespace DTO
         }
         public Table Find(int key)
         {
-            this._id = key;
-            DataTable dt = CRUD.Instance.Find(this);
-            return new Table(dt.Rows[0]);
+            try
+            {
+                this._id = key;
+                DataTable dt = CRUD.Instance.Find(this);
+                return new Table(dt.Rows[0]);
+            }
+            catch (IndexOutOfRangeException) { return null; }
         }
      
     }

@@ -28,11 +28,12 @@ namespace DAL
                 DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from Food where NameF = N'{obj.NameF}'");
                 if (dt.Rows.Count > 0)
                 {
-                    string query = $"update Food ";
+                    string query = $"update Food set Category = N'{obj.Category}' , Price = {obj.Price} where NameF = N'{obj.NameF}'";
+                    DataProvider.Instance.ExecuteNonQuery(query);
                 }
                 else
                 {
-                    string query = $"insert into Food() values()";
+                    string query = $"insert into Food values(N'{obj.NameF}' , N'{obj.Category}' , {obj.Price})";
                     DataProvider.Instance.ExecuteNonQuery(query);
                 }
             }

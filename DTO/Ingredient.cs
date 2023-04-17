@@ -65,10 +65,15 @@ namespace DTO
         }
         public Ingredient Find(string keyName , string keyNameF )
         {
-            this._name = keyName; 
-            this._nameF = keyNameF;
-            DataTable dt = CRUD.Instance.Find(this);
-            return new Ingredient(dt.Rows[0]);
+            try
+            {
+                this._name = keyName;
+                this._nameF = keyNameF;
+                DataTable dt = CRUD.Instance.Find(this);
+                return new Ingredient(dt.Rows[0]);
+            }
+            catch (IndexOutOfRangeException) { return null; }
+            
         }
         public void Delete() { 
             CRUD.Instance.Delete(this);

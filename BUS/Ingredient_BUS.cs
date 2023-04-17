@@ -15,7 +15,7 @@ namespace BUS
         public DataTable getIngredientsForFood(string nameFood)
         {
             if (!string.IsNullOrEmpty(nameFood)) { return DAL.getIngredientsForFood(nameFood); }
-            else { throw new Exception("Sai tên food"); }
+            else { throw new ArgumentNullException("arg phải khác null"); }
         }
         public double getInventory(string Name)
         {

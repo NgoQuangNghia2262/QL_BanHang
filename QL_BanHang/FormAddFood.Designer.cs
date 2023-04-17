@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.cbbCate = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,6 +60,7 @@
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconPictureBox1.TabIndex = 7;
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label2
             // 
@@ -81,37 +82,38 @@
             this.label1.Size = new System.Drawing.Size(226, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Quay lại danh sách mặt hàng";
+            this.label1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Location = new System.Drawing.Point(9, 103);
+            this.panel3.Location = new System.Drawing.Point(1, 98);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(780, 4);
+            this.panel3.Size = new System.Drawing.Size(688, 10);
             this.panel3.TabIndex = 4;
             // 
-            // textBox1
+            // tbName
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 22);
-            this.textBox1.TabIndex = 8;
+            this.tbName.Location = new System.Drawing.Point(208, 45);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(177, 22);
+            this.tbName.TabIndex = 8;
             // 
-            // textBox2
+            // tbPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 22);
-            this.textBox2.TabIndex = 8;
+            this.tbPrice.Location = new System.Drawing.Point(208, 138);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(177, 22);
+            this.tbPrice.TabIndex = 8;
             // 
-            // comboBox1
+            // cbbCate
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(208, 218);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 24);
-            this.comboBox1.TabIndex = 9;
+            this.cbbCate.FormattingEnabled = true;
+            this.cbbCate.Location = new System.Drawing.Point(208, 218);
+            this.cbbCate.Name = "cbbCate";
+            this.cbbCate.Size = new System.Drawing.Size(177, 24);
+            this.cbbCate.TabIndex = 9;
             // 
             // panel1
             // 
@@ -119,10 +121,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Location = new System.Drawing.Point(160, 185);
+            this.panel1.Controls.Add(this.cbbCate);
+            this.panel1.Controls.Add(this.tbName);
+            this.panel1.Controls.Add(this.tbPrice);
+            this.panel1.Location = new System.Drawing.Point(103, 144);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(427, 340);
             this.panel1.TabIndex = 10;
@@ -165,7 +167,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(216, 550);
+            this.iconButton1.Location = new System.Drawing.Point(153, 513);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
             this.iconButton1.Size = new System.Drawing.Size(140, 51);
@@ -173,6 +175,7 @@
             this.iconButton1.Text = "Hủy";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton2
             // 
@@ -182,7 +185,7 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 30;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.Location = new System.Drawing.Point(390, 550);
+            this.iconButton2.Location = new System.Drawing.Point(327, 513);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(140, 51);
             this.iconButton2.TabIndex = 11;
@@ -196,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(790, 788);
+            this.ClientSize = new System.Drawing.Size(663, 649);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel1);
@@ -220,9 +223,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.ComboBox cbbCate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
