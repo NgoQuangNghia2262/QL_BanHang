@@ -80,7 +80,6 @@ namespace QL_BanHang
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            if (change) { ingredient.Save(); change = false; }
             int lenght = food.Ingredients.Length;
             Ingredient[] ingredients = new Ingredient[lenght + 1];
             for (int i = 0; i < lenght; i++)

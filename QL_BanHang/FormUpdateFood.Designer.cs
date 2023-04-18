@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.flpUpdateFood = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,8 +40,9 @@
             this.lbName = new System.Windows.Forms.Label();
             this.lbSTT = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.flpUpdateFood.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,56 +51,12 @@
             // flpUpdateFood
             // 
             this.flpUpdateFood.BackColor = System.Drawing.Color.White;
-            this.flpUpdateFood.Controls.Add(this.panel4);
-            this.flpUpdateFood.Location = new System.Drawing.Point(0, 97);
+            this.flpUpdateFood.Controls.Add(this.panel2);
+            this.flpUpdateFood.Location = new System.Drawing.Point(0, 34);
             this.flpUpdateFood.Margin = new System.Windows.Forms.Padding(0);
             this.flpUpdateFood.Name = "flpUpdateFood";
-            this.flpUpdateFood.Size = new System.Drawing.Size(658, 420);
+            this.flpUpdateFood.Size = new System.Drawing.Size(658, 483);
             this.flpUpdateFood.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(652, 50);
-            this.panel4.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(477, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(321, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(166, 8);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Gà Sốt Tiêu Xanh";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "label8";
             // 
             // panel3
             // 
@@ -157,7 +109,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.flpUpdateFood);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(62, 173);
@@ -172,16 +123,16 @@
             this.panel2.Controls.Add(this.lbPrice);
             this.panel2.Controls.Add(this.lbName);
             this.panel2.Controls.Add(this.lbSTT);
-            this.panel2.Location = new System.Drawing.Point(25, 48);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(599, 34);
+            this.panel2.Size = new System.Drawing.Size(652, 34);
             this.panel2.TabIndex = 3;
             // 
             // lbCate
             // 
             this.lbCate.AutoSize = true;
             this.lbCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCate.Location = new System.Drawing.Point(452, 8);
+            this.lbCate.Location = new System.Drawing.Point(509, 8);
             this.lbCate.Name = "lbCate";
             this.lbCate.Size = new System.Drawing.Size(37, 16);
             this.lbCate.TabIndex = 0;
@@ -191,7 +142,7 @@
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(296, 8);
+            this.lbPrice.Location = new System.Drawing.Point(315, 8);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(61, 16);
             this.lbPrice.TabIndex = 0;
@@ -201,7 +152,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(144, 8);
+            this.lbName.Location = new System.Drawing.Point(169, 8);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(34, 16);
             this.lbName.TabIndex = 0;
@@ -211,7 +162,7 @@
             // 
             this.lbSTT.AutoSize = true;
             this.lbSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSTT.Location = new System.Drawing.Point(28, 8);
+            this.lbSTT.Location = new System.Drawing.Point(54, 8);
             this.lbSTT.Name = "lbSTT";
             this.lbSTT.Size = new System.Drawing.Size(37, 16);
             this.lbSTT.TabIndex = 0;
@@ -222,12 +173,38 @@
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 14);
+            this.label3.Location = new System.Drawing.Point(3, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Các thông tin chỉnh sửa";
             this.label3.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(404, 696);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(128, 44);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.Text = "Lưu";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(267, 696);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(131, 44);
+            this.iconButton2.TabIndex = 5;
+            this.iconButton2.Text = "Hủy";
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // FormUpdateFood
             // 
@@ -235,6 +212,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(781, 762);
+            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.label2);
@@ -243,8 +222,6 @@
             this.Name = "FormUpdateFood";
             this.Text = "FormUpdateFood";
             this.flpUpdateFood.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -269,10 +246,7 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbSTT;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

@@ -312,7 +312,7 @@
             this.panel3.Controls.Add(this.lbSLKhach);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Location = new System.Drawing.Point(-3, 3);
+            this.panel3.Location = new System.Drawing.Point(0, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(280, 66);
             this.panel3.TabIndex = 3;
