@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace QL_BanHang
 {
-    public partial class FormTaiKhoan : Form
+    public partial class FormAccount : Form
     {
         private Account instance = new Account();
         
-        public FormTaiKhoan()
+        public FormAccount()
         {
             InitializeComponent();
             LoadTaiKhoan();

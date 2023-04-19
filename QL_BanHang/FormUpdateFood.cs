@@ -111,6 +111,7 @@ namespace QL_BanHang
                 }
             }
             catch (NullReferenceException) {}
+            catch(Exception err) { MessageBox.Show(err.Message); }
         }
     }
 }

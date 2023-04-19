@@ -26,6 +26,8 @@ namespace QL_BanHang
         }
         void loadHeader(DateTime firstDay , DateTime secondDay)
         {
+            try
+            {
             Bill[] bills = bill.FindBillDayBetweenDay(firstDay, secondDay);
             lbDonHang.Text = bills.Length.ToString();
             lbSLBan.Text = Table.Count.ToString();
@@ -45,31 +47,44 @@ namespace QL_BanHang
             lbDoanhThu.Text = doanhthu.ToString();
             lbGiaTriTraDo.Text = giatritrado.ToString();
 
+            }
+            catch (ArgumentOutOfRangeException err) { MessageBox.Show(err.Message); }
+
         }
         void LoadCharTable(DateTime firstDay, DateTime secondDay)
         {
-            chartTable.Series["Doanh Thu"].Points.Clear();
-            int between = 7;
-            TimeSpan fourTeenDay = new TimeSpan(14, 0, 0, 0);
-            if (secondDay - firstDay < fourTeenDay) { between = 1; }
-            while (firstDay < secondDay)
+            try
             {
-                double turnover = bill.getTurnoverDayBetweenDay(firstDay, firstDay.AddDays(between));
-                chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover);
-                firstDay = firstDay.AddDays(between);
-                
+                chartTable.Series["Doanh Thu"].Points.Clear();
+                int between = 7;
+                TimeSpan fourTeenDay = new TimeSpan(14, 0, 0, 0);
+                if (secondDay - firstDay < fourTeenDay) { between = 1; }
+                while (firstDay < secondDay)
+                {
+                    double turnover = bill.getTurnoverDayBetweenDay(firstDay, firstDay.AddDays(between));
+                    chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover);
+                    firstDay = firstDay.AddDays(between);
+
+                }
+                firstDay = firstDay.AddDays(-between);
+                double turnover2 = bill.getTurnoverDayBetweenDay(firstDay, DateTime.Now);
+                chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover2);
             }
-            double turnover2 = bill.getTurnoverDayBetweenDay(firstDay, DateTime.Now);
-            chartTable.Series["Doanh Thu"].Points.AddXY(firstDay.Day, turnover2);
+            catch(ArgumentOutOfRangeException err) { MessageBox.Show(err.Message); }
         }
         void LoadTopFood(DateTime firstDay , DateTime secondDay)
         {
-            flpTopFood.Controls.Clear();
-            Bill_Info[] billinfos = bif.getTop5FoodDayBetweenDay(firstDay, secondDay);
-            for (int i = 0; i < billinfos.Length; i++)
+            try
             {
-                flpTopFood.Controls.Add(createItemTopFood(billinfos[i]));
+                flpTopFood.Controls.Clear();
+                Bill_Info[] billinfos = bif.getTop5FoodDayBetweenDay(firstDay, secondDay);
+                for (int i = 0; i < billinfos.Length; i++)
+                {
+                    flpTopFood.Controls.Add(createItemTopFood(billinfos[i]));
+                }
             }
+            catch (ArgumentOutOfRangeException err) { MessageBox.Show(err.Message); }
+           
         }
          Panel createItemTopFood(Bill_Info bi)
         {

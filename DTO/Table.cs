@@ -12,6 +12,7 @@ namespace DTO
     {
         private int _id;
         private int _status;
+        
         public Table() { }
        
         private Table(DataRow row)

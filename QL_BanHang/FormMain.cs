@@ -40,13 +40,12 @@ namespace QL_BanHang
                 flpTable.Controls.Add(btn);
             }
         }
-     
-
-       
-
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            this.Hide();
+            FormQLBill form = new FormQLBill();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

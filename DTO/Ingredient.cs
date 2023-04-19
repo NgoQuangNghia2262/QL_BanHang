@@ -43,6 +43,14 @@ namespace DTO
         public string NameF { get => _nameF;  }
         public double Amount { get => _amount; set => _amount = value; }
         public double Inventory { get => _inventory; set => _inventory = value; }
+        public Ingredient[] Ingredients
+        {
+            get
+            {
+
+                return null;
+            }
+        }
 
         public void Save()
         {

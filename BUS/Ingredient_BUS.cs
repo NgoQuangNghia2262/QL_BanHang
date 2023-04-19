@@ -21,5 +21,9 @@ namespace BUS
         {
             return Convert.ToDouble(DAL.getInventory(Name));
         }
+        public DataTable groupByName()
+        {
+            return DAL.groupByName();
+        }
     }
 }

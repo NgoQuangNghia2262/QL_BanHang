@@ -1,6 +1,6 @@
 ﻿namespace QL_BanHang
 {
-    partial class FormTaiKhoan
+    partial class FormAccount
     {
         /// <summary>
         /// Required designer variable.

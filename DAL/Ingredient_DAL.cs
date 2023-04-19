@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAL
 {
@@ -83,6 +84,10 @@ namespace DAL
         public object getInventory(string Name)
         {
             return DataProvider.Instance.ExecutesScalar($"select Inventory from Ingredient where  Name = N'{Name}'");
+        }
+        public DataTable groupByName()
+        {
+            return DataProvider.Instance.ExecuteQuery($"select Name , Inventory from Ingredient group by Name , Inventory");
         }
     }
 }

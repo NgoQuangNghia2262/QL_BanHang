@@ -136,6 +136,12 @@
     <Compile Include="FormFood.Designer.cs">
       <DependentUpon>FormFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormImportingInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportingInvoices.Designer.cs">
+      <DependentUpon>FormImportingInvoices.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIngredient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +160,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProduct.cs">
+    <Compile Include="FormManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProduct.Designer.cs">
-      <DependentUpon>FormProduct.cs</DependentUpon>
+    <Compile Include="FormManagement.Designer.cs">
+      <DependentUpon>FormManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLBill.cs">
       <SubType>Form</SubType>
@@ -166,11 +172,11 @@
     <Compile Include="FormQLBill.Designer.cs">
       <DependentUpon>FormQLBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTaiKhoan.cs">
+    <Compile Include="FormAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTaiKhoan.Designer.cs">
-      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
+    <Compile Include="FormAccount.Designer.cs">
+      <DependentUpon>FormAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUpdateFood.cs">
       <SubType>Form</SubType>
@@ -207,14 +213,14 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProduct.resx">
-      <DependentUpon>FormProduct.cs</DependentUpon>
+    <EmbeddedResource Include="FormManagement.resx">
+      <DependentUpon>FormManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLBill.resx">
       <DependentUpon>FormQLBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTaiKhoan.resx">
-      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="FormAccount.resx">
+      <DependentUpon>FormAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateFood.resx">
       <DependentUpon>FormUpdateFood.cs</DependentUpon>
