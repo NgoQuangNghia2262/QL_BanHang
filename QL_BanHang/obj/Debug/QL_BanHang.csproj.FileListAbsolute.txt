@@ -11,9 +11,7 @@ D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.csproj.CoreCompile
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.exe
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.pdb
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormAdmin.resources
-D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormTaiKhoan.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormBill.resources
-D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormProduct.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormQLBill.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormChangePassword.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\bin\Debug\EntityFramework.dll
@@ -52,3 +50,4 @@ D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormIngredient.res
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormUpdateFood.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormAddFood.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormManagement.resources
+D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormAccount.resources

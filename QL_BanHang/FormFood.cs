@@ -29,6 +29,12 @@ namespace QL_BanHang
                 ccbLoaiMH.Items.Add(item);
             }
         }
+        Food getGroupFoodActivate()
+        {
+            Food foods = new Food();
+            
+            return foods;
+        }
         void LoadFood(Food[] foods)
         {
             flpFood.Controls.Clear();
@@ -171,6 +177,23 @@ namespace QL_BanHang
         {
             this.Hide();
             FormAddFood form = new FormAddFood();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormUpdateFood form = new FormUpdateFood();
+            form.ShowDialog();
+            this.Close();
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormManagement form = new FormManagement();
             form.ShowDialog();
             this.Close();
         }

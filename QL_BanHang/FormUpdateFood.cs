@@ -24,6 +24,7 @@ namespace QL_BanHang
         public FormUpdateFood(Food[] foods)
         {
             InitializeComponent();
+            this.foods = foods;
             ccbCategory = getCbbFoodCategory(food.getCategory());
             LoadFlpUpdateFood(foods);
         }
@@ -74,6 +75,7 @@ namespace QL_BanHang
             TextBox price = new TextBox();
             price.Text = food.Price.ToString();
             price.Location = lbPrice.Location;
+            price.Width = 50;
             price.KeyPress += (object sender, KeyPressEventArgs e) => {
                 if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                     e.Handled = true;
@@ -87,10 +89,23 @@ namespace QL_BanHang
 
             ccbCategory.Text = food.Category;
             ccbCategory.Location = lbCate.Location;
+            ccbCategory.Width = 100;
             ccbCategory.SelectedIndexChanged += (object sender, EventArgs e) => { 
                 food.Category = ccbCategory.Text;
             };
             panel.Controls.Add(ccbCategory);
+
+            Button btn = new Button();
+            btn.Text = "Nguyên Liệu";
+            btn.Location = lbNguyenLieu.Location;
+            btn.Width = 95;
+           // btn.Height = 30;
+            btn.Click += (object sender, EventArgs e) =>
+            {
+                FormIngredient form = new FormIngredient(food);
+                form.ShowDialog();
+            };
+            panel.Controls.Add(btn);
             return panel;
         }
         private void iconButton2_Click(object sender, EventArgs e)
@@ -110,7 +125,7 @@ namespace QL_BanHang
                     item.Save();
                 }
             }
-            catch (NullReferenceException) {}
+           
             catch(Exception err) { MessageBox.Show(err.Message); }
         }
     }

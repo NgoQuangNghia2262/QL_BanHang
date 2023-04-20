@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             this.flpUpdateFood = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbCate = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbSTT = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.lbNguyenLieu = new System.Windows.Forms.Label();
             this.flpUpdateFood.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpUpdateFood
@@ -57,6 +58,59 @@
             this.flpUpdateFood.Name = "flpUpdateFood";
             this.flpUpdateFood.Size = new System.Drawing.Size(658, 483);
             this.flpUpdateFood.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.lbNguyenLieu);
+            this.panel2.Controls.Add(this.lbCate);
+            this.panel2.Controls.Add(this.lbPrice);
+            this.panel2.Controls.Add(this.lbName);
+            this.panel2.Controls.Add(this.lbSTT);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(652, 34);
+            this.panel2.TabIndex = 3;
+            // 
+            // lbCate
+            // 
+            this.lbCate.AutoSize = true;
+            this.lbCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCate.Location = new System.Drawing.Point(336, 8);
+            this.lbCate.Name = "lbCate";
+            this.lbCate.Size = new System.Drawing.Size(37, 16);
+            this.lbCate.TabIndex = 0;
+            this.lbCate.Text = "Loại";
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.Location = new System.Drawing.Point(219, 8);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(61, 16);
+            this.lbPrice.TabIndex = 0;
+            this.lbPrice.Text = "Giá bán";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(113, 8);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(34, 16);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Tên";
+            // 
+            // lbSTT
+            // 
+            this.lbSTT.AutoSize = true;
+            this.lbSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSTT.Location = new System.Drawing.Point(35, 8);
+            this.lbSTT.Name = "lbSTT";
+            this.lbSTT.Size = new System.Drawing.Size(37, 16);
+            this.lbSTT.TabIndex = 0;
+            this.lbSTT.Text = "STT";
             // 
             // panel3
             // 
@@ -116,58 +170,6 @@
             this.panel1.Size = new System.Drawing.Size(658, 517);
             this.panel1.TabIndex = 4;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.lbCate);
-            this.panel2.Controls.Add(this.lbPrice);
-            this.panel2.Controls.Add(this.lbName);
-            this.panel2.Controls.Add(this.lbSTT);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 34);
-            this.panel2.TabIndex = 3;
-            // 
-            // lbCate
-            // 
-            this.lbCate.AutoSize = true;
-            this.lbCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCate.Location = new System.Drawing.Point(509, 8);
-            this.lbCate.Name = "lbCate";
-            this.lbCate.Size = new System.Drawing.Size(37, 16);
-            this.lbCate.TabIndex = 0;
-            this.lbCate.Text = "Loại";
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(315, 8);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(61, 16);
-            this.lbPrice.TabIndex = 0;
-            this.lbPrice.Text = "Giá bán";
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(169, 8);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(34, 16);
-            this.lbName.TabIndex = 0;
-            this.lbName.Text = "Tên";
-            // 
-            // lbSTT
-            // 
-            this.lbSTT.AutoSize = true;
-            this.lbSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSTT.Location = new System.Drawing.Point(54, 8);
-            this.lbSTT.Name = "lbSTT";
-            this.lbSTT.Size = new System.Drawing.Size(37, 16);
-            this.lbSTT.TabIndex = 0;
-            this.lbSTT.Text = "STT";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -206,6 +208,16 @@
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
+            // lbNguyenLieu
+            // 
+            this.lbNguyenLieu.AutoSize = true;
+            this.lbNguyenLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNguyenLieu.Location = new System.Drawing.Point(523, 8);
+            this.lbNguyenLieu.Name = "lbNguyenLieu";
+            this.lbNguyenLieu.Size = new System.Drawing.Size(93, 16);
+            this.lbNguyenLieu.TabIndex = 0;
+            this.lbNguyenLieu.Text = "Nguyên Liệu";
+            // 
             // FormUpdateFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,11 +234,11 @@
             this.Name = "FormUpdateFood";
             this.Text = "FormUpdateFood";
             this.flpUpdateFood.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +260,6 @@
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Label lbNguyenLieu;
     }
 }
