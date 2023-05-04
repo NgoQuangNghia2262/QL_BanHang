@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALTests", "DALTests\DALTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOTests", "DTOTests\DTOTests.csproj", "{FAF365B0-0430-4E17-87CF-60A58967DEE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUSTests", "BUSTests\BUSTests.csproj", "{3A174296-9905-4973-95F6-8C7E08D0884D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUSTests2", "BUSTests2\BUSTests2.csproj", "{3B50EC55-96C4-4B12-966A-2452E084AB78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{FAF365B0-0430-4E17-87CF-60A58967DEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAF365B0-0430-4E17-87CF-60A58967DEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAF365B0-0430-4E17-87CF-60A58967DEE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A174296-9905-4973-95F6-8C7E08D0884D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A174296-9905-4973-95F6-8C7E08D0884D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A174296-9905-4973-95F6-8C7E08D0884D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A174296-9905-4973-95F6-8C7E08D0884D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B50EC55-96C4-4B12-966A-2452E084AB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B50EC55-96C4-4B12-966A-2452E084AB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B50EC55-96C4-4B12-966A-2452E084AB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B50EC55-96C4-4B12-966A-2452E084AB78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

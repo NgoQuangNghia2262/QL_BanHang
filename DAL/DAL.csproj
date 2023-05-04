@@ -47,6 +47,8 @@
     <Compile Include="DataProvider.cs" />
     <Compile Include="Food_DAL.cs" />
     <Compile Include="ICRUD.cs" />
+    <Compile Include="ImportingInvoices_DAL.cs" />
+    <Compile Include="ImportingInvoices_Info_DAL.cs" />
     <Compile Include="Ingredient_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Table_DAL.cs" />

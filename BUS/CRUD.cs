@@ -52,6 +52,12 @@ namespace BUS
                         BUS.Delete(obj);
                         break;
                     }
+                case "ImportingInvoices":
+                    {
+                        CRUDImportingInvoices_BUS BUS = new CRUDImportingInvoices_BUS();
+                        BUS.Delete(obj);
+                        break;
+                    }
                 default: { throw new ArgumentOutOfRangeException(nameof(objType) , $"Chưa thiết lập case {objType} tại lớp CRUD"); }
             }
         }
@@ -106,6 +112,12 @@ namespace BUS
                         dt = instance.Find();
                         break; 
                     }
+                case "ImportingInvoices":
+                    {
+                        CRUDImportingInvoices_BUS instance = new CRUDImportingInvoices_BUS();
+                        dt = instance.Find();
+                        break;
+                    }
                 default: { throw new ArgumentOutOfRangeException(nameof(objType), $"Chưa thiết lập case {objType} tại lớp CRUD"); }
             }
             return dt;
@@ -158,6 +170,11 @@ namespace BUS
                         dt = instance.Find(obj);
                         break;
                     }
+                case "ImportingInvoices": {
+                        CRUDImportingInvoices_BUS instance = new CRUDImportingInvoices_BUS();
+                        dt = instance.Find(obj);
+                        break;
+                    }
                 default: { throw new Exception($"Chưa thiết lập case {objType} tại lớp CRUD"); }
 
             }
@@ -169,6 +186,12 @@ namespace BUS
             string objType = obj.GetType().Name;
             switch (objType)
             {
+                case "ImportingInvoices":
+                    {
+                        CRUDImportingInvoices_BUS instance = new CRUDImportingInvoices_BUS();
+                        instance.Save(obj);
+                        break;
+                    }
                 case "Table": {
                         Table_DAL instance = new Table_DAL();
                         instance.Save(obj);

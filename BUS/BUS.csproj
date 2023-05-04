@@ -48,9 +48,13 @@
     <Compile Include="CRUDBill_BUS.cs" />
     <Compile Include="CRUDBill_Info_BUS.cs" />
     <Compile Include="CRUDFood_BUS.cs" />
+    <Compile Include="CRUDImportingInvoices_BUS.cs" />
+    <Compile Include="CRUDImportingInvoices_Info_BUS.cs" />
     <Compile Include="CRUDIngredient_BUS.cs" />
     <Compile Include="Food_BUS.cs" />
     <Compile Include="ICRUD.cs" />
+    <Compile Include="ImportingInvoices_BUS.cs" />
+    <Compile Include="ImportingInvoices_Info_BUS.cs" />
     <Compile Include="Ingredient_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CRUDTable_BUS.cs" />
