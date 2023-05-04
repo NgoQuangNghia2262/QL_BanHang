@@ -56,6 +56,8 @@ namespace DAL
         {
             try
             {
+                DataProvider.Instance.ExecuteNonQuery($"delete Bill_Info where NameF = N'{obj.NameF}'");
+                DataProvider.Instance.ExecuteNonQuery($"delete Ingredient where NameF = N'{obj.NameF}'");
                 DataProvider.Instance.ExecuteNonQuery($"delete Food where NameF = N'{obj.NameF}'");
 
             }

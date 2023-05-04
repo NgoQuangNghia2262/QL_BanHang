@@ -342,7 +342,7 @@ namespace QL_BanHang
             bill.Save();
             Table tb = new Table();
             tb = tb.Find(bill.IdTb);
-            tb.Status = 1;
+            tb.Status = 0;
             tb.Save();
             FormMain form = new FormMain();
             form.ShowDialog();

@@ -15,13 +15,13 @@ namespace QL_BanHang
     {
         private readonly Food food = new Food();
         private ComboBox ccbCategory = new ComboBox();
-        private Food[] foods;
+        private List<Food> foods;
         public FormUpdateFood()
         {
             InitializeComponent();
             
         }
-        public FormUpdateFood(Food[] foods)
+        public FormUpdateFood(List<Food> foods)
         {
             InitializeComponent();
             this.foods = foods;
@@ -36,9 +36,9 @@ namespace QL_BanHang
             form.ShowDialog();
             this.Close();
         }
-        void LoadFlpUpdateFood(Food[] foods)
+        void LoadFlpUpdateFood(List<Food> foods)
         {
-            for (int i = 0; i < foods.Length; i++)
+            for (int i = 0; i < foods.Count; i++)
             {
                 flpUpdateFood.Controls.Add(createPnlUpdateFood(foods[i] , i +1));
             }
@@ -125,7 +125,6 @@ namespace QL_BanHang
                     item.Save();
                 }
             }
-           
             catch(Exception err) { MessageBox.Show(err.Message); }
         }
     }

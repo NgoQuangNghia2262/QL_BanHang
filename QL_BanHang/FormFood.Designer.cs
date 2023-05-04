@@ -326,7 +326,7 @@
             this.iconButton3.Text = "Xóa mặt hàng";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconPictureBox1
             // 

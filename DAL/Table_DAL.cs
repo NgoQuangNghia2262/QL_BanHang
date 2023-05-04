@@ -32,7 +32,7 @@ namespace DAL
         {
             try
             {
-                DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from TableFood where Id = {obj.AHGFAJKSF}");
+                DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from TableFood where Id = {obj.Id}");
                 if(dt.Rows.Count > 0)
                 {
                     string query = $"update TableFood set status = {obj.Status} where Id = {obj.Id}";

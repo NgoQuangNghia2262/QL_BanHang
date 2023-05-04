@@ -15,6 +15,7 @@ namespace QL_BanHang
     {
         private Food food = new Food();
         private double sec = 0.5;//Thời gian delay tìm kiếm food
+        private List<Food> foodList = new List<Food>();
         public FormFood()
         {
             InitializeComponent();
@@ -28,12 +29,6 @@ namespace QL_BanHang
             {
                 ccbLoaiMH.Items.Add(item);
             }
-        }
-        Food getGroupFoodActivate()
-        {
-            Food foods = new Food();
-            
-            return foods;
         }
         void LoadFood(Food[] foods)
         {
@@ -75,6 +70,7 @@ namespace QL_BanHang
                 if(createFoodPanel.BackColor == Color.Aqua)
                 {
                     createFoodPanel.BackColor = Color.White;
+                    foodList.Remove(food);
                     createFoodPanel.Controls.RemoveAt(3);
                 }
                 else
@@ -83,6 +79,7 @@ namespace QL_BanHang
                     FlowLayoutPanel flpIngredient = createFLPIngredient(food.Ingredients);
                     flpIngredient.Location = new Point(0, createFoodPanel.Height + 2);
                     createFoodPanel.Controls.Add(flpIngredient);
+                    foodList.Add(food);
                 }
             };
 
@@ -184,7 +181,7 @@ namespace QL_BanHang
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            FormUpdateFood form = new FormUpdateFood();
+            FormUpdateFood form = new FormUpdateFood(foodList);
             form.ShowDialog();
             this.Close();
             
@@ -196,6 +193,20 @@ namespace QL_BanHang
             FormManagement form = new FormManagement();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            DialogResult dia = MessageBox.Show("Bạn có muốn xóa không", "Xóa ?", MessageBoxButtons.OKCancel);
+            if (dia == DialogResult.OK)
+            {
+                int del = foodList.Count;
+                foreach (Food item in foodList)
+                {
+                    item.Delete();
+                }
+                MessageBox.Show($"{del} mặt hàng được xóa");
+            }
         }
     }
 }
