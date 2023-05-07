@@ -35,17 +35,8 @@ namespace DAL
         {
             try
             {
-                DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from Bill_Info ,Bill where Bill_Info.idbill= Bill.id and Bill_Info.idbill = {obj.IdBill} and NameF = N'{obj.NameF}' and Status = 0");
-                if (dt.Rows.Count > 0)
-                {
-                    string query = $"update Bill_Info set Amount = {obj.Amount} where idbill = {obj.IdBill} and NameF = N'{obj.NameF}'";
-                    DataProvider.Instance.ExecuteNonQuery(query);
-                }
-                else
-                {
-                    string query = $"insert into Bill_Info(IdBill , NameF , Amount) values({obj.IdBill} , N'{obj.NameF}' , {obj.Amount})";
-                    DataProvider.Instance.ExecuteNonQuery(query);
-                }
+                string query = $"EXEC AddOrUpdateImportingInvoiceInfo @Id = {obj.Id}, @IdBill = {obj.IdBill}, @NameF = '{obj.NameF}', @Amount = {obj.Amount}, @Price = {obj.Price}";
+                DataProvider.Instance.ExecuteNonQuery(query);
 
             }
             catch (Exception ex)
@@ -53,12 +44,6 @@ namespace DAL
                 throw ex;
             }
         }
-        public DataTable getTopFoodDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
-        {
-            string query1 = "select top(5) NameF ,SUM(amount) as Amount from Bill_Info , Bill where Bill.Id = IdBill ";
-            string query2 = $"and DateIn between '{FirstDay.ToString("yyyy/MM/dd")}' and '{SecondDay.AddDays(1).ToString("yyyy/MM/dd")}'";
-            string query = query1 + query2 + "group by NameF ORDER BY Sum(Amount) DESC";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
+       
     }
 }
