@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class CRUD : ICRUD
+    public class CRUD 
     {
+        private ICRUD BUS;
         private static CRUD instance;
         public static CRUD Instance
         {
@@ -23,38 +24,44 @@ namespace BUS
             switch (objType)
             {
                 case "Table": {
-                        CRUDTable_BUS BUS = new CRUDTable_BUS();
+                        BUS = new CRUDTable_BUS();
                         BUS.Delete(obj);
                         break; }
                 case "Account": {
-                        CRUDAccount_BUS BUS = new CRUDAccount_BUS();
+                        BUS = new CRUDAccount_BUS();
                         BUS.Delete(obj); 
                         break; }
                 case "Food": {
-                        CRUDFood_BUS BUS = new CRUDFood_BUS();
+                        BUS = new CRUDFood_BUS();
                         BUS.Delete(obj);
                         break; }
                 case "Ingredient":
                     {
-                        CRUDIngredient_BUS BUS = new CRUDIngredient_BUS();
+                        BUS = new CRUDIngredient_BUS();
                         BUS.Delete(obj);
                         break;
                     }
                 case "Bill_Info":
                     {
-                        CRUDBill_Info_BUS BUS = new CRUDBill_Info_BUS();
+                        BUS = new CRUDBill_Info_BUS();
                         BUS.Delete(obj);
                         break;
                     }
                 case "Bill":
                     {
-                        CRUDBill_BUS BUS = new CRUDBill_BUS();
+                        BUS = new CRUDBill_BUS();
                         BUS.Delete(obj);
                         break;
                     }
                 case "ImportingInvoices":
                     {
-                        CRUDImportingInvoices_BUS BUS = new CRUDImportingInvoices_BUS();
+                        BUS = new CRUDImportingInvoices_BUS();
+                        BUS.Delete(obj);
+                        break;
+                    }
+                case "CRUDImportingInvoices_Info":
+                    {
+                        BUS = new CRUDImportingInvoices_Info_BUS();
                         BUS.Delete(obj);
                         break;
                     }

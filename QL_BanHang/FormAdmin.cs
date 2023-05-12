@@ -28,7 +28,7 @@ namespace QL_BanHang
         {
             try
             {
-            Bill[] bills = bill.FindBillDayBetweenDay(firstDay, secondDay);
+            Bill[] bills = Bill.FindBillDayBetweenDay(firstDay, secondDay);
             lbDonHang.Text = bills.Length.ToString();
             lbSLBan.Text = Table.Count.ToString();
             lbBanSD.Text = Table.CountWithStatus(1).ToString();

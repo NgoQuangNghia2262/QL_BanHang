@@ -51,3 +51,4 @@ D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormUpdateFood.res
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormAddFood.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormManagement.resources
 D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormAccount.resources
+D:\Visual code\DNN\QL_BanHang\QL_BanHang\obj\Debug\QL_BanHang.FormImportingInvoices.resources

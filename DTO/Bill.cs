@@ -72,12 +72,64 @@ namespace DTO
         {
             CRUD.Instance.Save(this);
         }
-        public Bill[] Find()
+        public double getTurnoverDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
         {
-            DataTable dt = CRUD.Instance.FindAll(this);
+            return bus.getTurnoverDayBetweenDay(FirstDay, SecondDay);
+        }
+
+        public void FindBillForTable()
+        {
+            try
+            {
+                if (IdTb <= 0) { throw new FormatException("Id của Bill phỉa lớn hơn 0"); }
+                Bill_BUS bus = new Bill_BUS();
+                DataTable dt = bus.FindBillForTable(this.IdTb);
+                DataRow row = dt.Rows[0];
+                Status = int.Parse(row["Status"].ToString());
+                DateIn = DateTime.Parse(row["DateIn"].ToString());
+                DateOut = DateTime.Parse(row["DateOut"].ToString());
+                Discount = double.Parse(row["Discount"].ToString());
+                Note = row["Note"].ToString();
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new InvalidOperationException("Không tìm thấy phần tử trong danh sách.");
+            }
+        }
+        public void getElementById()
+        {
+            try
+            {
+                if (Id <= 0) { throw new FormatException("Id của Bill phỉa lớn hơn 0"); }
+                DataTable dt = CRUD.Instance.Find(this);
+                DataRow row = dt.Rows[0];
+                Status = int.Parse(row["Status"].ToString());
+                IdTb = int.Parse(row["IdTb"].ToString());
+                DateIn = DateTime.Parse(row["DateIn"].ToString());
+                DateOut = DateTime.Parse(row["DateOut"].ToString());
+                Discount = double.Parse(row["Discount"].ToString());
+                Note = row["Note"].ToString();
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new InvalidOperationException("Không tìm thấy phần tử trong danh sách.");
+            }
+
+        }
+
+        public Bill Find(int idbill)
+        {
+            this._id = idbill;
+            DataTable dt = CRUD.Instance.Find(this);
+            return new Bill(dt.Rows[0]);
+        }
+
+        public static Bill[] Find()
+        {
+            DataTable dt = CRUD.Instance.FindAll(new Bill());
             return ConvertDataTableToBill(dt); 
         }
-        private Bill[] ConvertDataTableToBill(DataTable dt)
+        private static Bill[] ConvertDataTableToBill(DataTable dt)
         {
             Bill[] instance = new Bill[dt.Rows.Count];
             for (int i = 0; i < instance.Length; i++)
@@ -86,35 +138,11 @@ namespace DTO
             }
             return instance;
         }
-        public Bill[] FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
+        public static Bill[] FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
         {
+            Bill_BUS bus = new Bill_BUS();
             DataTable dt = bus.FindBillDayBetweenDay(FirstDay , SecondDay);
             return ConvertDataTableToBill(dt);
         }
-       
-
-        public Bill FindBillForTable(int idtb)
-        {
-            try
-            {
-                DataTable dt = bus.FindBillForTable(idtb);
-                return new Bill(dt.Rows[0]);
-            }
-            catch (IndexOutOfRangeException) { return new Bill(idtb); }
-        }
-
-       
-        public Bill Find(int idbill)
-        {
-            this._id = idbill;
-            DataTable dt = CRUD.Instance.Find(this);
-            return new Bill(dt.Rows[0]);
-        }
-        public double getTurnoverDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
-        {
-            return bus.getTurnoverDayBetweenDay(FirstDay ,SecondDay);
-        }
-
-
     }
 }

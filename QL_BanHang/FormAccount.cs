@@ -6,8 +6,6 @@ namespace QL_BanHang
 {
     public partial class FormAccount : Form
     {
-        private Account instance = new Account();
-        
         public FormAccount()
         {
             InitializeComponent();
@@ -15,7 +13,7 @@ namespace QL_BanHang
         }
         void LoadTaiKhoan()
         {
-            Account[] accounts = instance.Find();
+            Account[] accounts = Account.Find();
             dgvTaiKhoan.DataSource = accounts;
         }
         private void button2_Click(object sender, EventArgs e)
@@ -76,7 +74,9 @@ namespace QL_BanHang
             {
                 try
                 {
-                    Account acc = instance.Find(tbTk.Text);
+                    Account acc = new Account();
+                    acc.Username = tbTk.Text;
+                    acc.getElementById();
                     acc.Delete();
                     LoadTaiKhoan();
                 }

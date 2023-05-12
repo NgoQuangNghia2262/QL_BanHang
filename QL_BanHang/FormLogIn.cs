@@ -33,7 +33,9 @@ namespace QL_BanHang
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Account result = account.Find(tbUser.Text);
+            Account result = new Account();
+            result.Username = tbUser.Text;
+            result.getElementById();
             if (result.Password != tbPass.Text)
             {
                 MessageBox.Show("Tài khoản hoặc mật khấu không đúng");

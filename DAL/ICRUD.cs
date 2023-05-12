@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal interface  ICRUD
+    public interface  ICRUD
     {
         //
         // Summary:

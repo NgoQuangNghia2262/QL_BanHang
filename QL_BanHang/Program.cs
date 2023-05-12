@@ -20,7 +20,7 @@ namespace QL_BanHang
             Application.SetCompatibleTextRenderingDefault(false);
             Bill bill = new Bill();
             Food food = new Food();
-            Application.Run(new FormAdmin());
+            Application.Run(new FormAccount());
         }
     }
 }

@@ -13,7 +13,6 @@ namespace QL_BanHang
 {
     public partial class FormMain : Form
     {
-        private readonly Table table = new Table();
         public FormMain()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace QL_BanHang
         }
         void LoadTable()
         {
-            Table[] tables = table.Find();
+            Table[] tables = Table.Find();
             foreach (Table item in tables)
             {
                 Button btn = new Button();

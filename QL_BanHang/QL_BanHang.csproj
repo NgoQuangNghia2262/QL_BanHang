@@ -204,6 +204,9 @@
     <EmbeddedResource Include="FormFood.resx">
       <DependentUpon>FormFood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormImportingInvoices.resx">
+      <DependentUpon>FormImportingInvoices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIngredient.resx">
       <DependentUpon>FormIngredient.cs</DependentUpon>
     </EmbeddedResource>

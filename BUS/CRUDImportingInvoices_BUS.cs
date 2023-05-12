@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class CRUDImportingInvoices_BUS
+    public class CRUDImportingInvoices_BUS : ICRUD
     {
         private readonly ImportingInvoices_DAL DAL = new ImportingInvoices_DAL();
 

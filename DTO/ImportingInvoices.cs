@@ -21,6 +21,14 @@ namespace DTO
         public DateTime Date { get => _date; set => _date = value; }
         public string Note { get => _note; set => _note = value; }
         public string Suppliers { get => _suppliers; set => _suppliers = value; }
+        public ImportingInvoices_Info[] ImportingInvoices_Infos
+        {
+            get
+            {
+                ImportingInvoices_Info instance = new ImportingInvoices_Info();
+                return instance.Find(Id);
+            }
+        }
 
         public ImportingInvoices() {   }
 

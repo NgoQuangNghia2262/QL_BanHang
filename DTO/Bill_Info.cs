@@ -45,8 +45,6 @@ namespace DTO
                 return food.Find(NameF);
             }
         }
-
-
         public Bill_Info[] Find(int idBill = -1)
         {
             DataTable dt = new DataTable();

@@ -52,7 +52,7 @@ namespace QL_BanHang
         void LoadFlpBill(DateTime FirstDay , DateTime SecondDay)
         {
             flpBill.Controls.Clear();
-            Bill[] bills = bill.FindBillDayBetweenDay(FirstDay,SecondDay);
+            Bill[] bills = Bill.FindBillDayBetweenDay(FirstDay,SecondDay);
             LoadPnl2(bills);
             foreach (Bill item in bills)
             {

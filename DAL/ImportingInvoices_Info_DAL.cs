@@ -13,7 +13,7 @@ namespace DAL
         {
             try
             {
-                DataProvider.Instance.ExecuteNonQuery($"delete Bill_Info where Id = '{obj.Id}'");
+                DataProvider.Instance.ExecuteNonQuery($"delete ImportingInvoices_Info where Id = '{obj.Id}'");
 
             }
             catch (Exception err) { throw err; }
@@ -23,8 +23,8 @@ namespace DAL
             try
             {
                 DataTable dt = null;
-                if (obj == null) { dt = DataProvider.Instance.ExecuteQuery("select * from Bill_Info"); }
-                else { dt = DataProvider.Instance.ExecuteQuery($"select * from Bill_Info where idbill = {obj.IdBill}"); }
+                if (obj == null) { dt = DataProvider.Instance.ExecuteQuery("select * from ImportingInvoices_Info"); }
+                else { dt = DataProvider.Instance.ExecuteQuery($"select * from ImportingInvoices_Info where idbill = {obj.IdBill}"); }
                 return dt;
 
             }

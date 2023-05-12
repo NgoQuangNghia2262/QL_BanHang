@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace QL_BanHang
         public FormImportingInvoices()
         {
             InitializeComponent();
+            loadDgvHDB();
+        }
+        void loadDgvHDB()
+        {
+            ImportingInvoices bill = new ImportingInvoices();
+            dgvHDB.DataSource = bill.Find();
         }
     }
 }

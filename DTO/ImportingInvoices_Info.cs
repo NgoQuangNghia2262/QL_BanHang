@@ -57,21 +57,19 @@ namespace DTO
         {
             CRUD.Instance.Delete(this);
         }
-        public ImportingInvoices_Info[] Find()
+        public ImportingInvoices_Info[] Find(int idBill = -1)
         {
-            DataTable dt = CRUD.Instance.FindAll(this);
-            ImportingInvoices_Info[] arr = ConvertDataTableToDTO(dt);
-            return arr;
-        }
-        public ImportingInvoices_Info Find(string key)
-        {
-            try
+            DataTable dt = new DataTable();
+            if (idBill == -1)
             {
-                this._id = int.Parse(key);
-                DataTable dt = CRUD.Instance.Find(this);
-                return new ImportingInvoices_Info(dt.Rows[0]);
+                dt = CRUD.Instance.FindAll(this);
             }
-            catch (IndexOutOfRangeException) { return null; }
+            else
+            {
+                this.IdBill = idBill;
+                dt = CRUD.Instance.Find(this);
+            }
+            return ConvertDataTableToDTO(dt);
         }
     }
 }

@@ -41,7 +41,9 @@ namespace DTO
             get
             {
                 Bill bill = new Bill();
-                return bill.FindBillForTable(Id);
+                bill.IdTb = this.Id;
+                bill.FindBillForTable();
+                return bill;
             }
         }
 

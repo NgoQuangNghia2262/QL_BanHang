@@ -43,9 +43,9 @@ namespace DTO
         {
             CRUD.Instance.Delete(this);
         }
-        public Account[] Find()
+        public static Account[] Find()
         {
-            DataTable dt = CRUD.Instance.FindAll(this);
+            DataTable dt = CRUD.Instance.FindAll(new Account());
             Account[] accounts = new Account[dt.Rows.Count];
             for (int i = 0; i < accounts.Length; i++)
             {
@@ -53,16 +53,20 @@ namespace DTO
             }
             return accounts;
         }
-        public Account Find(string username)
+        public void getElementById()
         {
             try
             {
-                this.Username = username;
+                if (Username == "") { throw new FormatException("Tên người dùng không hợp lệ"); }
                 DataTable dt = CRUD.Instance.Find(this);
-                return new Account(dt.Rows[0]);
+                DataRow row = dt.Rows[0];
+                Password = row["password"].ToString().Trim();
+                Category = row["category"].ToString().Trim();
             }
-            catch(IndexOutOfRangeException ) { return new Account(); }
-            
+            catch (IndexOutOfRangeException)
+            {
+                throw new InvalidOperationException("Không tìm thấy phần tử trong danh sách.");
+            }
         }
     }
 }
