@@ -52,8 +52,7 @@ namespace DTO
         {
             get
             {
-                Bill_Info instance = new Bill_Info();
-                return instance.Find(Id);
+                return Bill_Info.FindAllByIdBill(Id);
             }
         }
         public double Total
@@ -127,9 +126,9 @@ namespace DTO
         public static Bill[] Find()
         {
             DataTable dt = CRUD.Instance.FindAll(new Bill());
-            return ConvertDataTableToBill(dt); 
+            return ConvertDataTableToDTO(dt); 
         }
-        private static Bill[] ConvertDataTableToBill(DataTable dt)
+        private static Bill[] ConvertDataTableToDTO(DataTable dt)
         {
             Bill[] instance = new Bill[dt.Rows.Count];
             for (int i = 0; i < instance.Length; i++)
@@ -142,7 +141,7 @@ namespace DTO
         {
             Bill_BUS bus = new Bill_BUS();
             DataTable dt = bus.FindBillDayBetweenDay(FirstDay , SecondDay);
-            return ConvertDataTableToBill(dt);
+            return ConvertDataTableToDTO(dt);
         }
     }
 }

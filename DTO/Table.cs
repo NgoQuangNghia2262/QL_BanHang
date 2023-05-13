@@ -51,9 +51,9 @@ namespace DTO
         {
             CRUD.Instance.Save(this);
         }
-        public Table[] Find()
+        public static Table[] Find()
         {
-            DataTable dt = CRUD.Instance.FindAll(this);
+            DataTable dt = CRUD.Instance.FindAll(new Table());
             Table[] tables = new Table[dt.Rows.Count];
             for (int i = 0; i < tables.Length; i++)
             {
@@ -71,6 +71,20 @@ namespace DTO
             }
             catch (IndexOutOfRangeException) { return null; }
         }
-     
+        public void getElementById()
+        {
+            try
+            {
+                if (Id <= 0) { throw new FormatException("Id của Bill phỉa lớn hơn 0"); }
+                DataTable dt = CRUD.Instance.Find(this);
+                DataRow row = dt.Rows[0];
+                Status = int.Parse(row["Status"].ToString());
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new InvalidOperationException("Không tìm thấy phần tử trong danh sách.");
+            }
+        }
+
     }
 }
