@@ -51,25 +51,18 @@ namespace DTO
                 return null;
             }
         }
-
+        private static Ingredient[] ConvertDataTableToDTO(DataTable dt)
+        {
+            Ingredient[] BillInfos = new Ingredient[dt.Rows.Count];
+            for (int i = 0; i < BillInfos.Length; i++)
+            {
+                BillInfos[i] = new Ingredient(dt.Rows[i]);
+            }
+            return BillInfos;
+        }
         public void Save()
         {
             CRUD.Instance.Save(this);
-        }
-        public Ingredient[] Find(string nameF = null)
-        {
-            DataTable dt = new DataTable();
-            if (nameF == null) { dt = CRUD.Instance.FindAll(this); }
-            else {
-                Ingredient_BUS BUS = new Ingredient_BUS();
-                dt = BUS.getIngredientsForFood(nameF);
-            }
-            Ingredient[] instance = new Ingredient[dt.Rows.Count];
-            for (int i = 0; i < instance.Length; i++)
-            {
-                instance[i] = new Ingredient(dt.Rows[i]);
-            }
-            return instance;
         }
         public Ingredient Find(string keyName , string keyNameF )
         {
@@ -83,6 +76,24 @@ namespace DTO
             catch (IndexOutOfRangeException) { return null; }
             
         }
+        public static Ingredient[] getElementByNameF(string nameF)
+        {
+            Ingredient_BUS BUS = new Ingredient_BUS();
+            DataTable dt =  BUS.getIngredientsForFood(nameF);
+            return ConvertDataTableToDTO(dt);
+        }
+
+
+        public Ingredient getElementById()
+        {
+            try
+            {
+                DataTable dt = CRUD.Instance.Find(this);
+                return new Ingredient(dt.Rows[0]);
+            }
+            catch (IndexOutOfRangeException) { return null; }
+
+        }
         public void Delete() { 
             CRUD.Instance.Delete(this);
         }
@@ -90,6 +101,11 @@ namespace DTO
         {
             Ingredient_BUS bus = new Ingredient_BUS();
             return bus.getInventory(Name);
+        }
+        public static Ingredient[] Find()
+        {
+            DataTable dt = CRUD.Instance.FindAll(new Ingredient());
+            return ConvertDataTableToDTO(dt);
         }
     }
 }

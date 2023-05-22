@@ -60,5 +60,9 @@ namespace DAL
             string query = query1 + query2 + "group by NameF ORDER BY Sum(Amount) DESC";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable FindAllByIdBill(int idBill)
+        {
+            return DataProvider.Instance.ExecuteQuery($"select * from Bill_Info where idbill = {idBill}");
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace QL_BanHang
         }
         void LoadCbbCate()
         {
-            string[] cates = food.getCategory();
+            string[] cates = Food.getCategory();
             foreach (string item in cates)
             {
                 cbbCate.Items.Add(item);

@@ -13,7 +13,6 @@ namespace QL_BanHang
 {
     public partial class FormUpdateFood : Form
     {
-        private readonly Food food = new Food();
         private ComboBox ccbCategory = new ComboBox();
         private List<Food> foods;
         public FormUpdateFood()
@@ -25,7 +24,7 @@ namespace QL_BanHang
         {
             InitializeComponent();
             this.foods = foods;
-            ccbCategory = getCbbFoodCategory(food.getCategory());
+            ccbCategory = getCbbFoodCategory(Food.getCategory());
             LoadFlpUpdateFood(foods);
         }
 

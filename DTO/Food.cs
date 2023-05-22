@@ -37,7 +37,7 @@ namespace DTO
             get
             {
                 Ingredient ingredient = new Ingredient();
-                Ingredient[] ingredients = ingredient.Find(NameF);
+                Ingredient[] ingredients = Ingredient.getElementByNameF(NameF);
                 return ingredients;
             }
         }
@@ -57,7 +57,7 @@ namespace DTO
                 item.Save();
             }
         }
-        private Food[] ConvertDataTableToDTO(DataTable dt)
+        private static Food[] ConvertDataTableToDTO(DataTable dt)
         {
             Food[] foods = new Food[dt.Rows.Count];
             for (int i = 0; i < foods.Length; i++)
@@ -66,15 +66,15 @@ namespace DTO
             }
             return foods;
         }
-        public string[] getCategory()
+        public static string[] getCategory()
         {
+            Food_BUS BUS = new Food_BUS();
             return BUS.getCategory();
         }
-        public Food[] Find()
+        public static Food[] Find()
         {
-            DataTable dt = CRUD.Instance.FindAll(this);
-            Food[] foods = ConvertDataTableToDTO(dt);
-            return foods;
+            DataTable dt = CRUD.Instance.FindAll(new Food());
+            return ConvertDataTableToDTO(dt);
         }
         public Food Find(string key)
         {
@@ -89,14 +89,13 @@ namespace DTO
         public Food[] FindWithCategory(string category)
         {
             DataTable dt = BUS.FindWithCategory(category);
-            Food[] foods = ConvertDataTableToDTO(dt);
-            return foods;
+            return ConvertDataTableToDTO(dt);
         }
-        public Food[] FindApproximateNameF(string nameF)
+        public static Food[] FindApproximateNameF(string nameF)
         {
+            Food_BUS BUS = new Food_BUS();
             DataTable dt = BUS.FindApproximateNameF(nameF);
-            Food[] foods = ConvertDataTableToDTO(dt);
-            return foods;
+            return ConvertDataTableToDTO(dt);
         }
         public void Save()
         {

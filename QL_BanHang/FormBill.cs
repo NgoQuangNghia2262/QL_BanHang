@@ -113,7 +113,7 @@ namespace QL_BanHang
         }
         void LoadContainerLeft()
         {
-            string[] categorys = food.getCategory();
+            string[] categorys = Food.getCategory();
             foreach (string item in categorys)
             {
                 Button btn = new Button();
@@ -389,7 +389,7 @@ namespace QL_BanHang
             sec-=0.5;
             if (sec == 0)
             { 
-                Food[] foods = food.FindApproximateNameF(tbSeach.Text);
+                Food[] foods = Food.FindApproximateNameF(tbSeach.Text);
                 LoadProduct(foods);
                 timer1.Stop();
                 sec = 0.5;

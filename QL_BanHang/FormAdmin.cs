@@ -14,7 +14,6 @@ namespace QL_BanHang
 {
     public partial class FormAdmin : Form
     {
-        Bill_Info bif = new Bill_Info();
         Bill bill = new Bill();
         public FormAdmin()
         {
@@ -77,7 +76,7 @@ namespace QL_BanHang
             try
             {
                 flpTopFood.Controls.Clear();
-                Bill_Info[] billinfos = bif.getTop5FoodDayBetweenDay(firstDay, secondDay);
+                Bill_Info[] billinfos = Bill_Info.getTop5FoodDayBetweenDay(firstDay, secondDay);
                 for (int i = 0; i < billinfos.Length; i++)
                 {
                     flpTopFood.Controls.Add(createItemTopFood(billinfos[i]));

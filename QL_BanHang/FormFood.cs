@@ -20,11 +20,11 @@ namespace QL_BanHang
         {
             InitializeComponent();
             LoadCBBcate();
-            LoadFood(food.FindApproximateNameF(""));
+            LoadFood(Food.Find());
         }
         void LoadCBBcate()
         {
-            string[] foodCategorys = food.getCategory();
+            string[] foodCategorys = Food.getCategory();
             foreach (string item in foodCategorys)
             {
                 ccbLoaiMH.Items.Add(item);
@@ -125,7 +125,7 @@ namespace QL_BanHang
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             tbSeach.Text = "";
-            if(ccbLoaiMH.Text.Trim() == "All") { LoadFood(food.FindApproximateNameF("")); }
+            if(ccbLoaiMH.Text.Trim() == "All") { LoadFood(Food.Find()); }
             else { LoadFood(food.FindWithCategory(ccbLoaiMH.Text)); }
         }
 
@@ -164,7 +164,7 @@ namespace QL_BanHang
             sec -= 0.5;
             if (sec == 0)
             {
-                LoadFood(food.FindApproximateNameF(tbSeach.Text));
+                LoadFood(Food.FindApproximateNameF(tbSeach.Text));
                 timer1.Stop();
                 sec = 0.5;
             }

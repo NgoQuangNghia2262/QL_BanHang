@@ -84,6 +84,7 @@ namespace DTO
                 Bill_BUS bus = new Bill_BUS();
                 DataTable dt = bus.FindBillForTable(this.IdTb);
                 DataRow row = dt.Rows[0];
+                _id = int.Parse(row["Id"].ToString());
                 Status = int.Parse(row["Status"].ToString());
                 DateIn = DateTime.Parse(row["DateIn"].ToString());
                 DateOut = DateTime.Parse(row["DateOut"].ToString());

@@ -45,20 +45,28 @@ namespace DTO
                 return food.Find(NameF);
             }
         }
-        public Bill_Info[] Find(int idBill = -1)
+        public static Bill_Info[] FindAllByIdBill(int IdBill)
         {
-            DataTable dt = new DataTable();
-            if(idBill == -1)
-            {
-                dt = CRUD.Instance.FindAll(this);
-            }
-            else {
-                this.IdBill = idBill;
-                dt = CRUD.Instance.Find(this); 
-            }
+            DataTable dt = Bill_Info_BUS.FindAllByIdBill(IdBill);
             return ConvertDataTableToDTO(dt);
         }
-        private Bill_Info[] ConvertDataTableToDTO(DataTable dt)
+        public static Bill_Info[] Find()
+        {
+            DataTable dt = CRUD.Instance.FindAll(new Bill());
+            return ConvertDataTableToDTO(dt);
+        }
+        public Bill_Info Find(int key)
+        {
+            try
+            {
+                this._id = key;
+                DataTable dt = CRUD.Instance.Find(this);
+                return new Bill_Info(dt.Rows[0]);
+            }
+            catch (IndexOutOfRangeException) { return null; }
+        }
+
+        private static Bill_Info[] ConvertDataTableToDTO(DataTable dt)
         {
             Bill_Info[] BillInfos = new Bill_Info[dt.Rows.Count];
             for (int i = 0; i < BillInfos.Length; i++)
@@ -71,10 +79,9 @@ namespace DTO
         {
             CRUD.Instance.Save(this);
         }
-        public Bill_Info[] getTop5FoodDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
+        public static Bill_Info[] getTop5FoodDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
         {
-            Bill_Info_BUS bus = new Bill_Info_BUS();
-            DataTable dt = bus.getTopFoodDayBetweenDay(FirstDay, SecondDay);
+            DataTable dt = Bill_Info_BUS.getTopFoodDayBetweenDay(FirstDay, SecondDay);
             Bill_Info[] BillInfos = new Bill_Info[dt.Rows.Count];
             for (int i = 0; i < BillInfos.Length; i++)
             {
@@ -87,6 +94,22 @@ namespace DTO
         public void Delete()
         {
             CRUD.Instance.Delete(this);
+        }
+        public void getElementById()
+        {
+            try
+            {
+                if (Id <= 0) { throw new FormatException("Id của Bill phỉa lớn hơn 0"); }
+                DataTable dt = CRUD.Instance.Find(this);
+                DataRow row = dt.Rows[0];
+                NameF = row["NameF"].ToString();
+                IdBill = int.Parse(row["IdBill"].ToString());
+                Amount = int.Parse(row["Amount"].ToString());
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new InvalidOperationException("Không tìm thấy phần tử trong danh sách.");
+            }
         }
 
     }
