@@ -14,7 +14,8 @@ namespace DTO
         private int _status;
         
         public Table() { }
-       
+        public Table(int id) { _id = id; }
+
         private Table(DataRow row)
         {
             _id = int.Parse(row["Id"].ToString());
@@ -40,10 +41,20 @@ namespace DTO
         {
             get
             {
-                Bill bill = new Bill();
-                bill.IdTb = this.Id;
-                bill.FindBillForTable();
-                return bill;
+                try
+                {
+                    Bill bill = new Bill();
+                    bill.IdTb = this.Id;
+                    bill.FindBillForTable();
+                    return bill;
+                }
+                catch (Exception) {
+                    Bill bill = new Bill();
+                    bill.IdTb = this.Id;
+                    bill.Save();
+                    bill.FindBillForTable();
+                    return bill;
+                }
             }
         }
 
@@ -61,12 +72,11 @@ namespace DTO
             }
             return tables;
         }
-        public Table Find(int key)
+        public static Table Find(int key)
         {
             try
             {
-                this._id = key;
-                DataTable dt = CRUD.Instance.Find(this);
+                DataTable dt = CRUD.Instance.Find(new Table(key));
                 return new Table(dt.Rows[0]);
             }
             catch (IndexOutOfRangeException) { return null; }

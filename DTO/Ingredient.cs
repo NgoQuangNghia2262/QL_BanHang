@@ -23,7 +23,12 @@ namespace DTO
             _inventory = 0;
             _nameF = "";
         }
-        private Ingredient(DataRow row)
+        public Ingredient(string name , string namef)
+        {
+            _name = name;
+            _nameF = namef;
+        }
+            private Ingredient(DataRow row)
         {
             _name = row["Name"].ToString();
             _nameF = row["NameF"].ToString();
@@ -43,14 +48,6 @@ namespace DTO
         public string NameF { get => _nameF;  }
         public double Amount { get => _amount; set => _amount = value; }
         public double Inventory { get => _inventory; set => _inventory = value; }
-        public Ingredient[] Ingredients
-        {
-            get
-            {
-
-                return null;
-            }
-        }
         private static Ingredient[] ConvertDataTableToDTO(DataTable dt)
         {
             Ingredient[] BillInfos = new Ingredient[dt.Rows.Count];
@@ -64,13 +61,12 @@ namespace DTO
         {
             CRUD.Instance.Save(this);
         }
-        public Ingredient Find(string keyName , string keyNameF )
+        public static Ingredient Find(string keyName , string keyNameF )
         {
             try
             {
-                this._name = keyName;
-                this._nameF = keyNameF;
-                DataTable dt = CRUD.Instance.Find(this);
+
+                DataTable dt = CRUD.Instance.Find(new Ingredient(keyName,keyNameF));
                 return new Ingredient(dt.Rows[0]);
             }
             catch (IndexOutOfRangeException) { return null; }

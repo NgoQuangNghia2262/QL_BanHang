@@ -40,7 +40,7 @@ namespace DTO
             Amount = int.Parse(row["Amount"].ToString());
             Price = double.Parse(row["Price"].ToString());
         }
-        private ImportingInvoices_Info[] ConvertDataTableToDTO(DataTable dt)
+        private static ImportingInvoices_Info[] ConvertDataTableToDTO(DataTable dt)
         {
             ImportingInvoices_Info[] foods = new ImportingInvoices_Info[dt.Rows.Count];
             for (int i = 0; i < foods.Length; i++)
@@ -57,17 +57,18 @@ namespace DTO
         {
             CRUD.Instance.Delete(this);
         }
-        public ImportingInvoices_Info[] Find(int idBill = -1)
+        public static ImportingInvoices_Info[] Find(int idBill = -1)
         {
             DataTable dt = new DataTable();
             if (idBill == -1)
             {
-                dt = CRUD.Instance.FindAll(this);
+                dt = CRUD.Instance.FindAll(new ImportingInvoices_Info());
             }
             else
             {
-                this.IdBill = idBill;
-                dt = CRUD.Instance.Find(this);
+                ImportingInvoices_Info ins = new ImportingInvoices_Info();
+                ins.IdBill = idBill;
+                dt = CRUD.Instance.Find(ins);
             }
             return ConvertDataTableToDTO(dt);
         }

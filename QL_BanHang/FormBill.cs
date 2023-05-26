@@ -17,10 +17,7 @@ namespace QL_BanHang
 {
     public partial class FormBill : Form
     {
-        private Food food = new Food();
         private Bill bill = new Bill();
-        private double sec = 0.5;//Thời gian delay tìm kiếm food
-        
        
         public FormBill()
         {
@@ -287,11 +284,12 @@ namespace QL_BanHang
         // Even
         private void food_Click(object sender, EventArgs e)
         {
+            //SAI ------------------------------------------------------------------------------------------------------------------------------
             Button button = sender as Button;
             if(bill.Id == 0) {
                 bill = new Bill(0 , bill.IdTb , DateTime.Now , DateTime.Now , 0 , "");
                 Table tb = new Table();
-                tb = tb.Find(bill.IdTb);
+                tb.getElementById();
                 tb.Status = 1;
                 tb.Save();
                 bill.Save();
@@ -323,7 +321,7 @@ namespace QL_BanHang
         private void foodCategory_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            Food[] foods = food.FindWithCategory(button.Text);
+            Food[] foods = Food.FindWithCategory(button.Text);
             LoadProduct(foods);
         }
         private void FormBill_Load(object sender, EventArgs e)
@@ -335,15 +333,23 @@ namespace QL_BanHang
             tbFind.Focus();
             label2.Visible = false;
         }
+        //
+        // Summary:
+        //     1.Set bill hiện tại trạng thái = 1 ( đã thanh toán )
+        //     2.Lấy ra bàn đang chứa chill này rồi set trạng thái = 0 ( kh có khách )
+        //     3.Tạo bill mới cho bàn này
+        //    
         void ThanhToan()
         {
             this.Hide();
             bill.Status = 1;
             bill.Save();
-            Table tb = new Table();
-            tb = tb.Find(bill.IdTb);
+            Table tb = Table.Find(bill.IdTb);
             tb.Status = 0;
             tb.Save();
+            bill = new Bill();
+            bill.IdTb = tb.Id;
+            bill.Save();
             FormMain form = new FormMain();
             form.ShowDialog();
             this.Close();
@@ -383,7 +389,7 @@ namespace QL_BanHang
             timer1.Start();
             
         }
-
+        private double sec = 0.5;//Thời gian delay tìm kiếm food
         private void timer1_Tick(object sender, EventArgs e)
         {
             sec-=0.5;

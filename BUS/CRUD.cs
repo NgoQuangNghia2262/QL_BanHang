@@ -231,9 +231,6 @@ namespace BUS
 
             }
         }
-        public DataTable Find()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

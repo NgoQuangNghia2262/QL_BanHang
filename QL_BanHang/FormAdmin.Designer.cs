@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.lbDonHang = new System.Windows.Forms.Label();
@@ -58,32 +58,31 @@
             this.flpTopFood = new System.Windows.Forms.FlowLayoutPanel();
             this.label29 = new System.Windows.Forms.Label();
             this.mtbDay = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel29 = new System.Windows.Forms.Panel();
-            this.label43 = new System.Windows.Forms.Label();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.label42 = new System.Windows.Forms.Label();
             this.iconPictureBox18 = new FontAwesome.Sharp.IconPictureBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.label41 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
             this.iconPictureBox17 = new FontAwesome.Sharp.IconPictureBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.label38 = new System.Windows.Forms.Label();
             this.iconPictureBox16 = new FontAwesome.Sharp.IconPictureBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.label37 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label36 = new System.Windows.Forms.Label();
             this.iconPictureBox15 = new FontAwesome.Sharp.IconPictureBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.label34 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
             this.iconPictureBox14 = new FontAwesome.Sharp.IconPictureBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -135,6 +134,8 @@
             this.label49 = new System.Windows.Forms.Label();
             this.iconPictureBox19 = new FontAwesome.Sharp.IconPictureBox();
             this.panel33 = new System.Windows.Forms.Panel();
+            this.iconPictureBox20 = new FontAwesome.Sharp.IconPictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             this.panel10.SuspendLayout();
@@ -180,6 +181,7 @@
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox19)).BeginInit();
             this.panel33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -463,16 +465,6 @@
             this.mtbDay.Text = "20230401";
             this.mtbDay.ValidatingType = typeof(System.DateTime);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(166, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 27);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Xem";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel29
             // 
             this.panel29.Controls.Add(this.iconPictureBox18);
@@ -484,34 +476,6 @@
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(461, 54);
             this.panel29.TabIndex = 1;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(56, 19);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(50, 16);
-            this.label43.TabIndex = 0;
-            this.label43.Text = "Admin";
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.LightGray;
-            this.panel30.Location = new System.Drawing.Point(12, 49);
-            this.panel30.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(442, 1);
-            this.panel30.TabIndex = 3;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(102, 17);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(189, 16);
-            this.label42.TabIndex = 1;
-            this.label42.Text = "đã thanh toán đơn hàn TRX112";
             // 
             // iconPictureBox18
             // 
@@ -526,6 +490,34 @@
             this.iconPictureBox18.TabIndex = 2;
             this.iconPictureBox18.TabStop = false;
             // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(102, 17);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(189, 16);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.LightGray;
+            this.panel30.Location = new System.Drawing.Point(12, 49);
+            this.panel30.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(442, 1);
+            this.panel30.TabIndex = 3;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(56, 19);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(50, 16);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "Admin";
+            // 
             // panel27
             // 
             this.panel27.Controls.Add(this.iconPictureBox17);
@@ -537,34 +529,6 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(461, 54);
             this.panel27.TabIndex = 1;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(56, 19);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(50, 16);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "Admin";
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.LightGray;
-            this.panel28.Location = new System.Drawing.Point(12, 49);
-            this.panel28.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(442, 1);
-            this.panel28.TabIndex = 3;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(102, 17);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(189, 16);
-            this.label40.TabIndex = 1;
-            this.label40.Text = "đã thanh toán đơn hàn TRX112";
             // 
             // iconPictureBox17
             // 
@@ -579,6 +543,34 @@
             this.iconPictureBox17.TabIndex = 2;
             this.iconPictureBox17.TabStop = false;
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(102, 17);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(189, 16);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.LightGray;
+            this.panel28.Location = new System.Drawing.Point(12, 49);
+            this.panel28.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(442, 1);
+            this.panel28.TabIndex = 3;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(56, 19);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(50, 16);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Admin";
+            // 
             // panel25
             // 
             this.panel25.Controls.Add(this.iconPictureBox16);
@@ -590,34 +582,6 @@
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(461, 54);
             this.panel25.TabIndex = 1;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(56, 19);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(50, 16);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "Admin";
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.LightGray;
-            this.panel26.Location = new System.Drawing.Point(12, 49);
-            this.panel26.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(442, 1);
-            this.panel26.TabIndex = 3;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(102, 17);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(189, 16);
-            this.label38.TabIndex = 1;
-            this.label38.Text = "đã thanh toán đơn hàn TRX112";
             // 
             // iconPictureBox16
             // 
@@ -632,6 +596,34 @@
             this.iconPictureBox16.TabIndex = 2;
             this.iconPictureBox16.TabStop = false;
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(102, 17);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(189, 16);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.LightGray;
+            this.panel26.Location = new System.Drawing.Point(12, 49);
+            this.panel26.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(442, 1);
+            this.panel26.TabIndex = 3;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(56, 19);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(50, 16);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "Admin";
+            // 
             // panel23
             // 
             this.panel23.Controls.Add(this.iconPictureBox15);
@@ -643,34 +635,6 @@
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(461, 54);
             this.panel23.TabIndex = 1;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(56, 19);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(50, 16);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Admin";
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.LightGray;
-            this.panel24.Location = new System.Drawing.Point(12, 49);
-            this.panel24.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(442, 1);
-            this.panel24.TabIndex = 3;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(102, 17);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(189, 16);
-            this.label36.TabIndex = 1;
-            this.label36.Text = "đã thanh toán đơn hàn TRX112";
             // 
             // iconPictureBox15
             // 
@@ -685,6 +649,34 @@
             this.iconPictureBox15.TabIndex = 2;
             this.iconPictureBox15.TabStop = false;
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(102, 17);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(189, 16);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.LightGray;
+            this.panel24.Location = new System.Drawing.Point(12, 49);
+            this.panel24.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(442, 1);
+            this.panel24.TabIndex = 3;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(56, 19);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(50, 16);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Admin";
+            // 
             // panel21
             // 
             this.panel21.Controls.Add(this.iconPictureBox14);
@@ -696,34 +688,6 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(461, 54);
             this.panel21.TabIndex = 1;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(56, 19);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(50, 16);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Admin";
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.LightGray;
-            this.panel22.Location = new System.Drawing.Point(12, 49);
-            this.panel22.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(442, 1);
-            this.panel22.TabIndex = 3;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(102, 17);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(189, 16);
-            this.label35.TabIndex = 1;
-            this.label35.Text = "đã thanh toán đơn hàn TRX112";
             // 
             // iconPictureBox14
             // 
@@ -737,6 +701,34 @@
             this.iconPictureBox14.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox14.TabIndex = 2;
             this.iconPictureBox14.TabStop = false;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(102, 17);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(189, 16);
+            this.label35.TabIndex = 1;
+            this.label35.Text = "đã thanh toán đơn hàn TRX112";
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.LightGray;
+            this.panel22.Location = new System.Drawing.Point(12, 49);
+            this.panel22.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(442, 1);
+            this.panel22.TabIndex = 3;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(56, 19);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(50, 16);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Admin";
             // 
             // panel8
             // 
@@ -1168,17 +1160,17 @@
             // 
             // chartTable
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartTable.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartTable.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chartTable.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartTable.Legends.Add(legend5);
             this.chartTable.Location = new System.Drawing.Point(3, 64);
             this.chartTable.Name = "chartTable";
             this.chartTable.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh Thu";
-            this.chartTable.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Doanh Thu";
+            this.chartTable.Series.Add(series5);
             this.chartTable.Size = new System.Drawing.Size(894, 249);
             this.chartTable.TabIndex = 7;
             this.chartTable.Text = "Doanh Thu";
@@ -1215,17 +1207,17 @@
             // 
             // chartCircle
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartCircle.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartCircle.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.chartCircle.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartCircle.Legends.Add(legend6);
             this.chartCircle.Location = new System.Drawing.Point(15, 57);
             this.chartCircle.Name = "chartCircle";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartCircle.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartCircle.Series.Add(series6);
             this.chartCircle.Size = new System.Drawing.Size(562, 256);
             this.chartCircle.TabIndex = 0;
             this.chartCircle.Text = " ";
@@ -1327,13 +1319,42 @@
             this.panel33.Size = new System.Drawing.Size(1435, 44);
             this.panel33.TabIndex = 15;
             // 
+            // iconPictureBox20
+            // 
+            this.iconPictureBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconPictureBox20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox20.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox20.IconChar = FontAwesome.Sharp.IconChar.AngleLeft;
+            this.iconPictureBox20.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox20.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox20.IconSize = 20;
+            this.iconPictureBox20.Location = new System.Drawing.Point(28, 47);
+            this.iconPictureBox20.Name = "iconPictureBox20";
+            this.iconPictureBox20.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox20.TabIndex = 17;
+            this.iconPictureBox20.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(54, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 20);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Quay lại ";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1451, 1024);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.iconPictureBox20);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.mtbDay);
             this.Controls.Add(this.panel33);
             this.Controls.Add(this.panel32);
@@ -1424,6 +1445,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox19)).EndInit();
             this.panel33.ResumeLayout(false);
             this.panel33.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1454,7 +1476,6 @@
         private System.Windows.Forms.FlowLayoutPanel flpTopFood;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.MaskedTextBox mtbDay;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel29;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox18;
         private System.Windows.Forms.Label label42;
@@ -1531,5 +1552,7 @@
         private System.Windows.Forms.Label label49;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox19;
         private System.Windows.Forms.Panel panel33;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox20;
+        private System.Windows.Forms.Label label11;
     }
 }

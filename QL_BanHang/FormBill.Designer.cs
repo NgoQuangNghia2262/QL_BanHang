@@ -62,6 +62,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconClear = new FontAwesome.Sharp.IconPictureBox();
             this.flpContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.flpContainerRight_Header.SuspendLayout();
             this.flpContainerRight_pnlFotter.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -112,11 +114,12 @@
             // 
             // flpContainerRight_Header
             // 
+            this.flpContainerRight_Header.Controls.Add(this.label6);
             this.flpContainerRight_Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flpContainerRight_Header.Location = new System.Drawing.Point(0, 0);
             this.flpContainerRight_Header.Margin = new System.Windows.Forms.Padding(0);
             this.flpContainerRight_Header.Name = "flpContainerRight_Header";
-            this.flpContainerRight_Header.Size = new System.Drawing.Size(516, 54);
+            this.flpContainerRight_Header.Size = new System.Drawing.Size(529, 54);
             this.flpContainerRight_Header.TabIndex = 7;
             // 
             // flpContainerRight_pnlFotter
@@ -475,6 +478,15 @@
             this.flpContainer.Size = new System.Drawing.Size(1214, 671);
             this.flpContainer.TabIndex = 16;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(197, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(264, 29);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "THÔNG TIN HÓA ĐƠN";
+            // 
             // FormBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,6 +500,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormBill";
             this.Load += new System.EventHandler(this.FormBill_Load);
+            this.flpContainerRight_Header.ResumeLayout(false);
+            this.flpContainerRight_Header.PerformLayout();
             this.flpContainerRight_pnlFotter.ResumeLayout(false);
             this.flpContainerRight_pnlFotter.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -544,5 +558,6 @@
         private FontAwesome.Sharp.IconPictureBox iconClear;
         private System.Windows.Forms.FlowLayoutPanel flpContainer;
         private System.Windows.Forms.FlowLayoutPanel flpContainerRight_Fotter;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -52,7 +52,8 @@ namespace DTO
         {
             get
             {
-                return Bill_Info.FindAllByIdBill(Id);
+                if(Id > 0) { return Bill_Info.FindAllByIdBill(Id); }
+                else { return null; }
             }
         }
         public double Total

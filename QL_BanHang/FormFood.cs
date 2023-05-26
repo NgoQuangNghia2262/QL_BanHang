@@ -126,7 +126,7 @@ namespace QL_BanHang
         {
             tbSeach.Text = "";
             if(ccbLoaiMH.Text.Trim() == "All") { LoadFood(Food.Find()); }
-            else { LoadFood(food.FindWithCategory(ccbLoaiMH.Text)); }
+            else { LoadFood(Food.FindWithCategory(ccbLoaiMH.Text)); }
         }
 
         private void tbSeach_TextChanged(object sender, EventArgs e)

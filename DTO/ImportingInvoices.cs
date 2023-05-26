@@ -25,12 +25,13 @@ namespace DTO
         {
             get
             {
-                ImportingInvoices_Info instance = new ImportingInvoices_Info();
-                return instance.Find(Id);
+                return ImportingInvoices_Info.Find(Id);
             }
         }
 
         public ImportingInvoices() {   }
+
+        public ImportingInvoices(int id) { _id = id; }
 
         public ImportingInvoices(int id, DateTime date, string note, string suppliers)
         {
@@ -47,7 +48,7 @@ namespace DTO
             Suppliers = row["Suppliers"].ToString();
 
         }
-        private ImportingInvoices[] ConvertDataTableToDTO(DataTable dt)
+        private static ImportingInvoices[] ConvertDataTableToDTO(DataTable dt)
         {
             ImportingInvoices[] foods = new ImportingInvoices[dt.Rows.Count];
             for (int i = 0; i < foods.Length; i++)
@@ -64,18 +65,17 @@ namespace DTO
         {
             CRUD.Instance.Delete(this);
         }
-        public ImportingInvoices[] Find()
+        public static ImportingInvoices[] Find()
         {
-            DataTable dt = CRUD.Instance.FindAll(this);
+            DataTable dt = CRUD.Instance.FindAll(new ImportingInvoices());
             ImportingInvoices[] foods = ConvertDataTableToDTO(dt);
             return foods;
         }
-        public ImportingInvoices Find(string key)
+        public static ImportingInvoices Find(int key)
         {
             try
             {
-                this._id = int.Parse(key);
-                DataTable dt = CRUD.Instance.Find(this);
+                DataTable dt = CRUD.Instance.Find(new ImportingInvoices(key));
                 return new ImportingInvoices(dt.Rows[0]);
             }
             catch (IndexOutOfRangeException) { return null; }

@@ -83,5 +83,13 @@ namespace QL_BanHang
             DateTime day = DateTime.Parse(mtbDay.Text);
             LoadFlpBill(day,day);
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormMain form = new FormMain();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

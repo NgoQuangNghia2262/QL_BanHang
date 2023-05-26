@@ -124,5 +124,13 @@ namespace QL_BanHang
             LoadTopFood(firstDay , DateTime.Now);
             LoadCharTable(firstDay , DateTime.Now);
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormManagement form = new FormManagement();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

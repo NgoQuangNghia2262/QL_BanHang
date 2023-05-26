@@ -69,6 +69,8 @@
             this.mtbDay = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.iconPictureBox20 = new FontAwesome.Sharp.IconPictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
@@ -80,6 +82,7 @@
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
             this.pnl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -300,7 +303,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 59);
+            this.label1.Location = new System.Drawing.Point(39, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 25);
             this.label1.TabIndex = 1;
@@ -501,7 +504,7 @@
             // 
             this.mtbDay.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mtbDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbDay.Location = new System.Drawing.Point(31, 88);
+            this.mtbDay.Location = new System.Drawing.Point(919, 89);
             this.mtbDay.Mask = "0000/00/00";
             this.mtbDay.Name = "mtbDay";
             this.mtbDay.Size = new System.Drawing.Size(154, 28);
@@ -511,7 +514,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(192, 87);
+            this.button1.Location = new System.Drawing.Point(1080, 88);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 28);
             this.button1.TabIndex = 7;
@@ -523,11 +526,39 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(31, 121);
+            this.label10.Location = new System.Drawing.Point(919, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(137, 16);
             this.label10.TabIndex = 8;
             this.label10.Text = "ĐỊnh dạng MM/dd/yyy";
+            // 
+            // iconPictureBox20
+            // 
+            this.iconPictureBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconPictureBox20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox20.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox20.IconChar = FontAwesome.Sharp.IconChar.AngleLeft;
+            this.iconPictureBox20.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox20.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox20.IconSize = 20;
+            this.iconPictureBox20.Location = new System.Drawing.Point(25, 73);
+            this.iconPictureBox20.Name = "iconPictureBox20";
+            this.iconPictureBox20.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox20.TabIndex = 19;
+            this.iconPictureBox20.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(51, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 20);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Quay lại ";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // FormQLBill
             // 
@@ -535,6 +566,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1186, 796);
+            this.Controls.Add(this.iconPictureBox20);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.mtbDay);
@@ -564,6 +597,7 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.pnl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -612,5 +646,7 @@
         private System.Windows.Forms.MaskedTextBox mtbDay;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox20;
+        private System.Windows.Forms.Label label11;
     }
 }

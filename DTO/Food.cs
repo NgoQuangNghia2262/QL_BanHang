@@ -86,8 +86,9 @@ namespace DTO
             }
             catch (IndexOutOfRangeException) { return null; }
         }
-        public Food[] FindWithCategory(string category)
+        public static Food[] FindWithCategory(string category)
         {
+            Food_BUS BUS = new Food_BUS();
             DataTable dt = BUS.FindWithCategory(category);
             return ConvertDataTableToDTO(dt);
         }
