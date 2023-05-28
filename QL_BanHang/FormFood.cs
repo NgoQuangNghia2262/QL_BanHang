@@ -181,7 +181,7 @@ namespace QL_BanHang
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            FormUpdateFood form = new FormUpdateFood(foodList);
+            FormUpdateFood2 form = new FormUpdateFood2(foodList);
             form.ShowDialog();
             this.Close();
             

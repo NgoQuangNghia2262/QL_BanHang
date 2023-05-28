@@ -13,7 +13,6 @@ namespace QL_BanHang
 {
     public partial class FormAddFood : Form
     {
-        private Food food = new Food();
         public FormAddFood()
         {
             InitializeComponent();
@@ -31,7 +30,7 @@ namespace QL_BanHang
         {
                 this.Hide();
                 string price = tbPrice.Text == "" ? "0" : tbPrice.Text;
-                food = new Food(tbName.Text, double.Parse(price), cbbCate.Text);
+                Food food = new Food(tbName.Text, double.Parse(price), cbbCate.Text);
                 food.Save();
                 FormIngredient form = new FormIngredient(food);
                 this.Close();

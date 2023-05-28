@@ -1,4 +1,4 @@
-﻿using BUS;
+﻿  using BUS;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,6 +16,7 @@ namespace DTO
         private string _category;
         private double _price;
         public Food(){ }
+        public Food(string name) { _nameF = name; }
         public Food(string name ,  double price , string category)
         {
             _nameF = name;
@@ -76,12 +77,11 @@ namespace DTO
             DataTable dt = CRUD.Instance.FindAll(new Food());
             return ConvertDataTableToDTO(dt);
         }
-        public Food Find(string key)
+        public static Food Find(string key)
         {
             try
             {
-                this._nameF = key;
-                DataTable dt = CRUD.Instance.Find(this);
+                DataTable dt = CRUD.Instance.Find(new Food(key));
                 return new Food(dt.Rows[0]);
             }
             catch (IndexOutOfRangeException) { return null; }

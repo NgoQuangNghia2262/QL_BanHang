@@ -71,7 +71,7 @@ namespace DAL
         }
         public DataTable FindBillDayBetweenDay(DateTime FirstDay , DateTime SecondDay)
         {
-            return DataProvider.Instance.ExecuteQuery($"select * from Bill where DateIn between '{FirstDay.ToString("yyyy/MM/dd")}' and '{SecondDay.AddDays(1).ToString("yyyy/MM/dd")}'");
+            return DataProvider.Instance.ExecuteQuery($"select * from Bill where status = 1 and DateIn between '{FirstDay.ToString("yyyy/MM/dd")}' and '{SecondDay.AddDays(1).ToString("yyyy/MM/dd")}'");
         }
         public object getTurnoverDayBetweenDay(DateTime FirstDay, DateTime SecondDay)
         {

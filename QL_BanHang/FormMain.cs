@@ -46,5 +46,13 @@ namespace QL_BanHang
             form.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormManagement form = new FormManagement();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -39,7 +39,8 @@ namespace QL_BanHang
         {
             for (int i = 0; i < foods.Count; i++)
             {
-                flpUpdateFood.Controls.Add(createPnlUpdateFood(foods[i] , i +1));
+                Panel pnl = createPnlUpdateFood(foods[i], i + 1);
+                flpUpdateFood.Controls.Add(pnl);
             }
         } 
         ComboBox getCbbFoodCategory(string[] categorys)

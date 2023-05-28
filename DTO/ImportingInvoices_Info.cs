@@ -14,17 +14,17 @@ namespace DTO
         private int _id;
         private int _idBill;
         private string _nameF;
-        private int _amount;
+        private double _amount;
         private double _price;
 
         public int Id { get => _id; }
         public int IdBill { get => _idBill; set => _idBill = value; }
         public string NameF { get => _nameF; set => _nameF = value; }
-        public int Amount { get => _amount; set => _amount = value; }
+        public double Amount { get => _amount; set => _amount = value; }
         public double Price { get => _price; set => _price = value; }
 
         public ImportingInvoices_Info() { }
-        public ImportingInvoices_Info(int id, int idBill, string nameF, int amount, double price)
+        public ImportingInvoices_Info(int id, int idBill, string nameF, double amount, double price)
         {
             _id = id;
             IdBill = idBill;
@@ -37,7 +37,7 @@ namespace DTO
             NameF = row["NameF"].ToString();
             _id = int.Parse(row["id"].ToString());
             IdBill = int.Parse(row["IdBill"].ToString());
-            Amount = int.Parse(row["Amount"].ToString());
+            Amount = double.Parse(row["Amount"].ToString());
             Price = double.Parse(row["Price"].ToString());
         }
         private static ImportingInvoices_Info[] ConvertDataTableToDTO(DataTable dt)
@@ -52,6 +52,7 @@ namespace DTO
         public void Save()
         {
             CRUD.Instance.Save(this);
+
         }
         public void Delete()
         {

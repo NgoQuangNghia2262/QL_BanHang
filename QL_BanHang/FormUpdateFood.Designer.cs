@@ -30,6 +30,7 @@
         {
             this.flpUpdateFood = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbNguyenLieu = new System.Windows.Forms.Label();
             this.lbCate = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.lbNguyenLieu = new System.Windows.Forms.Label();
             this.flpUpdateFood.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -53,10 +53,10 @@
             // 
             this.flpUpdateFood.BackColor = System.Drawing.Color.White;
             this.flpUpdateFood.Controls.Add(this.panel2);
-            this.flpUpdateFood.Location = new System.Drawing.Point(0, 34);
+            this.flpUpdateFood.Location = new System.Drawing.Point(0, 31);
             this.flpUpdateFood.Margin = new System.Windows.Forms.Padding(0);
             this.flpUpdateFood.Name = "flpUpdateFood";
-            this.flpUpdateFood.Size = new System.Drawing.Size(658, 483);
+            this.flpUpdateFood.Size = new System.Drawing.Size(1049, 486);
             this.flpUpdateFood.TabIndex = 0;
             // 
             // panel2
@@ -69,14 +69,24 @@
             this.panel2.Controls.Add(this.lbSTT);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 34);
+            this.panel2.Size = new System.Drawing.Size(1042, 34);
             this.panel2.TabIndex = 3;
+            // 
+            // lbNguyenLieu
+            // 
+            this.lbNguyenLieu.AutoSize = true;
+            this.lbNguyenLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNguyenLieu.Location = new System.Drawing.Point(930, 8);
+            this.lbNguyenLieu.Name = "lbNguyenLieu";
+            this.lbNguyenLieu.Size = new System.Drawing.Size(93, 16);
+            this.lbNguyenLieu.TabIndex = 0;
+            this.lbNguyenLieu.Text = "Nguyên Liệu";
             // 
             // lbCate
             // 
             this.lbCate.AutoSize = true;
             this.lbCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCate.Location = new System.Drawing.Point(336, 8);
+            this.lbCate.Location = new System.Drawing.Point(721, 8);
             this.lbCate.Name = "lbCate";
             this.lbCate.Size = new System.Drawing.Size(37, 16);
             this.lbCate.TabIndex = 0;
@@ -86,7 +96,7 @@
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(219, 8);
+            this.lbPrice.Location = new System.Drawing.Point(505, 8);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(61, 16);
             this.lbPrice.TabIndex = 0;
@@ -96,7 +106,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(113, 8);
+            this.lbName.Location = new System.Drawing.Point(181, 8);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(34, 16);
             this.lbName.TabIndex = 0;
@@ -167,7 +177,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(62, 173);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(658, 517);
+            this.panel1.Size = new System.Drawing.Size(1064, 517);
             this.panel1.TabIndex = 4;
             // 
             // label3
@@ -208,22 +218,12 @@
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // lbNguyenLieu
-            // 
-            this.lbNguyenLieu.AutoSize = true;
-            this.lbNguyenLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNguyenLieu.Location = new System.Drawing.Point(523, 8);
-            this.lbNguyenLieu.Name = "lbNguyenLieu";
-            this.lbNguyenLieu.Size = new System.Drawing.Size(93, 16);
-            this.lbNguyenLieu.TabIndex = 0;
-            this.lbNguyenLieu.Text = "Nguyên Liệu";
-            // 
             // FormUpdateFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(781, 762);
+            this.ClientSize = new System.Drawing.Size(1138, 762);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel1);

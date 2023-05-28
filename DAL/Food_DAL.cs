@@ -49,7 +49,7 @@ namespace DAL
         }
         public DataTable FindWithCategory(string category)
         {
-            return DataProvider.Instance.ExecuteQuery($"select * from food where category = N'{category}'");
+            return DataProvider.Instance.ExecuteQuery($"select * from Food where NameF in ( select NameF from Ingredient group by NameF) and Category = N'{category}'");
         }
 
         public void Delete(dynamic obj)
@@ -65,7 +65,7 @@ namespace DAL
         }
         public DataTable FindApproximateNameF(string NameF)
         {
-            return DataProvider.Instance.ExecuteQuery($"select * from food where NameF like N'%{NameF}%'");
+            return DataProvider.Instance.ExecuteQuery($"select * from Food where NameF in ( select NameF from Ingredient where NameF like N'%{NameF}%' group by NameF)");
 
         }
         

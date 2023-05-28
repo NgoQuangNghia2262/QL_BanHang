@@ -19,7 +19,7 @@ namespace QL_BanHang
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
-            FormAdmin form = new FormAdmin();   
+            FormManagement form = new FormManagement();   
             form.ShowDialog();
             Close();
         }

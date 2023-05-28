@@ -17,7 +17,17 @@ namespace QL_BanHang
         {
             InitializeComponent();
             LoadFlpBillInfo(bill);
+            LoadTT(bill);
         }
+        void LoadTT(Bill bill)
+        {
+            lbDateIn.Text = bill.DateIn.ToString("hh:mm:ss");
+            lbDateOut.Text = bill.DateOut.ToString("hh:mm:ss");
+            lbTable.Text = bill.IdTb.ToString();
+            lbNote.Text = bill.Note;
+            lbTotal.Text = bill.Total.ToString();
+        }
+
         void LoadFlpBillInfo(Bill bill)
         {
             flpBill_Info.Width = Screen.PrimaryScreen.WorkingArea.Width * 4/10;

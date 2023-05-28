@@ -41,8 +41,7 @@ namespace DTO
         {
             get
             {
-                Food food = new Food();
-                return food.Find(NameF);
+                return Food.Find(NameF);
             }
         }
         public static Bill_Info[] FindAllByIdBill(int IdBill)

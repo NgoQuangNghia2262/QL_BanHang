@@ -18,9 +18,8 @@ namespace QL_BanHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Bill bill = new Bill();
-            Food food = new Food();
-            Application.Run(new FormMain());
+            List<Food> list = new List<Food>() {Food.Find("Gà Sốt Tiêu Xanh"),Food.Find("Bánh mì") };
+            Application.Run(new FormUpdateFood2(list));
         }
     }
 }

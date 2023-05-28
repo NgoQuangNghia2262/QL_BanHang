@@ -282,21 +282,21 @@ namespace QL_BanHang
         }
 
         // Even
+
+        //
+        // Summary:
+        //     1.Set bill hiện tại trạng thái = 1 ( đã thanh toán )
+        //     2.Lấy ra bàn đang chứa chill này rồi set trạng thái = 0 ( kh có khách )
+        //     3.Tạo bill mới cho bàn này
+        //    
         private void food_Click(object sender, EventArgs e)
         {
-            //SAI ------------------------------------------------------------------------------------------------------------------------------
+            //Đoạn này cần sửa ------------------------------------------------------------------------------------------------------------------------------
             Button button = sender as Button;
-            if(bill.Id == 0) {
-                bill = new Bill(0 , bill.IdTb , DateTime.Now , DateTime.Now , 0 , "");
-                Table tb = new Table();
-                tb.getElementById();
-                tb.Status = 1;
-                tb.Save();
-                bill.Save();
-                bill = tb.bill;
-                
-            }
-            
+            Table tb = new Table();
+            tb = Table.Find(bill.IdTb);
+            tb.Status = 1;
+            tb.Save();
             Bill_Info billinfo = new Bill_Info(bill.Id, button.Text, 1);
             foreach (dynamic item in flpContainerRight_Bill.Controls)
             {
@@ -342,11 +342,12 @@ namespace QL_BanHang
         void ThanhToan()
         {
             this.Hide();
-            bill.Status = 1;
-            bill.Save();
             Table tb = Table.Find(bill.IdTb);
             tb.Status = 0;
             tb.Save();
+            Bill newBill = tb.bill;
+            newBill.Status = 1;
+            newBill.Save();
             bill = new Bill();
             bill.IdTb = tb.Id;
             bill.Save();
