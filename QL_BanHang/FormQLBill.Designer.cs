@@ -528,9 +528,9 @@
             this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(919, 122);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 16);
+            this.label10.Size = new System.Drawing.Size(144, 16);
             this.label10.TabIndex = 8;
-            this.label10.Text = "ĐỊnh dạng MM/dd/yyy";
+            this.label10.Text = "ĐỊnh dạng yyyy/MM/dd";
             // 
             // iconPictureBox20
             // 

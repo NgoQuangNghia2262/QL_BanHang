@@ -40,7 +40,7 @@ namespace DAL
                 }
                 else
                 {
-                    string query = $"insert into TableFood(status) values ({obj.Status})";
+                    string query = $"insert into TableFood(status) values (0)";
                     DataProvider.Instance.ExecuteNonQuery(query);
                 }
             }catch(Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

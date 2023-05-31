@@ -33,6 +33,7 @@
             this.flpContainerCenter = new System.Windows.Forms.FlowLayoutPanel();
             this.flpContainerRight_Bill = new System.Windows.Forms.FlowLayoutPanel();
             this.flpContainerRight_Header = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.flpContainerRight_pnlFotter = new System.Windows.Forms.Panel();
             this.tbDiscount = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconClear = new FontAwesome.Sharp.IconPictureBox();
             this.flpContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.flpContainerRight_Header.SuspendLayout();
             this.flpContainerRight_pnlFotter.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -110,7 +110,6 @@
             this.flpContainerRight_Bill.Name = "flpContainerRight_Bill";
             this.flpContainerRight_Bill.Size = new System.Drawing.Size(529, 343);
             this.flpContainerRight_Bill.TabIndex = 6;
-            this.flpContainerRight_Bill.Paint += new System.Windows.Forms.PaintEventHandler(this.flpContainerRight_Bill_Paint);
             // 
             // flpContainerRight_Header
             // 
@@ -121,6 +120,15 @@
             this.flpContainerRight_Header.Name = "flpContainerRight_Header";
             this.flpContainerRight_Header.Size = new System.Drawing.Size(529, 54);
             this.flpContainerRight_Header.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(197, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(264, 29);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "THÔNG TIN HÓA ĐƠN";
             // 
             // flpContainerRight_pnlFotter
             // 
@@ -146,6 +154,7 @@
             this.tbDiscount.Size = new System.Drawing.Size(42, 30);
             this.tbDiscount.TabIndex = 3;
             this.tbDiscount.Text = "0";
+            this.tbDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDiscount_KeyPress);
             // 
             // label4
             // 
@@ -436,7 +445,6 @@
             this.lbSeach.Size = new System.Drawing.Size(147, 22);
             this.lbSeach.TabIndex = 14;
             this.lbSeach.Text = "Nhập tên món ăn";
-            this.lbSeach.Click += new System.EventHandler(this.lbSeach_Click);
             // 
             // panel3
             // 
@@ -477,15 +485,6 @@
             this.flpContainer.Name = "flpContainer";
             this.flpContainer.Size = new System.Drawing.Size(1214, 671);
             this.flpContainer.TabIndex = 16;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(197, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(264, 29);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "THÔNG TIN HÓA ĐƠN";
             // 
             // FormBill
             // 

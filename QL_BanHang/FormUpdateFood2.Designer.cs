@@ -80,6 +80,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Đóng";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -107,6 +108,7 @@
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(100, 22);
             this.tbPrice.TabIndex = 3;
+            this.tbPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPrice_KeyPress);
             // 
             // tbName
             // 

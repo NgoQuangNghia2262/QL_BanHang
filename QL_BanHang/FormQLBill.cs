@@ -80,8 +80,15 @@ namespace QL_BanHang
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            DateTime day = DateTime.Parse(mtbDay.Text);
-            LoadFlpBill(day,day);
+            try
+            {
+                DateTime day = DateTime.Parse(mtbDay.Text);
+                LoadFlpBill(day, day);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Ngày nhập không hợp lệ , hãy chắc là bạn nhập đúng định dạng  yyyy / MM / dd");
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)

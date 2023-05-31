@@ -16,7 +16,7 @@ namespace QL_BanHang
     public partial class FormIngredient : Form
     {
         private Food food = new Food();
-        private Ingredient ingredient = new Ingredient();
+        private Ingredient ingredient;
         private bool change = false;
         public FormIngredient(Food food)
         {
@@ -41,9 +41,10 @@ namespace QL_BanHang
         {
             change = true;
             int index = e.RowIndex;
-            ingredient.Amount = Convert.ToDouble(dataGridView1.Rows[index].Cells["Amount"].Value.ToString());
-            ingredient.Name = dataGridView1.Rows[index].Cells["Name"].Value.ToString();
-            ingredient.Inventory = ingredient.getInventory();
+            double amount = Convert.ToDouble(dataGridView1.Rows[index].Cells["Amount"].Value.ToString());
+            string name = dataGridView1.Rows[index].Cells["Name"].Value.ToString();
+            double inventory = Ingredient.getInventory(name);
+            ingredient = new Ingredient(name , "" , amount , inventory);
             
         }
 

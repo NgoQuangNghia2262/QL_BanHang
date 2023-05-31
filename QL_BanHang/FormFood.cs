@@ -13,7 +13,6 @@ namespace QL_BanHang
 {
     public partial class FormFood : Form
     {
-        private Food food = new Food();
         private double sec = 0.5;//Thời gian delay tìm kiếm food
         private List<Food> foodList = new List<Food>();
         public FormFood()
@@ -21,6 +20,7 @@ namespace QL_BanHang
             InitializeComponent();
             LoadCBBcate();
             LoadFood(Food.Find());
+            
         }
         void LoadCBBcate()
         {

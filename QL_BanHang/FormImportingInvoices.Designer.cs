@@ -38,8 +38,10 @@
             this.cbbName = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
+            this.tbPrice = new System.Windows.Forms.TextBox();
             this.tbSL = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,8 +55,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.flpHDN = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tbPrice = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -112,7 +112,7 @@
             this.button6.TabIndex = 4;
             this.button6.Text = "Xóa";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button2_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button2
             // 
@@ -173,6 +173,15 @@
             this.lbId.TabIndex = 3;
             this.lbId.Text = "1";
             // 
+            // tbPrice
+            // 
+            this.tbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPrice.Location = new System.Drawing.Point(22, 219);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(155, 27);
+            this.tbPrice.TabIndex = 3;
+            this.tbPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPrice_KeyPress);
+            // 
             // tbSL
             // 
             this.tbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,9 +189,11 @@
             this.tbSL.Name = "tbSL";
             this.tbSL.Size = new System.Drawing.Size(148, 27);
             this.tbSL.TabIndex = 3;
+            this.tbSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPrice_KeyPress);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(18, 258);
@@ -191,6 +202,16 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(481, 330);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(18, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 20);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Giá Tiền";
             // 
             // label1
             // 
@@ -250,6 +271,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Tạo Mới";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -260,6 +282,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Đóng";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbGhiChu
             // 
@@ -325,24 +348,6 @@
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ngày nhập";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(18, 196);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 20);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Giá Tiền";
-            // 
-            // tbPrice
-            // 
-            this.tbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPrice.Location = new System.Drawing.Point(22, 219);
-            this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(155, 27);
-            this.tbPrice.TabIndex = 3;
             // 
             // FormImportingInvoices
             // 

@@ -178,6 +178,12 @@
     <Compile Include="FormAccount.Designer.cs">
       <DependentUpon>FormAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTable.Designer.cs">
+      <DependentUpon>FormTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAccount.resx">
       <DependentUpon>FormAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTable.resx">
+      <DependentUpon>FormTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateFood.resx">
       <DependentUpon>FormUpdateFood.cs</DependentUpon>

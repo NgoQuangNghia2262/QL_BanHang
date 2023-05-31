@@ -407,7 +407,6 @@ namespace QL_BanHang
         {
             tbSeach.Text = "";
         }
-
         private void GopDon()
         {
             this.Hide();
@@ -419,22 +418,17 @@ namespace QL_BanHang
             }
             this.Close();
         }
-
-      
-
         private void tbSeach_Click(object sender, EventArgs e)
         {
             lbSeach.Visible = false;
         }
 
-        private void lbSeach_Click(object sender, EventArgs e)
+        private void tbDiscount_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void flpContainerRight_Bill_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

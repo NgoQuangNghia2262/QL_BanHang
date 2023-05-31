@@ -13,7 +13,7 @@ namespace DAL
         {
             try
             {
-                DataProvider.Instance.ExecuteNonQuery($"delete ImportingInvoices_Info where Id = '{obj.Id}'");
+                DataProvider.Instance.ExecuteNonQuery($"delete ImportingInvoices_Info where IdBill = {obj.IdBill} and NameF = N'{obj.NameF}'");
 
             }
             catch (Exception err) { throw err; }
@@ -35,7 +35,7 @@ namespace DAL
         {
             try
             {
-                string query = $"EXEC AddOrUpdateImportingInvoiceInfo @Id = {obj.Id}, @IdBill = {obj.IdBill}, @NameF = '{obj.NameF}', @Amount = {obj.Amount}, @Price = {obj.Price}";
+                string query = $"EXEC CheckAndUpsertImportingInvoiceInfo @IdBill = {obj.IdBill}, @NameF = N'{obj.NameF}', @Amount = {obj.Amount}, @Price = {obj.Price}";
                 DataProvider.Instance.ExecuteNonQuery(query);
 
             }

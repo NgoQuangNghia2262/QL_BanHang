@@ -11,13 +11,13 @@ namespace DTO
 {
     public class ImportingInvoices_Info
     {
-        private int _id;
+        
         private int _idBill;
         private string _nameF;
         private double _amount;
         private double _price;
 
-        public int Id { get => _id; }
+       
         public int IdBill { get => _idBill; set => _idBill = value; }
         public string NameF { get => _nameF; set => _nameF = value; }
         public double Amount { get => _amount; set => _amount = value; }
@@ -26,7 +26,7 @@ namespace DTO
         public ImportingInvoices_Info() { }
         public ImportingInvoices_Info(int id, int idBill, string nameF, double amount, double price)
         {
-            _id = id;
+           
             IdBill = idBill;
             NameF = nameF;
             Amount = amount;
@@ -35,7 +35,7 @@ namespace DTO
         private ImportingInvoices_Info(DataRow row)
         {
             NameF = row["NameF"].ToString();
-            _id = int.Parse(row["id"].ToString());
+   
             IdBill = int.Parse(row["IdBill"].ToString());
             Amount = double.Parse(row["Amount"].ToString());
             Price = double.Parse(row["Price"].ToString());

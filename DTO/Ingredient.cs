@@ -43,8 +43,7 @@ namespace DTO
             _inventory = inventory;
             _nameF = nameF;
         }
-
-        public string Name { get => _name; set => _name = value; }
+        public string Name { get => _name;}
         public string NameF { get => _nameF;  }
         public double Amount { get => _amount; set => _amount = value; }
         public double Inventory { get => _inventory; set => _inventory = value; }
@@ -93,7 +92,7 @@ namespace DTO
         public void Delete() { 
             CRUD.Instance.Delete(this);
         }
-        public double getInventory()
+        public static double getInventory(string Name)
         {
             Ingredient_BUS bus = new Ingredient_BUS();
             return bus.getInventory(Name);

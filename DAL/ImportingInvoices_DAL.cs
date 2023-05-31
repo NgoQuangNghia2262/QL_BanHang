@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ImportingInvoices_DAL
+    public class ImportingInvoices_DAL : ICRUD
     {
         public void Delete(dynamic obj)
         {

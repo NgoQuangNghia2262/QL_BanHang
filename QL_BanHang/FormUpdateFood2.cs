@@ -19,7 +19,6 @@ namespace QL_BanHang
             this.foods = foods;
             LoadDgv(foods);
         }
-        private Food food = new Food();
         private List<Food> foods = new List<Food>();
         private int index = -1;
         void LoadDgv(List<Food> foods)
@@ -53,6 +52,22 @@ namespace QL_BanHang
                 food.Save();
             }
             MessageBox.Show("Successfully !!!");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormFood form = new FormFood();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void tbPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
