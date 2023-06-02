@@ -19,7 +19,7 @@ namespace DTO
         private string _note;
         private Bill_BUS bus = new Bill_BUS();
         public Bill() { _id = 0; }
-        public Bill(int idTb) { _id = 0; IdTb = idTb; }
+        public Bill(int id) { _id = id; }
         public Bill(int status, int idTb, DateTime dateIn, DateTime dateOut, double discount, string note)
         {
             _id = 0;
@@ -118,11 +118,15 @@ namespace DTO
 
         }
 
-        public Bill Find(int idbill)
+        public static Bill Find(int idbill)
         {
-            this._id = idbill;
-            DataTable dt = CRUD.Instance.Find(this);
-            return new Bill(dt.Rows[0]);
+            try
+            {
+                if(idbill < 0) { throw new Exception("Id phải > 0"); }
+                DataTable dt = CRUD.Instance.Find(new Bill(idbill));
+                return new Bill(dt.Rows[0]);
+            }
+            catch (IndexOutOfRangeException) { return null; }
         }
 
         public static Bill[] Find()

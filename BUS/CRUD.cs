@@ -10,7 +10,6 @@ namespace BUS
 {
     public class CRUD 
     {
-        private ICRUD BUS;
         private static CRUD instance;
         public static CRUD Instance
         {
@@ -20,53 +19,47 @@ namespace BUS
         private CRUD() { }
         public void Delete(object obj)
         {
+            BUS.ICRUD BUS;
             string objType = obj.GetType().Name;
             switch (objType)
             {
                 case "Table": {
                         BUS = new CRUDTable_BUS();
-                        BUS.Delete(obj);
                         break; }
                 case "Account": {
                         BUS = new CRUDAccount_BUS();
-                        BUS.Delete(obj); 
                         break; }
                 case "Food": {
                         BUS = new CRUDFood_BUS();
-                        BUS.Delete(obj);
                         break; }
                 case "Ingredient":
                     {
                         BUS = new CRUDIngredient_BUS();
-                        BUS.Delete(obj);
                         break;
                     }
                 case "Bill_Info":
                     {
                         BUS = new CRUDBill_Info_BUS();
-                        BUS.Delete(obj);
                         break;
                     }
                 case "Bill":
                     {
                         BUS = new CRUDBill_BUS();
-                        BUS.Delete(obj);
                         break;
                     }
                 case "ImportingInvoices":
                     {
                         BUS = new CRUDImportingInvoices_BUS();
-                        BUS.Delete(obj);
                         break;
                     }
                 case "CRUDImportingInvoices_Info":
                     {
                         BUS = new CRUDImportingInvoices_Info_BUS();
-                        BUS.Delete(obj);
                         break;
                     }
                 default: { throw new ArgumentOutOfRangeException(nameof(objType) , $"Chưa thiết lập case {objType} tại lớp CRUD"); }
             }
+            BUS.Delete(obj);
         }
 
         //
@@ -81,59 +74,51 @@ namespace BUS
         //    
         public DataTable FindAll(object obj)
         {
+            BUS.ICRUD instance;
             string objType = obj.GetType().Name;
-            DataTable dt = new DataTable();
             switch (objType)
             {
                 case "Table":
                     {
-                        CRUDTable_BUS instance = new CRUDTable_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDTable_BUS();
                         break;
                     }
                 case "Ingredient":
                     {
-                        CRUDIngredient_BUS instance = new CRUDIngredient_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDIngredient_BUS();
                         break;
                     }
                 case "Bill_Info":
                     {
-                        CRUDBill_Info_BUS instance = new CRUDBill_Info_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDBill_Info_BUS();
                         break;
                     }
                 case "Bill":
                     {
-                        CRUDBill_BUS instance = new CRUDBill_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDBill_BUS();
                         break;
                     }
                 case "Account": {
-                        CRUDAccount_BUS instance = new CRUDAccount_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDAccount_BUS();
                         break; 
                     }
                 case "Food": {
-                        CRUDFood_BUS instance = new CRUDFood_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDFood_BUS();
                         break; 
                     }
                 case "ImportingInvoices":
                     {
-                        CRUDImportingInvoices_BUS instance = new CRUDImportingInvoices_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDImportingInvoices_BUS();
                         break;
                     }
                 case "ImportingInvoices_Info":
                     {
-                        CRUDImportingInvoices_Info_BUS instance = new CRUDImportingInvoices_Info_BUS();
-                        dt = instance.Find();
+                        instance = new CRUDImportingInvoices_Info_BUS();
                         break;
                     }
                 default: { throw new ArgumentOutOfRangeException(nameof(objType), $"Chưa thiết lập case {objType} tại lớp CRUD"); }
             }
-            return dt;
+            return instance.Find();
         }
 
         //
@@ -202,52 +187,54 @@ namespace BUS
 
         public void Save(object obj)
         {
+            BUS.ICRUD instance;
             string objType = obj.GetType().Name;
             switch (objType)
             {
                 case "ImportingInvoices":
                     {
-                        CRUDImportingInvoices_BUS instance = new CRUDImportingInvoices_BUS();
-                        instance.Save(obj);
+                        instance = new CRUDImportingInvoices_BUS();
                         break;
                     }
                 case "ImportingInvoices_Info":
                     {
-                        CRUDImportingInvoices_Info_BUS instance = new CRUDImportingInvoices_Info_BUS();
-                        instance.Save(obj);
+                        instance = new CRUDImportingInvoices_Info_BUS();
                         break;
                     }
-                case "Table": {
-                        Table_DAL instance = new Table_DAL();
-                        instance.Save(obj);
-                        break; }
-                case "Bill_Info": {
-                        Bill_Info_DAL instance = new Bill_Info_DAL();
-                        instance.Save(obj);
-                        break; }
+                case "Table": 
+                    {
+                        instance = new CRUDTable_BUS();
+                        break; 
+                    }
+                case "Bill_Info": 
+                    {
+                        instance = new CRUDBill_Info_BUS();
+                        break; 
+                    }
                 case "Ingredient":
                     {
-                        Ingredient_DAL instance = new Ingredient_DAL();
-                        instance.Save(obj);
+                        instance = new CRUDIngredient_BUS();
                         break;
                     }
                 case "Bill":
                     {
-                        Bill_DAL instance = new Bill_DAL();
-                        instance.Save(obj);
+                        instance = new CRUDBill_BUS();
                         break;
                     }
-                case "Account": {
-                        Account_DAL instance = new Account_DAL();
-                        instance.Save(obj);
-                        break; }
-                case "Food": {
-                        Food_DAL instance = new Food_DAL();
-                        instance.Save(obj);
-                        break; }
+                case "Account":
+                    {
+                        instance = new CRUDAccount_BUS();
+                        break; 
+                    }
+                case "Food": 
+                    {
+                        instance = new CRUDFood_BUS();
+                        break;
+                    }
                 default: { throw new ArgumentOutOfRangeException(nameof(objType), $"Chưa thiết lập case {objType} tại lớp CRUD"); }
-
+                
             }
+            instance.Save(obj);
         }
         
     }

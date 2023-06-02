@@ -1,14 +1,5 @@
-﻿using DocumentFormat.OpenXml.Drawing.Charts;
-using DTO;
+﻿using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QL_BanHang
@@ -22,7 +13,6 @@ namespace QL_BanHang
         {
             InitializeComponent();
             this.food = food;
-            
             LoadDgv(ingredients());
         }
         Ingredient[] ingredients()
@@ -39,13 +29,12 @@ namespace QL_BanHang
         }
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            change = true;
+             change = true;
             int index = e.RowIndex;
             double amount = Convert.ToDouble(dataGridView1.Rows[index].Cells["Amount"].Value.ToString());
             string name = dataGridView1.Rows[index].Cells["Name"].Value.ToString();
             double inventory = Ingredient.getInventory(name);
-            ingredient = new Ingredient(name , "" , amount , inventory);
-            
+            ingredient = new Ingredient(name , food.NameF , amount , inventory);
         }
 
         private void FormIngredient_FormClosing(object sender, FormClosingEventArgs e)
@@ -70,7 +59,10 @@ namespace QL_BanHang
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (change) { ingredient.Save(); change = false; }
+            if (change) {
+                ingredient.Save(); 
+                change = false; 
+            }
                 int index = e.RowIndex;
                 string name = dataGridView1.Rows[index].Cells["Name"].Value.ToString();
                 string nameF = dataGridView1.Rows[index].Cells["NameF"].Value.ToString();

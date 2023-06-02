@@ -119,7 +119,11 @@ namespace QL_BanHang
                 btn.Height = btn.Width * 625 / 1000;
                 btn.Text = item;
                 btn.BackColor = Color.LightYellow;
-                btn.Click += foodCategory_Click;
+                btn.Click += (object sender, EventArgs e) =>
+                {
+                    Food[] foods = Food.FindWithCategory(item);
+                    LoadProduct(foods);
+                };
                 flpContainerLeft.Controls.Add(btn);
             }
 
@@ -293,8 +297,7 @@ namespace QL_BanHang
         {
             //Đoạn này cần sửa ------------------------------------------------------------------------------------------------------------------------------
             Button button = sender as Button;
-            Table tb = new Table();
-            tb = Table.Find(bill.IdTb);
+            Table tb = Table.Find(bill.IdTb);
             tb.Status = 1;
             tb.Save();
             Bill_Info billinfo = new Bill_Info(bill.Id, button.Text, 1);
@@ -317,13 +320,6 @@ namespace QL_BanHang
             billinfo.food.SubIngredient();
             LoadContainerRight_pnlFotter();
         }
-
-        private void foodCategory_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            Food[] foods = Food.FindWithCategory(button.Text);
-            LoadProduct(foods);
-        }
         private void FormBill_Load(object sender, EventArgs e)
         {   
         }
@@ -336,7 +332,7 @@ namespace QL_BanHang
         //
         // Summary:
         //     1.Set bill hiện tại trạng thái = 1 ( đã thanh toán )
-        //     2.Lấy ra bàn đang chứa chill này rồi set trạng thái = 0 ( kh có khách )
+        //     2.Lấy ra bàn đang chứa bill này rồi set trạng thái = 0 ( kh có khách )
         //     3.Tạo bill mới cho bàn này
         //    
         void ThanhToan()

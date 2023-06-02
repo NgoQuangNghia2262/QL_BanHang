@@ -19,7 +19,7 @@ namespace QL_BanHang
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             List<Food> list = new List<Food>() {Food.Find("Gà Sốt Tiêu Xanh"),Food.Find("Bánh mì") };
-            Application.Run(new FormTable());
+            Application.Run(new FormIngredient(Food.Find("Gà Sốt Tiêu Xanh")));
         }
     }
 }

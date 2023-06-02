@@ -12,34 +12,14 @@ namespace BUS
     {
         private readonly ImportingInvoices_DAL DAL = new ImportingInvoices_DAL();
 
-        private bool Check()
+        private bool Check(dynamic obj)
         {
-            return true;
-        }
-        //Truyền vào id bàn lấy ra 1 bàn
-        public DataTable Find(object key)
-        {
-            return DAL.Find(key);
-        }
-        //Lấy tát cả các bàn
-        public DataTable Find()
-        {
-            return DAL.Find();
-        }
-        public void Save(object obj)
-        {
-            if (Check())
-            {
-                DAL.Save(obj);
-            }
-            else
-            {
-                throw new Exception("Thông tin nhập vào không hợp lệ !!!");
-            }
+            bool checkId = obj.Id >= 0;
+            return checkId;
         }
         public void Delete(object Key)
         {
-            if (Check())
+            if (Check(Key))
             {
                 DAL.Delete(Key);
             }
@@ -47,6 +27,37 @@ namespace BUS
             {
                 throw new Exception("Thông tin không hợp lệ !!!");
             }
+        }
+
+        public DataTable Find(object key)
+        {
+            if (Check(key))
+            {
+                return DAL.Find(key);
+            }
+            else
+            {
+                throw new Exception("Thông tin không hợp lệ !!!");
+            }
+
+        }
+
+        public DataTable Find()
+        {
+            return DAL.Find();
+        }
+
+        public void Save(object obj)
+        {
+            if (Check(obj))
+            {
+                DAL.Save(obj);
+            }
+            else
+            {
+                throw new Exception("Thông tin không hợp lệ !!!");
+            }
+
         }
     }
 }

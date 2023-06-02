@@ -74,9 +74,7 @@ namespace QL_BanHang
             {
                 try
                 {
-                    Account acc = new Account();
-                    acc.Username = tbTk.Text;
-                    acc.getElementById();
+                    Account acc = Account.Find(tbTk.Text);
                     acc.Delete();
                     LoadTaiKhoan();
                 }

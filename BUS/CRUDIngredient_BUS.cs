@@ -38,7 +38,7 @@ namespace BUS
 
         public void Save(object obj)
         {
-            throw new NotImplementedException();
+           DAL.Save(obj);
         }
     }
 }

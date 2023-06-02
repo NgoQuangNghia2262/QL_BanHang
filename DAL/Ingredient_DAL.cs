@@ -47,7 +47,7 @@ namespace DAL
             DataProvider.Instance.ExecuteNonQuery(query2);
         }
         
-        public void Save(dynamic obj) //Hàm Này hơi xấu tý . Sửa sau ^^
+        public void Save(dynamic obj) //Hàm Này hơi xấu tý .
         {
             try
             {

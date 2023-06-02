@@ -11,10 +11,14 @@ namespace BUS
     internal class CRUDBill_Info_BUS : ICRUD
     {
         private Bill_Info_DAL DAL = new Bill_Info_DAL();
-        private bool Check() { return true; }
+        private bool Check(dynamic obj) 
+        {
+            bool checkId = obj.Id >= 0;
+            return checkId; 
+        }
         public void Delete(object Key)
         {
-            if (Check())
+            if (Check(Key))
             {
                 DAL.Delete(Key);
             }
@@ -26,7 +30,15 @@ namespace BUS
 
         public DataTable Find(object key)
         {
-            return DAL.Find(key);
+            if (Check(key))
+            {
+                return DAL.Find(key);
+            }
+            else
+            {
+                throw new Exception("Thông tin không hợp lệ !!!");
+            }
+           
         }
 
         public DataTable Find()
@@ -36,7 +48,15 @@ namespace BUS
 
         public void Save(object obj)
         {
-            DAL.Save(obj);
+            if (Check(obj))
+            {
+                DAL.Save(obj);
+            }
+            else
+            {
+                throw new Exception("Thông tin không hợp lệ !!!");
+            }
+            
         }
     }
 }

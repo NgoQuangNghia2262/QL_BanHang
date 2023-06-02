@@ -11,10 +11,13 @@ namespace BUS
     internal class CRUDFood_BUS : ICRUD
     {
         Food_DAL DAL = new Food_DAL();
-        private bool Check() { return true; }
+        private bool Check(dynamic obj) {
+            bool checkName = obj.NameF != null;
+            return checkName;
+        }
         public void Delete(object Key)
         {
-            if (Check())
+            if (Check(Key))
             {
                 DAL.Delete(Key);
             }
@@ -31,12 +34,27 @@ namespace BUS
 
         public DataTable Find(object key)
         {
-            return DAL.Find(key);
+            if (Check(key))
+            {
+                return DAL.Find(key);
+            }
+            else
+            {
+                throw new Exception("Thông tin không hợp lệ !!!");
+            }
+           
         }
 
         public void Save(object obj)
         {
-            throw new NotImplementedException();
+            if (Check(obj))
+            {
+                DAL.Save(obj);
+            }
+            else
+            {
+                throw new Exception("Thông tin không hợp lệ !!!");
+            }
         }
     }
 }

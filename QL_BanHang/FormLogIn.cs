@@ -1,13 +1,5 @@
 ﻿using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QL_BanHang
@@ -21,9 +13,7 @@ namespace QL_BanHang
       
         private void button1_Click(object sender, EventArgs e)
         {
-            Account result = new Account();
-            result.Username = tbUser.Text;
-            result.getElementById();
+            Account result = Account.Find(tbUser.Text);
             if (result.Password != tbPass.Text)
             {
                 MessageBox.Show("Tài khoản hoặc mật khấu không đúng");

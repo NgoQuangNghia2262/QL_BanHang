@@ -50,5 +50,19 @@ namespace QL_BanHang
             form.ShowDialog();
             this.Close();
         }
+
+        private void bànĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormTable form = new FormTable();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormChangePassword form = new FormChangePassword(Account.Find("admin"));
+            form.ShowDialog();
+        }
     }
 }
