@@ -9,9 +9,9 @@ namespace DAL
 {
     public class Table_DAL : ICRUD
     {
-        public void Delete(dynamic obj) // kh muốn xóa bàn
+        public void Delete(dynamic obj)
         {
-            throw new NotImplementedException();
+            DataProvider.Instance.ExecuteNonQuery($"delete TableFood where Id = {obj.Id}");
         }
 
         public DataTable Find(dynamic key = null)

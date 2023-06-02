@@ -33,27 +33,17 @@ namespace DAL
 
         public void Save(dynamic obj)
         {
-            try
+
+            DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from ImportingInvoices where Id = {obj.Id}");
+            if (dt.Rows.Count > 0)
             {
-                try
-                {
-                    DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from ImportingInvoices where Id = {obj.Id}");
-                    if (dt.Rows.Count > 0)
-                    {
-                        string query = $"update ImportingInvoices set Date = '{obj.Date}', Suppliers = '{obj.Suppliers}' , Note = N'{obj.Note}' where Id = '{obj.Id}'";
-                        DataProvider.Instance.ExecuteNonQuery(query);
-                    }
-                    else
-                    {
-                        string query = $"insert into ImportingInvoices( Date , Suppliers , note) values(getDate() , '{obj.Suppliers}' , N'{obj.Note}')";
-                        DataProvider.Instance.ExecuteNonQuery(query);
-                    }
-                }
-                catch (Exception err) { throw err; }
+                string query = $"update ImportingInvoices set Date = '{obj.Date}', Suppliers = '{obj.Suppliers}' , Note = N'{obj.Note}' where Id = '{obj.Id}'";
+                DataProvider.Instance.ExecuteNonQuery(query);
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                string query = $"insert into ImportingInvoices( Date , Suppliers , note) values(getDate() , '{obj.Suppliers}' , N'{obj.Note}')";
+                DataProvider.Instance.ExecuteNonQuery(query);
             }
         }
         

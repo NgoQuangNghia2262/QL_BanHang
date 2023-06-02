@@ -11,9 +11,10 @@ namespace BUS
     internal class CRUDAccount_BUS : ICRUD
     {
         Account_DAL DAL = new Account_DAL();
-        private bool Check(object Key) { 
-            if(Key == null) { return false; }
-            return true; }
+        private bool Check(dynamic Key) { 
+            if(Key.Username == null) { return false; }
+            return true; 
+        }
         public void Delete(object Key)
         {
             if (Check(Key))

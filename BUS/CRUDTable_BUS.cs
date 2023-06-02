@@ -16,12 +16,10 @@ namespace BUS
         {
             return true;
         }
-        //Truyền vào id bàn lấy ra 1 bàn
         public DataTable Find(object key)
         {
             return DAL.Find(key);
         }
-        //Lấy tát cả các bàn
         public DataTable Find()
         {
             Table_DAL DAL = new Table_DAL();

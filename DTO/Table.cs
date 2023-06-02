@@ -95,6 +95,10 @@ namespace DTO
                 throw new InvalidOperationException("Không tìm thấy phần tử trong danh sách.");
             }
         }
+        public void Delete()
+        {
+            CRUD.Instance.Delete(this);
+        }
 
     }
 }

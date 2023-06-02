@@ -13,7 +13,7 @@ namespace DAL
         // Summary:
         //     1.Phương thức nhận 1 obj -> trả về 1 bảng dữ liệu
         //     2.Kiểm tra user có truyền parameters 
-        //          2.1 Nếu parameters được truyền vào thì truy xuất dữ liệu với 1 điều kiện gì đó
+        //          2.1 Nếu parameters được truyền vào thì truy xuất dữ liệu với 1 điều kiện
         //          2.2 nếu không truyền parameters thì lấy tất cả dữ liệu trong DataBase
         //     3.Rồi trả về Bảng tương ứng 
         //

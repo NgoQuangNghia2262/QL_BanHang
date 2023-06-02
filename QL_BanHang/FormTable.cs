@@ -50,13 +50,21 @@ namespace QL_BanHang
             DialogResult dia = MessageBox.Show("Bạn có muốn xóa không", "Xóa ?", MessageBoxButtons.OKCancel);
             if (dia == DialogResult.OK)
             {
-
+                Table tb = Table.Find(int.Parse(idtb));
+                tb.Delete();
+                LoadDgv();
             }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        string idtb;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            idtb = dataGridView1.Rows[index].Cells[0].Value.ToString();
         }
     }
 }

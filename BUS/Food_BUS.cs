@@ -21,7 +21,6 @@ namespace BUS
             }
             return cates;
         }
-
         public DataTable FindApproximateNameF(string NameF)
         {
             return DAL.FindApproximateNameF(NameF);
