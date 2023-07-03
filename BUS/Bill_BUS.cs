@@ -47,5 +47,10 @@ namespace BUS
             }
             catch (InvalidCastException) { return 0; }
         }
+        public void MergeBill(int firstId, int secondId)
+        {
+            if (firstId < 0 | secondId < 0) { throw new ArgumentOutOfRangeException($"Para chuyền vào không hợp lệ (Phải >= 0)"); }
+            DAL.MergeBill(firstId, secondId);
+        }
     }
 }

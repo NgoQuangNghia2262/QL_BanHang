@@ -22,14 +22,12 @@ namespace BUS
         }
         public DataTable Find()
         {
-            Table_DAL DAL = new Table_DAL();
             return DAL.Find();
         }
         public void Save(object obj)
         {
             if(Check())
             {
-                Table_DAL DAL = new Table_DAL();
                 DAL.Save(obj);
             }
             else

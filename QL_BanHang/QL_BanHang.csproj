@@ -130,6 +130,12 @@
     <Compile Include="FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChuyenBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChuyenBan.Designer.cs">
+      <DependentUpon>FormChuyenBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChuyenBan.resx">
+      <DependentUpon>FormChuyenBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFood.resx">
       <DependentUpon>FormFood.cs</DependentUpon>

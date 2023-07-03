@@ -81,6 +81,11 @@ namespace DAL
             return DataProvider.Instance.ExecutesScalar(query);
 
         }
+        public void MergeBill(int firstId , int secondId)
+        {
+            string query = $"UPDATE Bill_Info SET IdBill = {secondId} WHERE IdBill = {firstId}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
 
     }
 }

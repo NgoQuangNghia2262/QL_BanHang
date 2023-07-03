@@ -149,5 +149,10 @@ namespace DTO
             DataTable dt = bus.FindBillDayBetweenDay(FirstDay , SecondDay);
             return ConvertDataTableToDTO(dt);
         }
+        public static void MergeBill(Bill first , Bill second)
+        {
+            Bill_BUS bus = new Bill_BUS();
+            bus.MergeBill(first.Id,second.Id);
+        }
     }
 }

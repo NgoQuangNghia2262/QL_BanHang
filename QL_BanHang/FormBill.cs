@@ -196,7 +196,7 @@ namespace QL_BanHang
                         }
                     case "Gộp Đơn":
                         {
-                            GopDon();
+                            GopDon(bill);
                             break;
                         }
                     case "Đóng":
@@ -403,15 +403,11 @@ namespace QL_BanHang
         {
             tbSeach.Text = "";
         }
-        private void GopDon()
+        private void GopDon(Bill bill)
         {
             this.Hide();
-            FormMain form = new FormMain();
+            FormChuyenBan form = new FormChuyenBan(bill);
             form.ShowDialog();
-            foreach (Control item in form.flpTable.Controls)
-            {
-                item.Click += (object sender, EventArgs e) => { MessageBox.Show("Hiii"); };
-            }
             this.Close();
         }
         private void tbSeach_Click(object sender, EventArgs e)

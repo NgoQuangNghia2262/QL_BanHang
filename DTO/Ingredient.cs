@@ -64,11 +64,10 @@ namespace DTO
         {
             try
             {
-
                 DataTable dt = CRUD.Instance.Find(new Ingredient(keyName,keyNameF));
                 return new Ingredient(dt.Rows[0]);
             }
-            catch (IndexOutOfRangeException) { return null; }
+            catch (IndexOutOfRangeException) { return null;}
             
         }
         public static Ingredient[] getElementByNameF(string nameF)

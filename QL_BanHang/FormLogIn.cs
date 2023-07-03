@@ -1,5 +1,7 @@
 ﻿using DTO;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace QL_BanHang
@@ -10,7 +12,7 @@ namespace QL_BanHang
         {
             InitializeComponent();
         }
-      
+   
         private void button1_Click(object sender, EventArgs e)
         {
             Account result = Account.Find(tbUser.Text);
