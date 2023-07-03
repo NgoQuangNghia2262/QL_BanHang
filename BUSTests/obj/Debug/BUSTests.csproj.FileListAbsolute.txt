@@ -1,8 +1,0 @@
-D:\Visual code\DNN\QL_BanHang\BUSTests\obj\Debug\BUSTests.csproj.AssemblyReference.cache
-D:\Visual code\DNN\QL_BanHang\BUSTests\obj\Debug\BUSTests.csproj.CoreCompileInputs.cache
-D:\Visual code\DNN\QL_BanHang\BUSTests\bin\Debug\BUSTests.dll
-D:\Visual code\DNN\QL_BanHang\BUSTests\bin\Debug\BUSTests.pdb
-D:\Visual code\DNN\QL_BanHang\BUSTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\Visual code\DNN\QL_BanHang\BUSTests\obj\Debug\BUSTests.csproj.CopyComplete
-D:\Visual code\DNN\QL_BanHang\BUSTests\obj\Debug\BUSTests.dll
-D:\Visual code\DNN\QL_BanHang\BUSTests\obj\Debug\BUSTests.pdb
